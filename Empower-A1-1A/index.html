@@ -1041,6 +1041,11 @@ body { background:#12304F; }
 .mp-row.ok { background:#DDF5E8; border-color:#1A7A4A; } .mp-row.no { background:#FFE3E0; border-color:#C0392B; }
 .mp-msg { font-weight:800; font-size:1.2rem; } .mp-msg.good { color:#1A7A4A; } .mp-msg.try { color:#C0392B; }
 
+/* numbered options: the student answers aloud ("number 2") while the teacher clicks */
+.numopts .syl{counter-reset:opt}
+.numopts .circ-opt{counter-increment:opt}
+.numopts .circ-opt::before{content:counter(opt);display:inline-flex;align-items:center;justify-content:center;width:1.55rem;height:1.55rem;margin-right:.5rem;border-radius:50%;background:#12304F;color:#fff;font-size:1rem;font-weight:800;vertical-align:middle;line-height:1}
+
 </style>
 </head>
 <body>
@@ -1103,7 +1108,7 @@ body { background:#12304F; }
   <div class="banner banner-leadin">🎯 Lead-in</div>
   <div class="slide-main"><div class="content">
     <h2>Look at the flags</h2>
-    <p class="instruction">Look at the picture. What country flags do you see? Click a balloon to check.</p>
+    <p class="instruction">Look at the picture. What country flags do you see? Tell me. I click a balloon to check.</p>
     
     <div class="balloons"><button class="balloon" style="--bc:#E8505B" onclick="balloonPick(this)" aria-label="balloon"><span class="bl">🇺🇸</span><span class="bs"></span><span class="bk"></span><span class="bn">the U.S.</span></button><button class="balloon" style="--bc:#F2C14E" onclick="balloonPick(this)" aria-label="balloon"><span class="bl">🇯🇵</span><span class="bs"></span><span class="bk"></span><span class="bn">Japan</span></button><button class="balloon" style="--bc:#4FB477" onclick="balloonPick(this)" aria-label="balloon"><span class="bl">🇮🇹</span><span class="bs"></span><span class="bk"></span><span class="bn">Italy</span></button><button class="balloon" style="--bc:#E8505B" onclick="balloonPick(this)" aria-label="balloon"><span class="bl">🇨🇦</span><span class="bs"></span><span class="bk"></span><span class="bn">Canada</span></button><button class="balloon" style="--bc:#F26B3A" onclick="balloonPick(this)" aria-label="balloon"><span class="bl">🇩🇪</span><span class="bs"></span><span class="bk"></span><span class="bn">Germany</span></button><button class="balloon" style="--bc:#4F8FE0" onclick="balloonPick(this)" aria-label="balloon"><span class="bl">🇫🇷</span><span class="bs"></span><span class="bk"></span><span class="bn">France</span></button></div>
     <div class="card" style="font-size:1.35rem;"><b>What other countries do you know in English?</b> Tell me! Then write them here.<br>
@@ -1137,7 +1142,7 @@ body { background:#12304F; }
     
     <p class="mini-h" style="margin:14px 0 4px;">🎧 Read and listen</p><div class="audio-box pending"><audio controls data-track="01.02"></audio></div>
     <div id="xfind" style="zoom:.9;"><div class="dlg-grid" style="grid-template-columns:repeat(3,1fr);"><div class="dlg"><div class="dlg-head"><span class="dn">1</span><span class="de">💬</span></div><div class="dline"><span class="sp">Vilma</span><span class="tx"><span class="find" data-hit="0" onclick="findPick(this)">Hi</span>, <span class="find" data-hit="1" onclick="findPick(this)">I'm</span> Vilma. What's your name?</span></div><div class="dline"><span class="sp">Camila</span><span class="tx"><span class="find" data-hit="1" onclick="findPick(this)">I'm</span> Camila.</span></div><div class="dline"><span class="sp">Vilma</span><span class="tx"><span class="find" data-hit="0" onclick="findPick(this)">Hi</span>, Camila. Nice to meet you.</span></div></div><div class="dlg"><div class="dlg-head"><span class="dn">2</span><span class="de">💬</span></div><div class="dline"><span class="sp">Harumi</span><span class="tx"><span class="find" data-hit="0" onclick="findPick(this)">Hello</span>, <span class="find" data-hit="1" onclick="findPick(this)">I'm</span> Harumi.</span></div><div class="dline"><span class="sp">Katia</span><span class="tx"><span class="find" data-hit="0" onclick="findPick(this)">Hi</span>. <span class="find" data-hit="1" onclick="findPick(this)">I'm</span> Katia.</span></div><div class="dline"><span class="sp">Pablo</span><span class="tx">And <span class="find" data-hit="1" onclick="findPick(this)">I'm</span> Pablo. <span class="find" data-hit="0" onclick="findPick(this)">Hi</span>.</span></div><div class="dline"><span class="sp">Harumi</span><span class="tx">Are you from the U.S.?</span></div><div class="dline"><span class="sp">Pablo</span><span class="tx">No, <span class="find" data-hit="1" onclick="findPick(this)">we're</span> from Ecuador.</span></div></div><div class="dlg"><div class="dlg-head"><span class="dn">3</span><span class="de">💬</span></div><div class="dline"><span class="sp">Li</span><span class="tx"><span class="find" data-hit="0" onclick="findPick(this)">Hi</span>, Rub&eacute;n. How are you?</span></div><div class="dline"><span class="sp">Rub&eacute;n</span><span class="tx"><span class="find" data-hit="0" onclick="findPick(this)">Hi</span>, Li. <span class="find" data-hit="1" onclick="findPick(this)">I'm</span> fine. How are you?</span></div><div class="dline"><span class="sp">Li</span><span class="tx">Fine, thanks.</span></div></div></div>
-      <div class="find-bar">🔎 Find it! Click every <b>I&rsquo;m</b> and <b>we&rsquo;re</b>. <button class="btn-check" onclick="checkFind('xfind')">Check</button> <button class="btn-reset" onclick="resetFind('xfind')">Reset</button><span class="find-msg"></span></div></div>
+      <div class="find-bar">🔎 Find it! Tell me every <b>I&rsquo;m</b> and <b>we&rsquo;re</b>. I click. <button class="btn-check" onclick="checkFind('xfind')">Check</button> <button class="btn-reset" onclick="resetFind('xfind')">Reset</button><span class="find-msg"></span></div></div>
   </div></div>
 </div>
 
@@ -1145,7 +1150,7 @@ body { background:#12304F; }
   <div class="banner banner-listening">🎧 Listening &amp; Speaking</div>
   <div class="slide-main"><div class="content">
     <h2>Who is talking?</h2>
-    <p class="instruction">Listen to conversations 1&ndash;3 again. Click a conversation. Then click its group of people: <b>a</b>, <b>b</b> or <b>c</b>.</p>
+    <p class="instruction">Listen to conversations 1&ndash;3 again. Tell me the group of people for each conversation: <b>a</b>, <b>b</b> or <b>c</b>. I click.</p>
     
     <div class="mp" id="xmp" style="zoom:.78;">
       <div class="mp-img"><img src="1b-groups.jpg" alt="Groups of students a, b and c in a lounge"><button class="mp-hot" data-l="a" style="left:19.4%;top:37.5%" onclick="mpHot(this)" aria-label="group a"><span class="mp-badge"></span></button><button class="mp-hot" data-l="b" style="left:56.0%;top:40.4%" onclick="mpHot(this)" aria-label="group b"><span class="mp-badge"></span></button><button class="mp-hot" data-l="c" style="left:80.9%;top:34.9%" onclick="mpHot(this)" aria-label="group c"><span class="mp-badge"></span></button></div>
@@ -1263,9 +1268,9 @@ body { background:#12304F; }
   <div class="banner banner-speaking">🗣️ Speaking</div>
   <div class="slide-main"><div class="content">
     <h2>Now use your own name!</h2>
-    <p class="instruction">Practice the conversations again. Use your own name. Click <b>Next card</b> for a new place.</p>
+    <p class="instruction">Practice the conversations again. Use your own name. I click <b>Next card</b> for a new place.</p>
     
-    <div class="card deckcard" id="dk-prac"><div class="dk-e">🎲</div><div class="dk-t">Ready?</div><div class="dk-x">Click the button to get your first scene.</div></div>
+    <div class="card deckcard" id="dk-prac"><div class="dk-e">🎲</div><div class="dk-t">Ready?</div><div class="dk-x">Ready? I click the button for your first scene.</div></div>
     <div class="btn-row"><button class="btn-check" onclick="deckDraw('dk-prac')">&#9654; Next card</button></div>
   </div></div>
 </div>
@@ -1276,7 +1281,7 @@ body { background:#12304F; }
     <h2>Checkpoint 1</h2>
     
     <div class="cp-cols">
-      <div class="step-card"><h4>1 &middot; Use it!</h4><div class="card deckcard" id="dk-cp1" style="min-height:150px;margin:6px 0;"><div class="dk-e">🎲</div><div class="dk-t">Ready?</div><div class="dk-x">Click the button.</div></div>
+      <div class="step-card"><h4>1 &middot; Use it!</h4><div class="card deckcard" id="dk-cp1" style="min-height:150px;margin:6px 0;"><div class="dk-e">🎲</div><div class="dk-t">Ready?</div><div class="dk-x">Ready? I click the button.</div></div>
         <div class="btn-row"><button class="btn-check" onclick="deckDraw('dk-cp1')">&#9654; New situation</button></div></div>
       <div class="step-card"><h4>2 &middot; How was it?</h4><div class="rate-list"><div class="rate-row"><span class="rt">Saying <i>I'm</i> and <i>we're</i></span><button onclick="ratePick(this)" aria-label="easy">😀</button><button onclick="ratePick(this)" aria-label="OK">🙂</button><button onclick="ratePick(this)" aria-label="hard">😕</button></div><div class="rate-row"><span class="rt">Asking questions: <i>Are you … ?</i></span><button onclick="ratePick(this)" aria-label="easy">😀</button><button onclick="ratePick(this)" aria-label="OK">🙂</button><button onclick="ratePick(this)" aria-label="hard">😕</button></div><div class="rate-row"><span class="rt">Listening to the audio</span><button onclick="ratePick(this)" aria-label="easy">😀</button><button onclick="ratePick(this)" aria-label="OK">🙂</button><button onclick="ratePick(this)" aria-label="hard">😕</button></div></div><p style="margin:6px 0 0;color:#4F7396;font-weight:700;">😀 easy &nbsp; 🙂 OK &nbsp; 😕 hard</p></div>
     </div>
@@ -1288,12 +1293,12 @@ body { background:#12304F; }
   <div class="banner banner-listening">🎧 Listening &amp; Speaking</div>
   <div class="slide-main"><div class="content">
     <h2>Are you Rub&eacute;n?</h2>
-    <p class="instruction">Read and listen to the conversation. Choose the correct answers.</p>
+    <p class="instruction">Read and listen to the conversation. Say the <b>number</b> of the correct answer.</p>
     
     <p class="mini-h" style="margin:14px 0 4px;">🎧 Read and listen</p><div class="audio-box pending"><audio controls data-track="01.07"></audio></div>
     <div class="cp-cols">
       <div><div class="dlg"><div class="dlg-head"><span class="de">💬</span></div><div class="dline"><span class="sp">Kelly</span><span class="tx">Are you Rub&eacute;n?</span></div><div class="dline"><span class="sp">Rub&eacute;n</span><span class="tx">Yes, I am.</span></div><div class="dline"><span class="sp">Kelly</span><span class="tx">Hi, I'm Kelly.</span></div><div class="dline"><span class="sp">Rub&eacute;n</span><span class="tx">Oh, hi. Are you a student here?</span></div><div class="dline"><span class="sp">Kelly</span><span class="tx">No, I'm not a student. I'm your teacher!</span></div><div class="dline"><span class="sp">Rub&eacute;n</span><span class="tx">Oh &hellip; sorry.</span></div></div></div>
-      <div id="x2a"><div class="ex-row"><span class="circ-num">1</span><b>Rub&eacute;n</b> is:<br><span class="syl" style="margin-left:34px;"><button class="circ-opt" data-group="c1" data-correct="a student" onclick="circPick(this)">a student</button><button class="circ-opt" data-group="c1" data-correct="a student" onclick="circPick(this)">a teacher</button></span></div>
+      <div id="x2a" class="numopts"><div class="ex-row"><span class="circ-num">1</span><b>Rub&eacute;n</b> is:<br><span class="syl" style="margin-left:34px;"><button class="circ-opt" data-group="c1" data-correct="a student" onclick="circPick(this)">a student</button><button class="circ-opt" data-group="c1" data-correct="a student" onclick="circPick(this)">a teacher</button></span></div>
         <div class="ex-row" style="margin-top:14px;"><span class="circ-num">2</span><b>Kelly</b> is:<br><span class="syl" style="margin-left:34px;"><button class="circ-opt" data-group="c2" data-correct="a teacher" onclick="circPick(this)">a student</button><button class="circ-opt" data-group="c2" data-correct="a teacher" onclick="circPick(this)">a teacher</button></span></div>
         <div class="btn-row"><button class="btn-check" onclick="checkCircSlide('x2a')">Check Answers</button><button class="btn-reset" onclick="resetCircSlide('x2a')">Reset</button></div></div>
     </div>
@@ -1369,7 +1374,7 @@ body { background:#12304F; }
     <h2>Checkpoint 2</h2>
     
     <div class="cp-cols">
-      <div class="step-card"><h4>1 &middot; Use it!</h4><div class="card deckcard" id="dk-cp2" style="min-height:150px;margin:6px 0;"><div class="dk-e">🎲</div><div class="dk-t">Ready?</div><div class="dk-x">Click the button.</div></div>
+      <div class="step-card"><h4>1 &middot; Use it!</h4><div class="card deckcard" id="dk-cp2" style="min-height:150px;margin:6px 0;"><div class="dk-e">🎲</div><div class="dk-t">Ready?</div><div class="dk-x">Ready? I click the button.</div></div>
         <div class="btn-row"><button class="btn-check" onclick="deckDraw('dk-cp2')">&#9654; New situation</button></div></div>
       <div class="step-card"><h4>2 &middot; How was it?</h4><div class="rate-list"><div class="rate-row"><span class="rt">Saying <i>I'm not</i> and <i>we're not</i></span><button onclick="ratePick(this)" aria-label="easy">😀</button><button onclick="ratePick(this)" aria-label="OK">🙂</button><button onclick="ratePick(this)" aria-label="hard">😕</button></div><div class="rate-row"><span class="rt">Short answers: <i>Yes, I am. / No, I'm not.</i></span><button onclick="ratePick(this)" aria-label="easy">😀</button><button onclick="ratePick(this)" aria-label="OK">🙂</button><button onclick="ratePick(this)" aria-label="hard">😕</button></div><div class="rate-row"><span class="rt">Making sentences true for me</span><button onclick="ratePick(this)" aria-label="easy">😀</button><button onclick="ratePick(this)" aria-label="OK">🙂</button><button onclick="ratePick(this)" aria-label="hard">😕</button></div></div><p style="margin:6px 0 0;color:#4F7396;font-weight:700;">😀 easy &nbsp; 🙂 OK &nbsp; 😕 hard</p></div>
     </div>
@@ -1381,7 +1386,7 @@ body { background:#12304F; }
   <div class="banner banner-vocab">📚 Vocabulary</div>
   <div class="slide-main"><div class="content">
     <h2>Countries</h2>
-    <p class="instruction">Click a flag. Listen and say the country. Then tell me: <b>I'm from …</b></p>
+    <p class="instruction">I click a flag. You listen and say the country. Then tell me: <b>I'm from …</b></p>
     
     <div class="fgrid"><button class="fcard" onclick="this.classList.toggle('open')"><span class="fe">🇺🇸</span><span class="fw">the U.S.</span></button><button class="fcard" onclick="this.classList.toggle('open')"><span class="fe">🇧🇷</span><span class="fw">Brazil</span></button><button class="fcard" onclick="this.classList.toggle('open')"><span class="fe">🇬🇧</span><span class="fw">the U.K. / Britain</span></button><button class="fcard" onclick="this.classList.toggle('open')"><span class="fe">🇪🇨</span><span class="fw">Ecuador</span></button><button class="fcard" onclick="this.classList.toggle('open')"><span class="fe">🇪🇸</span><span class="fw">Spain</span></button><button class="fcard" onclick="this.classList.toggle('open')"><span class="fe">🇲🇽</span><span class="fw">Mexico</span></button><button class="fcard" onclick="this.classList.toggle('open')"><span class="fe">🇨🇴</span><span class="fw">Colombia</span></button><button class="fcard" onclick="this.classList.toggle('open')"><span class="fe">🇨🇳</span><span class="fw">China</span></button><button class="fcard" onclick="this.classList.toggle('open')"><span class="fe">🇯🇵</span><span class="fw">Japan</span></button></div>
     <div class="gram-box" style="margin-top:14px;"><p><b>the U.S.</b> = the United States of America &nbsp;&nbsp; <b>the U.K.</b> = the United Kingdom</p></div>
@@ -1392,7 +1397,7 @@ body { background:#12304F; }
   <div class="banner banner-vocab">📚 Vocabulary &amp; Reading</div>
   <div class="slide-main"><div class="content">
     <h2>Where are the cities?</h2>
-    <p class="instruction">Match the countries in the box with maps 1&ndash;8. Click a country, then click a blank.</p>
+    <p class="instruction">Match the countries in the box with maps 1&ndash;8. Say the country for each number. I click it into the blank.</p>
     
     <div id="x3a"><div class="wb-bank book-style"><button class="wb-tile" data-val="the U.K." onclick="wbPick(this)">the U.K.</button><button class="wb-tile" data-val="China" onclick="wbPick(this)">China</button><button class="wb-tile" data-val="the U.S." onclick="wbPick(this)">the U.S.</button><button class="wb-tile" data-val="Spain" onclick="wbPick(this)">Spain</button><button class="wb-tile" data-val="Japan" onclick="wbPick(this)">Japan</button><button class="wb-tile" data-val="Ecuador" onclick="wbPick(this)">Ecuador</button><button class="wb-tile" data-val="Brazil" onclick="wbPick(this)">Brazil</button><button class="wb-tile" data-val="Mexico" onclick="wbPick(this)">Mexico</button></div>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;"><div class="map-card" style="text-align:left;padding:6px 10px;"><span class="circ-num">1</span> <span class="wb-blank" data-ans="Ecuador" onclick="wbPlace(this)" style="min-width:110px;">______</span><div class="mc-c" style="font-size:.95rem;">🗺️ Quito &middot; Cuenca</div></div><div class="map-card" style="text-align:left;padding:6px 10px;"><span class="circ-num">2</span> <span class="wb-blank" data-ans="China" onclick="wbPlace(this)" style="min-width:110px;">______</span><div class="mc-c" style="font-size:.95rem;">🗺️ Beijing &middot; Shanghai</div></div><div class="map-card" style="text-align:left;padding:6px 10px;"><span class="circ-num">3</span> <span class="wb-blank" data-ans="the U.S." onclick="wbPlace(this)" style="min-width:110px;">______</span><div class="mc-c" style="font-size:.95rem;">🗺️ Los Angeles &middot; New York</div></div><div class="map-card" style="text-align:left;padding:6px 10px;"><span class="circ-num">4</span> <span class="wb-blank" data-ans="the U.K." onclick="wbPlace(this)" style="min-width:110px;">______</span><div class="mc-c" style="font-size:.95rem;">🗺️ Manchester &middot; London</div></div><div class="map-card" style="text-align:left;padding:6px 10px;"><span class="circ-num">5</span> <span class="wb-blank" data-ans="Brazil" onclick="wbPlace(this)" style="min-width:110px;">______</span><div class="mc-c" style="font-size:.95rem;">🗺️ S&atilde;o Paulo &middot; Rio de Janeiro</div></div><div class="map-card" style="text-align:left;padding:6px 10px;"><span class="circ-num">6</span> <span class="wb-blank" data-ans="Spain" onclick="wbPlace(this)" style="min-width:110px;">______</span><div class="mc-c" style="font-size:.95rem;">🗺️ Madrid &middot; Barcelona</div></div><div class="map-card" style="text-align:left;padding:6px 10px;"><span class="circ-num">7</span> <span class="wb-blank" data-ans="Mexico" onclick="wbPlace(this)" style="min-width:110px;">______</span><div class="mc-c" style="font-size:.95rem;">🗺️ Mexico City &middot; Puebla</div></div><div class="map-card" style="text-align:left;padding:6px 10px;"><span class="circ-num">8</span> <span class="wb-blank" data-ans="Japan" onclick="wbPlace(this)" style="min-width:110px;">______</span><div class="mc-c" style="font-size:.95rem;">🗺️ Kyoto &middot; Tokyo</div></div></div>
@@ -1405,7 +1410,7 @@ body { background:#12304F; }
   <div class="banner banner-vocab">📚 Vocabulary &amp; Reading</div>
   <div class="slide-main"><div class="content">
     <h2>Our group</h2>
-    <p class="instruction">Complete the sentences with the correct country. Click a country, then click a blank.</p>
+    <p class="instruction">Complete the sentences with the correct country. Say the country for each number. I click it into the blank.</p>
     
     <div id="x3b" style="zoom:.8;"><div class="wb-bank book-style"><button class="wb-tile" data-val="the U.K." onclick="wbPick(this)">the U.K.</button><button class="wb-tile" data-val="China" onclick="wbPick(this)">China</button><button class="wb-tile" data-val="the U.S." onclick="wbPick(this)">the U.S.</button><button class="wb-tile" data-val="Spain" onclick="wbPick(this)">Spain</button><button class="wb-tile" data-val="Japan" onclick="wbPick(this)">Japan</button><button class="wb-tile" data-val="Ecuador" onclick="wbPick(this)">Ecuador</button><button class="wb-tile" data-val="Brazil" onclick="wbPick(this)">Brazil</button><button class="wb-tile" data-val="Mexico" onclick="wbPick(this)">Mexico</button></div>
     <div class="fixed-two-col"><div><div class="ex-row" style="background:#fff;border:2px solid var(--navy);border-radius:14px;padding:4px 10px;margin-bottom:6px;font-size:.98rem;line-height:1.35;"><b>👩 Vilma</b> <span class="circ-num">1</span> I'm Vilma. I'm from Rio de Janeiro, in <span class="wb-blank" data-ans="Brazil" onclick="wbPlace(this)" style="min-width:80px;">______</span>.</div><div class="ex-row" style="background:#fff;border:2px solid var(--navy);border-radius:14px;padding:4px 10px;margin-bottom:6px;font-size:.98rem;line-height:1.35;"><b>👨 Pablo</b> <span class="circ-num">2</span> Hi, I'm Pablo. I'm from <span class="wb-blank" data-ans="Ecuador" onclick="wbPlace(this)" style="min-width:80px;">______</span>. I'm from Cuenca.</div><div class="ex-row" style="background:#fff;border:2px solid var(--navy);border-radius:14px;padding:4px 10px;margin-bottom:6px;font-size:.98rem;line-height:1.35;"><b>👩 Camila</b> <span class="circ-num">3</span> Hello. I'm from Puebla, in <span class="wb-blank" data-ans="Mexico" onclick="wbPlace(this)" style="min-width:80px;">______</span>, and my name's Camila.</div><div class="ex-row" style="background:#fff;border:2px solid var(--navy);border-radius:14px;padding:4px 10px;margin-bottom:6px;font-size:.98rem;line-height:1.35;"><b>👨 Li</b> <span class="circ-num">4</span> Hi, I'm Li. I'm from Beijing, in <span class="wb-blank" data-ans="China" onclick="wbPlace(this)" style="min-width:80px;">______</span>. But I'm not in Beijing now. I'm a student in Shanghai.</div></div><div><div class="ex-row" style="background:#fff;border:2px solid var(--navy);border-radius:14px;padding:4px 10px;margin-bottom:6px;font-size:.98rem;line-height:1.35;"><b>👩 Harumi</b> <span class="circ-num">5</span> My name's Harumi. I'm from Tokyo, in <span class="wb-blank" data-ans="Japan" onclick="wbPlace(this)" style="min-width:80px;">______</span>.</div><div class="ex-row" style="background:#fff;border:2px solid var(--navy);border-radius:14px;padding:4px 10px;margin-bottom:6px;font-size:.98rem;line-height:1.35;"><b>👨 Michael</b> <span class="circ-num">6</span> I'm Michael. I'm from <span class="wb-blank" data-ans="the U.K." onclick="wbPlace(this)" style="min-width:80px;">______</span>. I'm a teacher in London.</div><div class="ex-row" style="background:#fff;border:2px solid var(--navy);border-radius:14px;padding:4px 10px;margin-bottom:6px;font-size:.98rem;line-height:1.35;"><b>👨 Rub&eacute;n</b> <span class="circ-num">7</span> I'm from Barcelona, in <span class="wb-blank" data-ans="Spain" onclick="wbPlace(this)" style="min-width:80px;">______</span>, and my name's Rub&eacute;n.</div><div class="ex-row" style="background:#fff;border:2px solid var(--navy);border-radius:14px;padding:4px 10px;margin-bottom:6px;font-size:.98rem;line-height:1.35;"><b>👩 Kelly</b> <span class="circ-num">8</span> Hello. I'm a teacher, and my name's Kelly. I'm from New York, in <span class="wb-blank" data-ans="the U.S." onclick="wbPlace(this)" style="min-width:80px;">______</span>.</div></div></div>
@@ -1418,7 +1423,7 @@ body { background:#12304F; }
   <div class="banner banner-vocab">📚 Vocabulary</div>
   <div class="slide-main"><div class="content">
     <h2>Listen and write the countries</h2>
-    <p class="instruction">Listen and write the countries a&ndash;i. Click a country, then click a blank. Listen first!</p>
+    <p class="instruction">Listen and write the countries a&ndash;i. Listen first! Say the country for each letter. I click it into the blank.</p>
     
     <p class="mini-h" style="margin:14px 0 4px;">🎧 Listen</p><div class="audio-box pending"><audio controls data-track="01.11"></audio></div>
     <div id="x3c"><div class="wb-bank book-style"><button class="wb-tile" data-val="Brazil" onclick="wbPick(this)">Brazil</button><button class="wb-tile" data-val="the U.K." onclick="wbPick(this)">the U.K.</button><button class="wb-tile" data-val="Ecuador" onclick="wbPick(this)">Ecuador</button><button class="wb-tile" data-val="Spain" onclick="wbPick(this)">Spain</button><button class="wb-tile" data-val="Mexico" onclick="wbPick(this)">Mexico</button><button class="wb-tile" data-val="Colombia" onclick="wbPick(this)">Colombia</button><button class="wb-tile" data-val="China" onclick="wbPick(this)">China</button><button class="wb-tile" data-val="Japan" onclick="wbPick(this)">Japan</button><button class="wb-tile" data-val="the U.S." onclick="wbPick(this)">the U.S.</button></div>
@@ -1445,7 +1450,7 @@ body { background:#12304F; }
     <h2>Where are you from?</h2>
     <p class="instruction">I choose a city and a country. Ask me: <b>Are you from … ?</b> Find my city! Then we change roles.</p>
     
-    <div class="card deckcard" id="dk-city"><div class="dk-e">🗺️</div><div class="dk-t">My card (teacher)</div><div class="dk-x">Click the button. Then ask me questions.</div></div>
+    <div class="card deckcard" id="dk-city"><div class="dk-e">🗺️</div><div class="dk-t">My card (teacher)</div><div class="dk-x">Ask me questions.</div></div>
     <div class="bubble" style="margin:8px auto;text-align:center;max-width:560px;font-size:1.3rem;">Are you from <b>Puebla</b>?</div>
     <div class="bubble you" style="margin:8px auto;text-align:center;max-width:560px;font-size:1.3rem;">No, I'm not. I'm from Mexico City.</div>
     <div class="btn-row"><button class="btn-check" onclick="deckDraw('dk-city')">&#9654; New city card</button></div>
@@ -1477,7 +1482,7 @@ body { background:#12304F; }
   <div class="banner banner-speaking">🗣️ Speaking</div>
   <div class="slide-main"><div class="content">
     <h2>A new conversation</h2>
-    <p class="instruction">Choose a name and a country. Have another conversation with me. Then say it again with <b>your</b> name and <b>your</b> country.</p>
+    <p class="instruction">Tell me a name and a country. I click them. Have another conversation with me. Then say it again with <b>your</b> name and <b>your</b> country.</p>
     
     <div class="bld">
       <div class="bld-out">Hello, I'm <b data-slot="n">…</b>. I'm from <b data-slot="c">…</b>. </div>
@@ -1491,7 +1496,7 @@ body { background:#12304F; }
   <div class="banner banner-review">🏁 Checkpoint 3</div>
   <div class="slide-main"><div class="content">
     <h2>I can&hellip;</h2>
-    <p class="instruction">Click what you can do now. Click the one you want to practice again.</p>
+    <p class="instruction">Tell me what you can do now. Tell me which one you want to practice again. I click.</p>
     
     <div class="cando"><button onclick="this.classList.toggle('on')">say hello and my name</button><button onclick="this.classList.toggle('on')">say <i>I'm</i> and <i>we're</i></button><button onclick="this.classList.toggle('on')">say <i>I'm not</i> and <i>we're not</i></button><button onclick="this.classList.toggle('on')">ask <i>Are you … ?</i> and answer</button><button onclick="this.classList.toggle('on')">say countries</button><button onclick="this.classList.toggle('on')">say where I'm from</button></div>
     <div class="step-card" style="margin-top:14px;"><h4>The hardest part today was&hellip;</h4>
@@ -1503,7 +1508,7 @@ body { background:#12304F; }
   <div class="banner banner-review">🏁 Plan together</div>
   <div class="slide-main"><div class="content">
     <h2>What's next?</h2>
-    <p class="instruction">Choose your next step. We write it in our notes.</p>
+    <p class="instruction">Tell me your next step: A or B. We write it in our notes.</p>
     
     <div class="two-pic" style="grid-template-columns:repeat(2,1fr);max-width:900px;">
       <div class="step-card"><h4>Option A</h4><p style="font-size:1.35rem;margin:0;">🗣️ <b>Talk about people</b><br>He's / She's / They're</p></div>
@@ -1585,7 +1590,7 @@ body { background:#12304F; }
   <div id="counter">1/1</div>
   <button id="nextBtn" onclick="goTo(current+1)">Next ▶</button>
   <button id="dlNotesBtn" onclick="savePDF()" style="margin-left:10px;padding:5px 12px;background:#2E2A6B;color:#fff;border:none;border-radius:7px;font-size:.82rem;cursor:pointer;font-family:inherit;">💾 Save Notes</button>
-  <button onclick="this.blur();printAll()" style="margin-left:6px;padding:5px 12px;background:#0E5A8A;color:#fff;border:none;border-radius:7px;font-size:.82rem;cursor:pointer;font-family:inherit;">🖨️ Print Lesson</button>
+  
   <button onclick="this.blur();clearAllNotes()" title="Delete all notes and start a new lesson" style="margin-left:6px;padding:5px 12px;background:#8B2E2E;color:#fff;border:none;border-radius:7px;font-size:.82rem;cursor:pointer;font-family:inherit;">🗑️ Clear Notes</button>
 </div>
 
