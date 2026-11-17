@@ -2,9 +2,9 @@
 
 ---
 
-I'm Nanda, an English teacher. Lessons are strictly one-on-one ("Conversational English with teacher Nanda"). I build interactive HTML lessons for a course from its book, one lesson at a time. My folder `AEF-Courses` is connected. Before building anything:
+I'm Nanda, an English teacher. Lessons are strictly one-on-one ("Conversational English with teacher Nanda"). I build interactive HTML lessons for a course from its book, one lesson at a time. My folder `Conversational-English` is connected. Before building anything:
 
-1. Read `AEF Lesson Standards.md` in that folder (never edit it without asking me) and use `AEF2-1B/index.html` as the style/quality reference.
+1. Read `_Docs/AEF Lesson Standards.md` in that folder (never edit it without asking me) and use `AEF2-1B/index.html` as the style/quality reference.
 2. Ask me which course/book, level, unit and lesson, and what theme I want (each lesson gets its own creative visual theme).
 3. Follow every rule below.
 
@@ -39,5 +39,5 @@ I'm Nanda, an English teacher. Lessons are strictly one-on-one ("Conversational 
 
 ---
 
-## Tools (saved in your folder as `AEF-build-tools.tar.gz`)
+## Tools (saved in your folder as `_Tools/AEF-build-tools.tar.gz`)
 Python build scripts (one `build.py` per lesson, shared `balance.py`) and Playwright checks. Ask Claude to unpack it and start the new course from `a1b`.

@@ -12,3 +12,8 @@ node_modules/
 index_backup_*.html
 index_2*.html
 *_backup_*.html
+
+# Local-only source material and archives (never pushed)
+_Books/
+_Archive/
+_backups/

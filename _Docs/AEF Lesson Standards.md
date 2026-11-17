@@ -7,6 +7,50 @@ Share it at the start of any new conversation so Claude can match the existing l
 
 ---
 
+## ✅ Pre-Edit Checklist — Run This Before Touching ANY Book-Content Slide
+
+> Added 2026-08-25 after repeated book-accuracy and standards-compliance mistakes on AEF4-1B. This checklist is not optional and is not a one-time read — run it fresh every time, for every slide, even ones already built. Never build or fix a slide from memory of the book or memory of this file.
+
+1. **Open the actual book page render for this exercise first** — every time, even if it was already viewed earlier in the same session. Never reconstruct exercise content from memory, from a similar exercise in another unit, or from what "sounds right."
+2. **Follow the book's exercises step by step, in the exact order they appear on the page** (a, b, c, d… / 1, 2, 3…). Don't skip a step, merge two steps into one slide, reorder them, or add a step the book doesn't have — unless the teacher explicitly asks for a deviation.
+3. **Copy the book's wording, sentences, and sequence exactly — word for word, including every sentence, every number, and every attribution ("according to...", "a study by...", "another research team..."). Never shorten, merge, drop, or paraphrase a sentence from a reading/listening passage, even if it "sounds the same" or seems redundant.** This applies above all to continuous prose (articles, interview bios, reading passages) — these are the easiest to accidentally compress while transcribing, and the most serious to get wrong, because the student is reading it directly as if it were the real text. The only allowed changes are the ones already documented elsewhere in this file — e.g. adapting "compare with a partner" / "discuss with a partner" to one-on-one phrasing ("tell me," "share your thoughts with me") in *instructions*, or changing the interaction mechanic to fit an on-screen click/type format. Instructions may be adapted for one-on-one delivery; actual book content (article text, comprehension questions, quotes, captions) may never be reworded, trimmed, or invented. When transcribing a passage, copy it sentence-by-sentence directly from the book render — do not retype it "from the gist" of what was just read.
+4. **Never mention the source on screen** — no "book," "Student Book," "Workbook," "SB," "WB," "TB," page numbers, or exercise letters/numbers anywhere the student can see. These are internal references for building the slide only.
+5. **Never show a raw number on screen that comes from the book's own internal referencing** — this covers audio track numbers (e.g. "1.17") as well as exercise/page numbers. This extends the existing Audio Standards rule ("no 'Track 2.8'") to all book-internal numbering, not audio alone.
+   - **Exception: a `.book-placeholder` for audio not yet added** may show a label (including a track number) — it's a private note for whoever is wiring in the file later, not something a student is looking at as a finished slide. The strict "nothing but the `<audio>` element, zero exceptions" rule (Audio standards, rule 4) kicks in once the real file is wired in — that's when any label/number glued to the player must be removed.
+6. **Never invent anything that's missing** — a filename, an answer-key value, a piece of content the available book scans don't show. Ask the teacher instead of guessing or filling the gap with something plausible.
+7. **After building, re-open the same book page again and check the finished slide against it line by line** — don't rely on the read from step 1 still being accurate in memory by the time the slide is done.
+8. **Then, separately, check the relevant sections of the rest of this standards file** (exercise type, banner, audio, example numbering, blank widths, etc.) against what was just built — book-accuracy and standards-compliance are two separate checks, not one.
+9. **Two specific, repeated mistakes to actively check for on every single numbered exercise, every time, with no exceptions — including every Homework slide:**
+   - **The green "example" badge is only for an item the book itself shows as already worked/answered.** If the book's exercise starts straight at item 1 with no example, item 1 is a real question — `circ-num`, not `example-badge`. Never default to marking item 1 as the example just because it's first; check the actual book page for that specific exercise every time, per item 1-3 above.
+   - **Column order must be top-to-bottom then left-to-right, never row-major/interleaved.** With `n` items in 2 columns, items 1…⌈n/2⌉ go in the left column (stacked top to bottom) and the rest in the right column — e.g. 4 items → 1,2 left / 3,4 right; not 1,3 left / 2,4 right. `.fixed-two-col` / `.fixed-three-col` / `.fixed-four-col` are plain CSS grids with no auto-flow override, so placing numbered items directly as grid children produces the wrong (row-major) order — always wrap each column's items in its own child `<div>` inside the grid container so the grouping is explicit in the HTML, not left to the grid to guess.
+   - Both of these must be re-checked on every slide touched, not just newly built ones — a slide edited for an unrelated reason can still be carrying one of these two mistakes from earlier.
+10. **Any self-authored explanatory content — CCQs, gram-notes, gram-boxes, glossary-box definitions, "meaning" statements — must be independently fact-checked for grammatical/logical accuracy before it ships, separately from checking it against the book.** This content isn't copied from the book, so the book-accuracy checks above (steps 1-7) don't catch errors in it — a wrong CCQ answer is a real error teaching false information to a real student in a real class, not a formatting issue. Concretely:
+    - Before writing a CCQ, gram-note, or meaning explanation, work out the actual correct answer yourself from first principles — don't write a plausible-sounding question and a plausible-sounding answer without independently verifying the answer is true.
+    - **Check every self-authored explanation against every example already sitting in the same box**, not just the example it was written for. A rule that's true for one example in a `.gram-box` can be false for another example three lines below it (this happened: a CCQ claimed "the two halves always change in the same direction," which was true for one example in the box and false for the very next one).
+    - If a box contains multiple examples of the same structure, prefer a CCQ/explanation general enough to be true for all of them, or scope it explicitly to the one example it's actually testing.
+    - This applies with the same seriousness as book-accuracy — wrong grammar taught confidently is worse than a formatting inconsistency.
+11. **Every `data-ans` value (every answer key) must come from an actual Teacher's Book or Workbook answer-key page you have open — never derived yourself from grammar logic, even when you're confident the derivation is correct.** This happened: an exercise's answers were worked out from the transformation pattern instead of read off the TB page, and a *different* exercise on the very same TB page turned out to have a wrong answer already shipped in the lesson ("self-centered" instead of the book's actual "self-sufficient") — a mistake that opening the TB page for an unrelated reason caught by accident. Concretely:
+    - Before building any Check-Answers exercise, locate and open the actual TB/WB answer-key page for that specific exercise. If it isn't in the available renders, say so explicitly to the teacher rather than filling the gap with a self-derived answer presented as fact.
+    - If only a self-derived answer is possible (the official key genuinely isn't available), the unverified flag goes in an **HTML comment** right above/inside that slide for the teacher's own eyes only (e.g. `<!-- TEACHER NOTE: these answers are derived, not read from an official key — verify if possible. -->`) — it must **never** appear as visible text on the slide itself. A visible disclaimer like "double-check against your official answer key" is a **book-reference violation** (see "No book references — ever" above) on top of being confusing/unprofessional in front of a student — the student should never see any hint that an answer might be wrong or unsourced. This happened once (HW5) and was corrected 2026-08-26 — don't repeat it.
+    - Never silently ship a guessed answer with the same confidence as a verified one either — the HTML-comment flag exists so *you* (or the teacher, reading the source) know to re-check it, not so the student sees a hedge.
+    - When you do open a TB/WB page for one exercise, check it for every exercise it contains, not just the one you were looking for — answer keys for unrelated exercises often share the same page and are easy to verify "for free" once the page is already open.
+
+---
+
+## ⏩ Forward-Only Rule — never re-touch already-approved slides
+
+> Added 2026-08-26 at the teacher's explicit request, after a "check every slide" audit pass ended up re-opening and re-editing slides the teacher had already reviewed and considered finished.
+
+Once a slide has been built, reviewed, and not flagged by the teacher, it is **settled** — treat it as correct and move forward. Do not re-open, re-check, or re-edit a slide that isn't the one currently being discussed, even during a broad "check everything" audit, unless:
+- The teacher explicitly names that slide or exercise, or
+- A change made elsewhere in the file mechanically requires it (e.g. renumbering `slideIds`/`slideLabels` after inserting a slide, or a shared function/CSS class used by that slide was just changed).
+
+**"Check every homework slide" / "check every slide" means audit and report, not silently rewrite.** If a broad audit turns up something on an already-approved slide, surface it to the teacher and ask before touching it — don't fix it automatically just because the audit found it. This is a deliberate change from earlier in this project, where broad audits directly edited any slide with an issue; going forward, only the slide(s) the teacher is actively pointing at get edited without asking first.
+
+The direction of work is always **forward**: new slides, the current slide being discussed, or a slide the teacher just named. Never backward into settled work on your own initiative.
+
+---
+
 ## 🗂 General Structure
 
 - Single-file HTML slide deck — `.slide` divs with opacity transitions, all inside `<div id="deck">`
@@ -69,6 +113,85 @@ When exercises are displayed in two (or more) columns, the numbering always flow
 
 Never lay out exercises left-to-right across a row (1 on left, 2 on right, 3 on left, 4 on right…). Always finish one column before starting the next.
 
+Layout classes: `.fixed-two-col` (2 columns), `.fixed-three-col` (3 columns), `.fixed-four-col` (4 columns) — all fixed CSS grids, used when items must split by an exact count rather than auto-balance by height.
+
+### Two columns whenever possible + worked examples (added 2026-10-15)
+
+> Added after AEF2-1A/1B review: several numbered exercises were left in a single long column, and worked examples were shown in a separate dashed "Example" box.
+
+- **Numbered exercises are always laid out in two columns when possible** (`.fixed-two-col`, items split per the Column Order Rule: top to bottom, then left to right). Only keep a single column when an item is too wide to fit half the slide (e.g. a long paragraph or a full-width writing box). This includes Homework slides.
+- **The worked example is item 1 of the exercise, not a separate box.** Do not use the "Example" label or the text "(example)". Build it as the first row of the left column in the same layout as the other items, with the answer already filled and highlighted green. The count for the column split includes the example (11 rows → 6 left / 5 right; 10 rows → 5 / 5).
+- **Badge:** if the book numbers the example as 1, the example badge shows `1` (green) and the student's items start at 2. If the student's items start at 1, the example row shows a green ✓ instead of a number.
+- **Answer line:** for word-order / rewrite items, put the correct answer on its own line below the prompt, styled like the answer box (`.given-line`).
+- **Build check:** run an audit that lists any slide with 4 or more numbered rows in a single column, and any two-column grid whose left column is not equal to or one item longer than the right.
+
+### `.two-col` vs `.fixed-two-col` — pick based on content, not habit
+
+> Added 2026-08-26 after AEF4-1B's HW2/HW4 dialogue exercises (multi-line `A:`/`B:` turns with `<br>`) were left in `.two-col` (native CSS multi-column auto-balancing), causing the first item of the left column and the first item of the right column to start at visibly different heights once turns spanned multiple lines.
+
+`.two-col` (`columns:2`, browser auto-balance) only produces clean-looking results when every item is roughly the same height (e.g. short single-line vocabulary rows). **The moment an exercise has multi-line items of uneven length — especially multi-turn dialogues using `<br>` between speakers — switch to `.fixed-two-col` with two explicit child `<div>`s (items split per the Column Order Rule, e.g. 8 items → 4 in the first `<div>`, 4 in the second).** This guarantees the top of column 1 and the top of column 2 actually align, since both columns start at the same grid row instead of being auto-flowed by total height. Check this any time a conversation/dialogue exercise is built or edited — it's an easy one to miss because `.two-col` still "looks fine" until an item's turn count grows past one line.
+
+---
+
+## 📏 Text Line-Height Standard
+
+> Added 2026-08-25 after AEF4-1B's instruction/discussion-question text looked visually cramped compared to quoted example text.
+
+**Every block of instruction, discussion-question, or quoted text uses `line-height:1.7`.** This applies to (at minimum) `.instruction`, `.inst-light`, `.discuss-label`, `.ex-row`, `.glossary-box p`, `.gram-note`, `.gram-mistake`, `.ex-example-centered`, `.ccq-list li`, and any similar reading-text class — never leave a text block at the browser default line-height (~1.2) or at a tighter value like `1.5`/`1.6`, it reads as cramped next to the rest of the deck. When adding a new CSS class for body/instruction-style text, always set `line-height:1.7` explicitly (some exercise/dialogue text intentionally uses a looser `1.8–1.9` — see the Typography reference table — but never anything tighter than 1.7).
+
+> Audited 2026-08-25 across all lesson files: `.inst-light` was missing `line-height` entirely (browser default ~1.2) in every lesson that had it, and `.glossary-box p` / `.gram-note` / `.gram-mistake` / `.ex-example-centered` / `.ccq-list li` were all sitting at `1.6` or missing it. All were corrected to `1.7`. When building or reviewing a lesson, check every reading-text class against this list — don't assume a class is compliant just because `.instruction` is.
+
+**When a slide has 2 or more standalone discussion questions (not a single flowing instruction sentence), give each question its own boxed container** (e.g. a `.ccq-box` wrapping a `.discuss-label`) stacked with a visible gap between boxes (`display:flex;flex-direction:column;gap:16px` or similar) — never stack multiple questions inside one shared block separated only by `<br>`.
+
+**Any image placed beside text in a `.fixed-two-col` / `.fixed-three-col` / `.fixed-four-col` layout must be height-constrained (e.g. `max-height`) so that section of the slide fits on screen without forcing a scroll.** Use `object-fit:contain` (not `cover`) whenever the full image needs to stay visible without cropping — `cover` is only for images being used as a decorative background fill where cropping the edges is acceptable.
+
+---
+
+## 🎨 Text Highlighting Standard
+
+> Added 2026-08-25 after AEF4-1B's "How weird!" glossary box (a wall of plain-text reacting phrases) felt flat and hard to scan.
+
+**Whenever an explanation box, glossary box, or grammar note has more than a sentence or two of plain text, break it up visually — don't leave dense paragraphs of uniform black text.** Use a mix of:
+
+- **Bold + color** on the key phrase or pattern being taught (e.g. the fixed part of a structure like `How / That's`), often paired with a light matching background chip: `color:#1B6E96;background:#E4F1F7;padding:1px 8px;border-radius:5px;` (swap the color pair per item so multiple patterns in the same box are visually distinct).
+- *Italics* for the variable/example word list that follows a pattern (e.g. the adjectives that can slot into it).
+- Color coding kept **consistent with the rest of the slide/lesson** where a concept already has an established color (e.g. reuse the same color for "did" everywhere it's highlighted across a lesson — see Text Line-Height Standard's sibling rule on auxiliary-verb color coding).
+
+This applies especially to `.glossary-box`, `.gram-box`, `.gram-note`, and similar theory/reference boxes — these are exactly the places dense text tends to accumulate. The goal is that a student can scan the box and immediately spot the pattern being taught, not read it top to bottom like a paragraph.
+
+### Instructions that list the target language get the same colour-chip treatment
+
+> Added 2026-08-26, reference implementation: AEF4-1B's `s-gbank-a`/`s-gbank-b` ("Quick-fire practice" / "A night at the club") instruction lines — `Complete with an auxiliary (do, did, have, is, etc.) or modal verb (can, would, etc.).` — where each listed word is individually bold + coloured.
+
+**Whenever an instruction line names specific words or phrases the student is meant to use or respond with (a list of auxiliaries, modals, response patterns, etc.), style each one as bold + its own colour** — never leave them as plain text inside the instruction sentence:
+```html
+<strong style="color:#1B6E96;">do</strong>, <strong style="color:#C4614A;">did</strong>, <strong style="color:#0E7A8A;">have</strong>, etc.
+```
+- Give each distinct word/phrase its own colour (reuse colours already established for that word elsewhere in the lesson if one exists — e.g. if "did" is already blue-green in a grammar box on an earlier slide, keep it that colour here too).
+- This applies to any instruction listing target language — not just auxiliary/modal lists: response-pattern lists ("So do I, Neither do I, I do, I don't, etc."), connector lists, modifier lists, or any other "use one of these" instruction.
+- Check this on every slide during an audit, homework and non-homework alike — an instruction line that lists specific words in plain black text is the same category of "boring explanation" the Text Highlighting Standard already targets, just inside an instruction instead of a gram-box.
+
+### Worked example sentences inside explanation boxes also get highlighted — never left as plain text
+
+> Added 2026-08-25 after AEF4-1B's "The more, the merrier" meaning box was caught with its example sentences (in the `<ul>` list and the `.ex-example-centered` box) sitting in plain black/italic text while the rest of the box used colour chips.
+
+**Any worked example sentence shown inside a `.gram-box`, `.glossary-box`, CCQ, or `.ex-example-centered` block must highlight the actual target structure inline** — not just the prose explaining it. If the box teaches a two-part pattern (e.g. `the + comparative …, the + comparative …`), each half of the pattern gets its own colour chip (reuse the same colour pair — e.g. blue for the first half, purple for the second — across every example in that box, so the repeated structure is instantly recognisable slide to slide). Don't highlight the surrounding explanation text and then leave the example sentence itself in plain italics — the example is the part a student actually reads to "get" the pattern, so it needs the highlight more than the prose does, not less.
+
+**General principle — boring explanations should always be made more visually interesting, not just technically correct.** Every theory/meaning box (`.gram-box`, `.glossary-box`, CCQs, worked examples) should be treated as a design problem, not just a content problem: before finishing a slide, ask "would a student's eye actually land on the pattern being taught, or does this read like a wall of text?" If the answer is the latter, add colour chips, icons, spacing, or card layout — whatever makes the target structure jump out — rather than shipping the plain-text version because it's technically complete.
+
+---
+
+## 🪟 Two-Part Slide Standard
+
+> Added 2026-08-25, reference implementation: AEF4-1B's Warm-Up slide (`s-warmup`) — title + discussion questions + image as part 1, four superstition cards as part 2.
+
+Some slides genuinely hold two distinct activities stacked on one slide (e.g. a discussion prompt with an image, followed by a separate card exercise below). When this happens:
+
+- **Part 1 should visually read as its own complete screen** — sized generously enough to feel intentional, not like leftover space above a second exercise. Don't leave a tall image floating with big empty margins, and don't let it feel like it's fighting part 2 for room.
+- **Do not use a fixed pixel height or a raw `calc(100vh - Npx)` on the container** — actual usable height varies too much between windows and causes overflow/overlap bugs. Instead, size the dominant visual (usually the image) with `max-height: clamp(<min>px, <vh>vh, <max>px)` and `object-fit:contain`, letting it scale naturally with the viewport while staying within safe bounds.
+- **Give part 1 a generous bottom margin before part 2 begins** — e.g. `margin-bottom:40px` on the part-1 container plus `margin-top:50-60px` on part 2's instruction paragraph. This visually separates the two parts so part 2 clearly starts "after a scroll," not immediately below part 1.
+- **When part 1 has a left column of stacked question boxes next to a right-column image, align the columns to `align-items:flex-start`** (not `center`) so the top of the first question box lines up with the top of the image.
+
 ---
 
 ## 🟢 Example Presentation Standards
@@ -104,11 +227,32 @@ color:#1A7A4A; font-weight:800; background:#E3F5EA; padding:1px 7px; border-radi
 
 ### Example placement relative to word banks and columns
 
-When an exercise has a word bank / phrase bank displayed above the numbered items, where the example goes depends on whether the real item count is even or odd:
+> Revised 2026-08-26 — the previous version of this rule (folding the example into the top of the right column for odd item counts) shipped on HW5 and produced a confusing, unacceptable layout: items read "2, 3, 4" in the left column and "1, 5, 6" in the right column, i.e. the example broke the visual reading order between the two columns. That version of the rule is retired — never fold the example into either column again.
 
-- **Even number of real items** (e.g. 8): the example gets its own centered block, placed directly below the word bank and above the two-column exercise list — never folded into the first item of the left column. Items then split evenly (e.g. 8 → 4 left / 4 right).
-- **Odd number of real items** (e.g. 7 or 9) *and the book shows an example for this exercise*: the example is **not** centered separately. Instead, it goes at the top of the **right column** (the column that would otherwise be shorter), so the right column's total row count (example row + its numbered items) matches the left column's row count (numbered items only).
-- **No example at all in the book's version of this exercise**: just follow the standard Column Order Rule as-is — the left column gets the extra item when the count is odd (e.g. 9 real items with no example → 5 left / 4 right).
+**The example always gets its own centered block, placed above the two-column (or word-bank) exercise list — never folded into either column, regardless of whether the real item count is odd or even.** Items then split by the standard Column Order Rule as if the example weren't part of the grid at all:
+- Even real item count (e.g. 8): 4 left / 4 right.
+- Odd real item count (e.g. 5 or 7): left column gets the extra item (e.g. 5 → 3 left / 2 right).
+
+This keeps the numbered items reading in strict ascending order across the two columns every time, with the example sitting visually separate above — never interleaved with the numbering.
+
+### Renumber real items starting at 1 once the example is extracted
+
+> Added 2026-08-28 after AEF4-1B's HW5 ("The more…, the more…") was found numbering its real items 2–6, matching the book's original numbers, because the book's own item 1 was the worked example. On screen this looked broken — item "1" appeared to be missing entirely.
+
+Once an example is pulled out into its own unnumbered `.ex-example-centered` block (per the rule above), it no longer occupies a slot in the on-screen numbering — regardless of what number that item had in the book. **The remaining real items are renumbered starting at 1**, in the same order the book presents them, so the student always sees a clean, gap-free `1, 2, 3…` sequence. This matches the pattern already used elsewhere in the same file (e.g. `s-gbank-a`'s "Quick-fire practice", where the book's item 1 is the example and the real items are shown as 1–8, not 2–9).
+
+Never carry the book's original item numbers onto the screen once one of them has been converted into the unnumbered example — check every exercise with an extracted example for this before considering it done.
+
+### Matching exercises: each column keeps its own independent, natural order
+
+> Added 2026-09-03 after AEF4-3B slide 15 ("Comment adverbs" matching) was found laying out sentences (a–h) and definitions (1–8) as paired rows in a single grid — which forced the definitions column out of numeric order to align with the (unrelated) row position of its matching sentence. On screen the right column read "2, 1, 3, 4, 5, 6, 7, 8": the example ("2") was dragged to the top of the list instead of sitting in its own natural 2nd position, and definition "1" was displaced to the second row.
+
+In a two-list matching exercise (sentences↔definitions, questions↔answers, words↔pictures, etc.), **the two columns are independent lists — never force them into shared grid rows just because item A pairs with item B.** Each column keeps its own natural reading order:
+- Left column: in the order the book presents it (e.g. a, b, c, d…).
+- Right column: in its own natural order (e.g. numeric 1, 2, 3, 4… or the book's own order) — **completely decoupled** from which row it happens to sit next to.
+- **If the example is item "2," it stays the 2nd item in its column's natural order — it is never pulled to the top of the list or moved anywhere else to sit beside its partner.** This applies to the example in either column.
+- The pairing itself is shown through the interaction (click-to-connect, shared highlight colour once matched, a badge/arrow noting the match) — never through physical adjacency in the layout.
+- Use two independent `flex-direction:column` lists inside a `display:grid` (or flex) wrapper with two columns, not a single grid where sentence/definition pairs are flattened into matching row positions.
 
 ---
 
@@ -131,6 +275,7 @@ When an exercise has a word bank / phrase bank displayed above the numbered item
 - No `placeholder="Type the correct sentence..."`, `placeholder="Complete the sentence..."`, `placeholder="Write your answer here..."`, or any other instructional/example filler inside an `<input>` or `<textarea>` a student types into.
 - The instruction line above the exercise (`.instruction` / `.inst-light`) is where any guidance belongs — never inside the answer field itself.
 - Applies to every typed-answer exercise type: sentence-rewrite boxes, listening-completion lines, writing-task textareas (short story, reading continuation, "make it personal" sentences), word-scramble inputs, and any future typed-answer exercise.
+- **Notes panel font**: `#notesTA` is set to `font-size:1.1rem` in every lesson (raised from 1rem on 2026-10-19 at the teacher's request).
 - **Exempt**: `#notesTA` (the slide Notes panel) — app UI chrome for the tutor/student's own private notes, not lesson exercise content, and keeps its `data-placeholder="Your notes for this slide…"`.
 
 ### Uniform width for typed answer blanks
@@ -141,6 +286,14 @@ When an exercise has a word bank / phrase bank displayed above the numbered item
 - Applies to any inline `style="width:...px;"` (or a shared class) placed on `.ans-input` elements — not just present perfect simple/continuous exercises, but any gap-fill where answers could vary in length (verb forms, contractions, one-word vs. multi-word answers, etc.).
 - The base `.ans-input` class only defines `min-width:80px` with no default fixed width, so any exercise using variable per-blank widths needs to be checked and corrected under this rule.
 - **Exempt**: blanks in genuinely different exercises/slides where there's no shared answer-length pattern to give away (a single standalone blank with no sibling blanks in the same task), or widths driven by layout/space constraints rather than answer length — but default to uniform width whenever in doubt.
+
+### Exercise + Use/discussion box layout — use horizontal space
+
+**When a slide has a main exercise plus a "Use" note (`.gram-note`) and/or discussion questions (`.ccq-box`), lay them out side by side — exercise on the left, Use/discussion box(es) on the right — instead of stacking everything vertically down the page.**
+- Stacking wastes horizontal space and pushes content below the fold when it doesn't need to; a two-column layout keeps the whole slide visible together.
+- Implementation: wrap the exercise block and the Use/discussion block(s) in a flex container (reuse the existing `.match-img-row`-style pattern: `display:flex; align-items:flex-start; gap:24px;`, wrapping to a single column on narrow screens), exercise first (left), Use/discussion second (right).
+- Applies whenever the exercise itself is naturally narrow or short enough that it doesn't need the full page width (e.g. a short list of pick-one buttons, a handful of discussion prompts, a small matching list) — not to wide exercises that already need the full row (image-matching grids, two-column fill-ins, etc.).
+- Check this on every slide that has this exercise+Use/discussion pattern, not just newly built ones — it applies retroactively across the whole lesson.
 
 ### Check Answers — feedback states (apply to every exercise)
 | State | Border | Text colour | Answer shown? |
@@ -166,7 +319,7 @@ When an exercise has a word bank / phrase bank displayed above the numbered item
 3. **Player style**: native `<audio controls src="filename.mp3">` set to full container width, wrapped in a light-coloured rounded pill container (e.g. `background: #f0f4f8; border-radius: 999px; padding: 10px 18px`)
    - Native controls provide play/pause, seekable progress bar, time display, and volume — no custom JS needed
    - Reference style: AEF3 1B audio player
-4. **No names, titles, or labels glued to the player — zero exceptions.** `.audio-box` (or wherever the `<audio>` element lives) must contain **nothing but the `<audio>` element itself** — no `<p>`, `<span>`, or icon inside or immediately above/below it describing what the track is (no "🎧 Listen and check", no "Track 2.8", no speaker names attached to the box). If the student needs an instruction before listening, that instruction belongs in the slide's normal `.instruction`/`.inst-light` paragraph placed *before* the audio box, exactly like any other exercise instruction — never as a caption specifically glued to the player.
+4. **No names, titles, or labels glued to the player — zero exceptions — once the real audio file is wired in.** `.audio-box` (or wherever the `<audio>` element lives) must contain **nothing but the `<audio>` element itself** — no `<p>`, `<span>`, or icon inside or immediately above/below it describing what the track is (no "🎧 Listen and check", no "Track 2.8", no speaker names attached to the box). If the student needs an instruction before listening, that instruction belongs in the slide's normal `.instruction`/`.inst-light` paragraph placed *before* the audio box, exactly like any other exercise instruction — never as a caption specifically glued to the player. This rule applies to the real, working `<audio>` element. A `.book-placeholder` standing in for audio not yet provided is exempt and may carry a label (see Pre-Edit Checklist rule 5) — the moment a real filename is wired in, swap the placeholder for the bare player and drop the label.
 
 ---
 
@@ -268,6 +421,25 @@ Before building any exercise that gives the student a list of words to complete 
   ```
 - Requires a top-level `var notesOpen = false;` alongside `notesData`/`current`
 
+### Notes must survive a page refresh (localStorage)
+
+> Added 2026-08-28 after AEF4-2A's notes were found storing only in memory, with no `localStorage` backing — a page refresh silently discarded all notes with only a `beforeunload` warning as protection. AEF4-2A's `#notesTA` was also missing `oninput="saveNotes()"` entirely, so plain typing (without touching Bold/Underline/Highlight) never even reached the in-memory object.
+
+- `notesData` must be **loaded from and saved to `localStorage`**, not kept purely in memory — a refresh, closed tab, or crash must never lose notes.
+- Storage key: `var notesStoreKey = 'aefNotes::' + document.title;` — `document.title` is already unique per lesson, so this needs no extra configuration per file.
+- Declare and hydrate immediately next to `notesData`, before any slide renders:
+  ```js
+  var notesStoreKey = 'aefNotes::' + document.title;
+  var notesData = {}; // (or `const`, matching the file's existing style)
+  try { var _savedNotes = JSON.parse(localStorage.getItem(notesStoreKey)); if (_savedNotes) Object.assign(notesData, _savedNotes); } catch(e) {}
+  ```
+- `saveNotes()` must write through to `localStorage` on every call, not just update the in-memory object:
+  ```js
+  function saveNotes(){ notesData[current] = document.getElementById('notesTA').innerHTML; try{ localStorage.setItem(notesStoreKey, JSON.stringify(notesData)); }catch(e){} }
+  ```
+- Never declare `notesData` twice in the same file (a duplicate declaration later in the script silently discards the loaded/hydrated version) — one declaration only, right where `slideIds`/`slideLabels`/`current` are declared.
+- Verify `#notesTA` actually has `oninput="saveNotes()"` on the element itself — don't assume it's wired just because `saveNotes()` exists elsewhere (e.g. inside `notesFormat`/`notesHilite`). Without it, plain typed notes never reach `notesData` at all, so they'd be lost on slide change, not just on refresh.
+
 ### Notes toolbar — 4 highlight colors + remove, with toggle-off
 
 ```html
@@ -300,10 +472,20 @@ function toggleNotes(){
   panel.classList.toggle('open', notesOpen);
   if (current === 0) panel.classList.toggle('cover', notesOpen);
   document.getElementById('notesBtn').textContent = notesOpen ? '✕ Close' : '📝 Notes';
+  /* reset position on close */
+  if (!notesOpen) { panel.style.left=''; panel.style.top=''; panel.style.right=''; panel.style.bottom=''; panel.style.transform=''; }
 }
 ```
 
 The button text itself changes between "📝 Notes" and "✕ Close" — it isn't a fixed label.
+
+### Draggable panel always resets to its default position on close
+
+The notes panel can be dragged around the screen mid-lesson (see the drag-handle script further down), but that dragged position is **session-only, never persisted across a close/reopen**. Every time `toggleNotes()` closes the panel (transitions from open → closed), it must clear the inline `left`/`top`/`right`/`bottom`/`transform` styles the drag handler set, so the panel falls back to its default CSS position (top-right, or centered for the `.cover` state) the next time it's opened — regardless of where it was last dragged to.
+
+- This reset happens **only on close**, not on every render — dragging while the panel is open must still work smoothly and keep its position until the teacher closes it.
+- Applies to every lesson using the draggable notes panel (all of them, going forward).
+- If a lesson's `toggleNotes()` uses a differently-named open/closed flag (e.g. a local `isOpen` captured before the toggle instead of the shared `notesOpen`), adapt the condition accordingly — the point is: whichever branch represents "the panel just closed," reset the inline position styles there.
 
 ### Panel animation
 `#notesPanel` uses `max-height: 0 → 320px` + `opacity` transition (not `display:none/flex`) for a smooth slide-open, and has a dark frosted-glass style (`background: rgba(10,40,54,.92)` on the textarea, `backdrop-filter: blur`) rather than a plain white box.
@@ -445,7 +627,7 @@ Both buttons are styled separately from the regular Prev/Next nav buttons — sm
 
 #### Per-lesson values to update (in the CSS `::before` content and in `printAll()`):
 - `[Lesson Title]` → the lesson's human-readable title (e.g. `Fasten your seat belts`)
-- `[LESSON_URL]` → the deployed lesson URL, now always in the form `https://teacher-nanda.github.io/AEF-Courses/[FOLDER]/index.html` (e.g. `https://teacher-nanda.github.io/AEF-Courses/AEF4-3A/index.html`) — see **🌐 AEF-Courses Deployment** above. Older lessons not yet migrated into AEF-Courses may still use their old Netlify URL until moved.
+- `[LESSON_URL]` → the deployed lesson URL, now always in the form `https://teacher-nanda.github.io/Conversational-English/[FOLDER]/index.html` (e.g. `https://teacher-nanda.github.io/Conversational-English/AEF4-3A/index.html`) — see **🌐 AEF-Courses Deployment** above. Older lessons not yet migrated into AEF-Courses may still use their old Netlify URL until moved.
 - The gradient in `.lesson-link-print` → match the lesson's own cover gradient colours
 - The `::before` content string → `"AEF4 3A \2014  Fasten your seat belts"` (update per lesson)
 
@@ -477,9 +659,9 @@ AEF-Courses/
 └── ...one folder per lesson
 ```
 
-- **Live site**: https://teacher-nanda.github.io/AEF-Courses/
-- **Each lesson's URL**: `https://teacher-nanda.github.io/AEF-Courses/[FOLDER]/index.html`
-  - e.g. `https://teacher-nanda.github.io/AEF-Courses/AEF3-1B/index.html`
+- **Live site**: https://teacher-nanda.github.io/Conversational-English/
+- **Each lesson's URL**: `https://teacher-nanda.github.io/Conversational-English/[FOLDER]/index.html`
+  - e.g. `https://teacher-nanda.github.io/Conversational-English/AEF3-1B/index.html`
 - The homepage (`AEF-Courses/index.html`) has a small `courses` array near the bottom of the file — one entry per lesson (`level`, `folder`, `file`, `code`, `title`). Add a line there whenever a new lesson folder is pasted in.
 - PDFs, MP3s, and other copyrighted textbook/audio files stay in each lesson folder locally (needed for the slides/audio to work) but are **excluded from git** via `.gitignore` — they are never pushed to GitHub.
 
@@ -488,21 +670,23 @@ AEF-Courses/
 2. Remove any leftover nested `.git` folder inside it, if the lesson used to be its own separate repo
 3. Add a card entry to the `courses` array in `AEF-Courses/index.html`
 4. Add the 🏠 All-Courses link to the lesson's cover slide (see standard above) — `href="../index.html"`
-5. Update the lesson's **saved-PDF link** (the one injected by `printAll()` into the cover banner and the lesson-notes panel) to `https://teacher-nanda.github.io/AEF-Courses/[FOLDER]/index.html` — see `[LESSON_URL]` note in the Print Lesson section above
+5. Update the lesson's **saved-PDF link** (the one injected by `printAll()` into the cover banner and the lesson-notes panel) to `https://teacher-nanda.github.io/Conversational-English/[FOLDER]/index.html` — see `[LESSON_URL]` note in the Print Lesson section above
 6. `git add` + commit inside `AEF-Courses`
 
 ---
 
 ## 🔗 Live Lesson URLs
 
-> Format for every lesson inside AEF-Courses: `https://teacher-nanda.github.io/AEF-Courses/[FOLDER]/index.html`
+> Format for every lesson inside AEF-Courses: `https://teacher-nanda.github.io/Conversational-English/[FOLDER]/index.html`
 
 | Lesson | URL |
 |---|---|
-| AEF3 1B | https://teacher-nanda.github.io/AEF-Courses/AEF3-1B/index.html |
-| AEF4 1A | https://teacher-nanda.github.io/AEF-Courses/AEF4-1A/index.html |
-| AEF4 2A | https://teacher-nanda.github.io/AEF-Courses/AEF4-2A/index.html |
-| AEF4 3A | https://teacher-nanda.github.io/AEF-Courses/AEF4-3A/index.html |
+| AEF3 1B | https://teacher-nanda.github.io/Conversational-English/AEF3-1B/index.html |
+| AEF4 1A | https://teacher-nanda.github.io/Conversational-English/AEF4-1A/index.html |
+| AEF4 1B | https://teacher-nanda.github.io/Conversational-English/AEF4-1B/index.html |
+| AEF4 2A | https://teacher-nanda.github.io/Conversational-English/AEF4-2A/index.html |
+| AEF4 Review 1&2 | https://teacher-nanda.github.io/Conversational-English/AEF4-Review1-2/index.html |
+| AEF4 3A | https://teacher-nanda.github.io/Conversational-English/AEF4-3A/index.html |
 | AEF4 7A | https://aef4-7a.netlify.app/ *(not yet migrated into AEF-Courses)* |
 | Business English for Everyone (Level 1) — Business-EFE1 | https://teacher-nanda.github.io/Business-EFE1/ *(separate repo, not part of AEF-Courses)* |
 
@@ -768,6 +952,29 @@ The Homework Cover is the **first slide of the Homework section**. It is a full-
 
 > These rules apply to every slide inside the Homework section (after `hw-cover`). Established during AEF4-3A after repeated corrections — treat all of these as settled, not open questions.
 
+### Homework = workbook-exact AND lesson-covered only — NON-NEGOTIABLE
+
+> Added 2026-10-09 after AEF4-4A homework shipped with (a) a workbook sentence rewritten (hail → typhoon), (b) a workbook option swapped (mist → chilly), and (c) exercises full of vocabulary never taught in the lesson (changeable, fog, smog, settled, sunny, icy, towel, sweat…). This must never happen again.
+
+1. **Every homework exercise must be exactly the workbook exercise** — same items, same words, same options, same order, same answers (answers from the TB/WB key). Instructions may be reworded; content never.
+2. **Before building or auditing any homework exercise, list every target word/structure in it and confirm each one appears in a non-homework slide of that lesson** (grep the lesson). If even one target item was not taught in the lesson, **delete that entire exercise** — never swap in a different word, rewrite the sentence, or "fix" it to fit. Optionally propose a teaching slide to the teacher instead.
+3. Pronunciation homework only stays if the sound set was taught AND every option word in it was seen/said in the lesson.
+4. Sample answers/tips on homework slides may only use vocabulary taught in the lesson.
+5a. **Exception — teacher-requested original exercises:** if the teacher explicitly asks for a new, original homework exercise (not from the workbook), build it only from words/structures taught in the lesson (state which slide's vocabulary it covers in an HTML comment above the slide), follow every other homework standard (example numbered 1, items from 2, column order, Check/Reset), and keep it clearly separate from workbook-exact exercises. Never use this exception on your own initiative.
+5. Run this check on every homework slide whenever the lesson's slides change (e.g. a vocabulary slide deleted) — homework depends on lesson content.
+
+### Temperatures — °F always paired with a °C conversion card
+
+> Added 2026-10-15 (teacher is not used to °F).
+
+Whenever a slide shows a temperature in °F (book text, dialogue, forecast cards), add a **small card in a corner of that slide** (e.g. `.temp-card`, top-right of the image or content area, font ≥ 1.05rem) giving the conversion to °C, e.g. `🌡️ 96°F ≈ 36°C`. Convert with (°F − 32) × 5/9 and round to the nearest whole degree. If a slide shows several °F values, list each one in the card. Bare "°" values with no unit stay as the book prints them (do not guess the unit). Slides built with both units side by side (e.g. city forecast cards) don't need an extra card.
+
+### Original multiple-choice exercises — vary the position of the correct answer
+
+> Added 2026-10-20 after AEF4-4A HW5 shipped with the correct option first in every item.
+
+In any exercise you author yourself (not copied from the book — book exercises keep the book's option order), spread the correct answer across positions (1st, 2nd, 3rd…) so no position dominates and the student can't guess a pattern. Check this explicitly before shipping: list the correct position of every item.
+
 ### No book references — ever
 
 Never show a book-specific exercise-letter label anywhere the student/teacher can see it: no "a", "b", "c", no "(a)", "Part a", "Exercise 3b", no audio track numbers (e.g. "3.2"), nothing that only makes sense if you're holding the physical book open. This applies to instructions, button labels, HTML comments intended as visible text, and audio labels alike.
@@ -777,6 +984,14 @@ Never show a book-specific exercise-letter label anywhere the student/teacher ca
 - ❌ `<p class="instruction">🔊 3.2 Listen and check.</p>`
 
 If you need to keep the book reference for your own tracking, put it in an HTML comment above the slide (`<!-- SB p.28, ex 6a -->`), never in visible text.
+
+### Conversation / dialogue exercises — every speaker turn on its own line
+
+> Added 2026-08-26 after AEF4-1B's HW2 (tag-question/auxiliary conversations) shipped with every speaker's turn run together in one paragraph (`A ... B ... A ...` all inline), making the exchange hard to read as a conversation.
+
+Any exercise presented as a back-and-forth exchange between two (or more) speakers — homework or otherwise — must put **each speaker's turn on its own line**, never run multiple turns together in one flowing paragraph. This applies to every item in the exercise (not just the worked example, which already had this rule — see Example Presentation Standards above): `<b>A:</b> ...<br><b>B:</b> ...<br><b>A:</b> ...` etc., with a line break before each new speaker turn, matching the book's own layout.
+- ✅ `<b>A:</b> I texted you last night, but you didn't reply.<br><b>B:</b> I <input> reply. I texted you right away.`
+- ❌ `A I texted you last night, but you didn't reply. B I <input> reply. I texted you right away.` (all one line)
 
 ### Examples — numbered "1", never just labeled "(example)"
 
@@ -798,6 +1013,10 @@ Every exercise's worked example is item **1**, not a separate "Eg"/"(example)" r
 For "select the correct option" exercises, the options sit **inline in the blank position within the sentence** as clickable buttons/pills — never listed afterward with letter labels.
 - ✅ `I had a terrible <button class="circ-opt">journey</button> <span class="circ-sep">/</span> <button class="circ-opt">trip</button> here — the flight was delayed.`
 - ❌ `I had a terrible ___ here. (a) journey (b) trip (c) travel`
+
+### Inline multiple-choice options never wrap mid-phrase
+
+Multi-word `.circ-opt` options (e.g. "does the bus leave", "I've ever been seeing") sit inside a running sentence, so if the browser is free to line-wrap them, a long option can break across two lines — ugly and hard to read as a single option. `.circ-opt` must always render as one unbroken unit: `display:inline-block; white-space:nowrap;`. Check this any time `.circ-opt` (or an equivalent inline-choice class) is defined or copied into a new lesson file.
 
 ### One instruction paragraph per slide
 
@@ -861,6 +1080,8 @@ Every non-cover slide has this exact structure, top to bottom:
 1. **Section header banner** — full-width coloured bar; contains **only** the emoji + section name, nothing else (e.g. `💬 Speaking`, `🎧 Listening`) — no subtitles, no exercise numbers, no extra text in the banner
 2. **Slide title (`h2`)** — below the banner, describes the specific activity (e.g. "Exercise 3 – Gap Fill"). **Every non-cover slide needs one** — never skip straight from the banner to instructions/content.
 3. **Instructions** — brief, adapted for one-on-one (see exercise rules). Use `class="instruction"` (bold, 1.08rem/700) or `class="inst-light"` (regular, 1.05rem/400) — never override their font-size or font-weight inline; if a slide needs a different look, it isn't a "instruction" line, style it separately.
+   - **If an instruction paragraph has more than one sentence, put each sentence on its own line with `<br>`** — never run two+ sentences together in one unbroken line of text. (e.g. `Look at the photos and extracts from an interview with Marianna.<br>Say how you think she finishes each sentence.`) This applies to `.instruction` and `.inst-light` alike. A single sentence that merely has a comma-joined clause ("Click a word in the bank, then click the blank it belongs in.") does not need a break — this rule is about separate sentences (each ending in `.`/`!`/`?`), not every comma.
+   - Never say "your teacher"/"with your teacher" in an instruction — the teacher runs the lesson live, so phrase it as direct address ("with me," "to me," "tell me").
 4. **Exercise content** — inputs, checkboxes, chips, etc.
 5. **Action buttons** — Check Answers / Suggested Answer + Reset, centred below the exercise
 
@@ -891,6 +1112,7 @@ Use CSS classes for banner colours — **not inline styles** (except for one-off
           letter-spacing:.03em; display:flex; align-items:center; gap:10px;
           flex-shrink:0; color:#fff; }
 
+.banner-bridge    { background: #3E7CB1; }
 .banner-leadin    { background: #D35400; }
 .banner-vocab     { background: #2A6B42; }
 .banner-reading   { background: #2A6B42; }
@@ -908,6 +1130,7 @@ Use CSS classes for banner colours — **not inline styles** (except for one-off
 
 | Section | HTML to use | Default colour |
 |---|---|---|
+| Bridge | `<div class="banner banner-bridge">🌉 Bridge</div>` | #3E7CB1 |
 | Warm-Up | `<div class="banner banner-leadin">🎯 Warm-Up</div>` | #D35400 |
 | Vocabulary | `<div class="banner banner-vocab">📚 Vocabulary</div>` | #2A6B42 |
 | Reading | `<div class="banner banner-reading">📖 Reading</div>` | #2A6B42 |
@@ -915,7 +1138,7 @@ Use CSS classes for banner colours — **not inline styles** (except for one-off
 | Speaking | `<div class="banner banner-speaking">💬 Speaking</div>` | #1E4D8C |
 | Grammar | `<div class="banner banner-grammar">📐 Grammar</div>` | #4A1A6A |
 | Pronunciation | `<div class="banner banner-pron">🔊 Pronunciation</div>` | #0E7A8A |
-| Lesson Review | `<div class="banner banner-review">✅ Lesson Review</div>` | #2E2A6B |
+| Lesson Review | `<div class="banner banner-review">⭐ Lesson Review</div>` | #2E2A6B |
 | Homework slides | `<div class="banner banner-hw">📝 Homework</div>` | #1C2B3A |
 
 If a slide combines two sections: `<div class="banner banner-listening">🎧 Listening & 💬 Speaking</div>` — keep it short.
@@ -967,8 +1190,9 @@ If a slide combines two sections: `<div class="banner banner-listening">🎧 Lis
 |---|---|---|---|
 | Section banner (`.banner`) | `1.1rem` | 700 | letter-spacing .03em; colour chosen per lesson |
 | Slide title (`h2`) | `1.85rem` | 800 | dark colour chosen per lesson |
-| Bold instruction (`.instruction`) | `1.08rem` | 700 | |
+| Bold instruction (`.instruction`) | `1.08rem` | 700 | line-height 1.7 |
 | Light instruction (`.inst-light`) | `1.05rem` | 400 | |
+| Discussion question (`.discuss-label`) | `1.08rem` | 700 | line-height 1.7 |
 
 #### Exercise content
 | Element | Size | Weight | Notes |
@@ -1033,6 +1257,10 @@ A short block of 2–4 yes/no or either/or questions about the example context, 
 </div>
 ```
 Keep the answer in a muted `<em>` so it doesn't visually dominate — the point is for the student to answer out loud first.
+
+### Instruction Checking Questions (ICQ)
+
+Different from a CCQ: an ICQ checks the student understood **what to do**, not what the language **means**. Use sparingly — only before a multi-step or easily-misread exercise instruction (e.g. "click a word, then click where it belongs, then listen to check" — three steps in one instruction), not for simple one-action instructions ("Click the correct answer."). Pattern: a one-line muted prompt directly under the instruction, phrased as a quick either/or or yes/no check, e.g. `<p class="inst-light" style="font-style:italic;color:#667;">Quick check: do you click the word first, or the picture first?</p>` — never add an ICQ that just restates the instruction verbatim; it should isolate the one step most likely to be misread. Most slides don't need one — reserve it for genuinely ambiguous multi-step mechanics.
 
 ### Timeline diagrams (tense meaning)
 
@@ -1177,21 +1405,119 @@ Some Flippity activity types are built for classrooms/multiple students and don'
 
 ---
 
+## 🌉 Bridge Slide — connecting to the previous lesson (always slide 2, before the Warm-Up)
+
+> Added after AEF4-1B's "Case Files: Ask About It!" slide worked well as a connector between lessons.
+
+Every lesson now opens with a short **Bridge slide**, positioned right after the Cover and before the Warm-Up. Its job is to re-activate a skill or grammar point from the **previous** lesson through a quick game or communicative task — **never through an explicit statement that this is reviewing the last lesson.** The connection should be felt through the activity itself, not announced to the student.
+
+**Design pattern:**
+
+- Build it as a light game or short interactive task (case-file-style cards, prompts, a quick production exercise) themed to fit the **current** lesson's topic, but built entirely from the skill/grammar taught in the **previous** lesson.
+- Keep it fast — 2–4 items, one clear task, no more than a couple of minutes of class time. This is a warm connector, not a full review.
+- It's fine (and often good) to end with a short, low-key `gram-note` that plants a seed for today's new grammar — but keep it brief and natural, not a lecture.
+- Never use words like "review," "last lesson," or "recap" in anything student-facing (title, instruction, banner). Let the activity itself carry the connection.
+
+### The Bridge is communicative, never a graded grammar drill
+
+**A Bridge slide must be a speaking/production task, not a fill-in-the-blank or multiple-choice grammar exercise with a single graded correct answer.** The whole point is for the student to *use* the target skill to communicate — ask a real question, react, make something up, describe something — not to prove they can conjugate it correctly on a form.
+
+This means, for the Bridge specifically:
+
+- **No `checkSlide`/`checkCircSlide`-style "Check Answers" button testing grammatical accuracy.** That mechanic belongs to the lesson's actual Grammar practice slides, not the Bridge.
+- **Open, ungraded production fields are fine and often best** — e.g. a blank `.ans-input` with no `data-ans`, existing only to give the student something to jot down while they speak their answer out loud. Nothing gets marked right or wrong.
+- **Favor prompts that require the student to generate their own language**: ask a question about a scenario, react to a statement, describe something invented, make a guess — not complete a sentence with the "correct" verb form.
+- The reference implementation (AEF4-1B's "Case Files: Ask About It!") is the model to copy: three short scenario cards, each ending in an open "ask a question about it" field with no grading — the student produces real questions using last lesson's skill, live, out loud.
+
+### Connect through learning points, not through topic
+
+The single most common way to get this wrong: rebuilding the **previous lesson's topic** in new clothes (e.g. another doctor/illness quiz after a "Doctor, doctor!" lesson). That is not a bridge — it's just the old lesson again with a new theme label, and it does nothing to connect to *today's* lesson.
+
+A Bridge slide must instead identify the actual **learning points** taught last time — the specific, nameable things the student practiced — and re-exercise those, dressed in whatever scenario fits *today's* topic. Learning points typically fall into one of these buckets:
+
+- **Grammar / structure** (e.g. present perfect simple, question formation, auxiliary-verb functions)
+- **Key functional phrases** (e.g. phrases for describing a problem, asking for clarification, giving advice)
+- **Vocabulary set** (e.g. illness/injury words, personality adjectives) — used as *language material* inside a new scenario, not as the scenario's subject
+- **Pronunciation focus** (e.g. word stress, a specific sound contrast)
+
+**How to build it:**
+
+1. List out the previous lesson's actual learning points (check the lesson file / manual notes — don't guess).
+2. Pick one or two of them — not the topic — as the thing being reactivated.
+3. Invent a short task or game for *today's* topic/theme that requires using that grammar, those phrases, that pronunciation pattern, or that vocabulary as a tool — the old topic itself should not reappear.
+
+**Worked example — wrong vs. right**, for a Bridge slide following a "Doctor, doctor!" lesson (learning points: present perfect simple, phrases for describing symptoms/problems, illness vocabulary, word stress) feeding into a "1 & 2 Review" or any unrelated next lesson:
+
+- ❌ **Wrong** (topic-based): a "myth or fact" quiz about burns, nosebleeds, and frostbite. This just re-runs the old lesson's illness/first-aid topic — exactly what this rule forbids.
+- ✅ **Right** (learning-point-based): a quick "Have you ever…?" mingling task where the student forms present-perfect questions about experiences unrelated to illness (travel, food, sport), or a rapid-fire task where the student must use last lesson's "describing a problem" phrases ("I've got a…", "It hurts when…") to complain about something totally different (a noisy neighbor, a broken phone) — the grammar/phrases are reactivated, the topic is not.
+
+If it's not obvious which learning points to reactivate, ask: "if I stripped away the theme, what specific language skill was the student practicing?" Bridge that skill forward — never the theme.
+
+**When bridging into a lesson that follows more than one previous lesson** (e.g. a Review lesson after 1A + 1B + 2A), don't limit the Bridge to only the single most-recent lesson's learning point — pull one distinct learning point from each of the recent lessons being connected, so the Bridge reactivates a genuine spread, not just the last thing taught.
+
+### When multiple cards/items are used, mix the task types
+
+Don't give every card the same instruction (e.g. "ask a question about it" three times in a row). Each card should exercise a **different** learning point through a **different kind of task**, so the Bridge feels varied and communicative rather than repetitive drilling of one mechanic. For example, across three cards pulling from three different lessons:
+
+- Card 1 (question-formation skill): "Ask a polite, indirect question about it."
+- Card 2 (reacting skill): "React to it! (Same as you? Different? Surprised?)"
+- Card 3 (a grammar contrast, e.g. present simple vs. present perfect continuous): "Tell me something you usually do, and something you've been doing a lot recently."
+
+All three stay open-ended and ungraded (per the rule above), but the *shape* of what the student produces changes card to card — a question, a reaction, a pair of personal statements — which is what makes it feel like a real mixed conversation rather than one repeated exercise pattern.
+
+**Banner — add to the approved list:**
+
+| Section | HTML to use | Default colour |
+|---|---|---|
+| Bridge | `<div class="banner banner-bridge">🌉 Bridge</div>` | #3E7CB1 |
+
+Add `.banner-bridge { background: #3E7CB1; }` to the banner CSS block alongside the others (adjust the shade per lesson palette if needed, same as every other banner colour).
+
+> Reference implementation: **AEF4-1B**, "Case Files: Ask About It!" — three mystery statements, students produce questions using last lesson's auxiliary-verb-question skill, closing with a short gram-note that quietly sets up today's new reacting-with-auxiliary-verbs grammar.
+
+---
+
+## 🎬 Warm-Up Standards — be creative, never default to a quote
+
+The Warm-Up is the first thing the student sees, so it must earn its place. A book quote followed by three discussion questions is the **fallback, not the format** — it should never be the whole warm-up.
+
+**Every warm-up must include at least one active, interactive element** from the list below, chosen to fit the lesson's topic:
+
+- **🧠 Myth or Fact?** — 4–6 surprising statements about the topic; student clicks Myth/Fact, graded green/red, then a 🔑 reveal explaining the real story with a memorable detail.
+- **🔢 Guess the number / year** — surprising statistics or dates hidden behind Reveal buttons; the student guesses out loud first.
+- **😅 What's wrong with this picture?** — a meme-style or staged image placeholder containing several deliberate mistakes; the student spots and describes them.
+- **📖 Funny short story or anecdote** — a 4–6 line true or true-ish story with a twist, followed by reaction questions.
+- **🗳️ Would you rather…** — two awkward options; the student picks one and justifies it.
+- **🎲 Dice roll / spin the wheel** — a random personal question to open the lesson (see Speaking Activities).
+
+**Rules for warm-ups:**
+
+- **Point it at the target language.** Wherever possible the warm-up should make the student *use* (or at least hear) the lesson's grammar or vocabulary before it's formally taught — e.g., a "how long has X been around?" guessing game before a present perfect lesson.
+- **Facts must be true and checkable.** Prefer well-established facts; hedge where a figure is an estimate ("it's commonly estimated that…"). Never invent a statistic to make a warm-up sound good.
+- **Keep the book's quote if there is one** — but demote it: put it *after* the interactive element, as a lead-in to the personal questions, not as the opening.
+- **Images are placeholders**, described specifically enough that the teacher knows exactly what to source (see the image placeholder standard).
+- **Vary the format between lessons.** Don't use Myth or Fact three lessons in a row — rotate through the list so the student never knows what's coming.
+
+> Reference implementations: **AEF4 5A** (survival Myth or Fact), **AEF3 2B** (how-long-have-they-been-around guessing game, which rehearses the target grammar), **AEF3 3A** (driving Myth or Fact + what's-wrong-with-this-picture).
+
+---
+
 ## 🗂 Typical Lesson Slide Order
 
 Most lessons follow this sequence (not all sections appear in every lesson):
 
 1. **Cover** — "Conversational English / with teacher Nanda" + Lesson Title only (see rules above)
-2. **Lead-in / Warm-Up** — warm-up activity (topic activation, image discussion, spin the wheel, dice-roll prompt)
-3. **Vocabulary** — word list, matching, or labelling exercise (consider a Bingo or Word Scramble review at the end)
-4. **Reading** — passage + comprehension exercises (true/false, multiple choice, gap fill)
-5. **Listening** — audio placeholder + comprehension task
-6. **Speaking** — discussion prompts or role-play adapted for one-on-one — a good spot for a dice-roller or spin-wheel prompt generator
-7. **Grammar** — follow the **Meaning → Form → Pronunciation** sequence above: context + CCQs → form breakdown → pronunciation focus → controlled practice → freer/personalized practice (MadLibs or open speaking)
-8. **Pronunciation** (when applicable) — pronunciation focus exercise
-9. **Writing** (when applicable) — guided writing prompt
-10. **Homework** — homework cover + task slides
-11. **Review / Wrap-up** — optional recap slide; a Virtual Breakout or dice-driven review is a good option here instead of a plain summary
+2. **Bridge** — short game/communicative task connecting to the previous lesson's skill (see 🌉 Bridge Slide standards above) — always before the Warm-Up
+3. **Lead-in / Warm-Up** — warm-up activity (topic activation, image discussion, spin the wheel, dice-roll prompt)
+4. **Vocabulary** — word list, matching, or labelling exercise (consider a Bingo or Word Scramble review at the end)
+5. **Reading** — passage + comprehension exercises (true/false, multiple choice, gap fill)
+6. **Listening** — audio placeholder + comprehension task
+7. **Speaking** — discussion prompts or role-play adapted for one-on-one — a good spot for a dice-roller or spin-wheel prompt generator
+8. **Grammar** — follow the **Meaning → Form → Pronunciation** sequence above: context + CCQs → form breakdown → pronunciation focus → controlled practice → freer/personalized practice (MadLibs or open speaking)
+9. **Pronunciation** (when applicable) — pronunciation focus exercise
+10. **Writing** (when applicable) — guided writing prompt
+11. **Homework** — homework cover + task slides
+12. **Review / Wrap-up** — optional recap slide; a Virtual Breakout or dice-driven review is a good option here instead of a plain summary
 
 Use this order as the default; deviate only if the book's lesson flow demands it.
 
@@ -1222,6 +1548,7 @@ Use this order as the default; deviate only if the book's lesson flow demands it
   - Example: `index_backup_20260706_1039.html`
 - Good moments to back up: after finishing each section, after any major fix, before attempting complex changes, and whenever asked to "save a backup"
 - Backup files are excluded from git via `.gitignore` (see AEF-Courses Deployment section) — they're a local safety net only, not meant to be committed
+- **Retention cap — max 2 backups per lesson at any time.** Before saving a new backup, check how many `index_backup_*.html` files already exist in that lesson's folder. If there are already 3 or more, delete the older ones first, keeping only the single most recent existing backup, then save the new one (so at most 2 remain after the save). Never let backups pile up unchecked — a growing pile of old backups is clutter, not safety.
 
 ---
 
@@ -1260,7 +1587,7 @@ Before considering a lesson complete, verify:
 - [ ] No raw audio filenames visible — all audio uses native `<audio controls>` in styled pill wrapper, with nothing else inside the audio container (no glued-on caption/label)
 - [ ] All image spots have styled placeholder `<div>`s
 - [ ] Navigation bar shows correct slide count and dots
-- [ ] Notes system: opens/closes on all slides, cover behaviour correct; toolbar has B/U + 4 highlight colors (yellow/green/pink/blue) + ✕ remove-highlight, same-color click toggles off; Notes button label toggles "📝 Notes" ↔ "✕ Close"
+- [ ] Notes system: opens/closes on all slides, cover behaviour correct; toolbar has B/U + 4 highlight colors (yellow/green/pink/blue) + ✕ remove-highlight, same-color click toggles off; Notes button label toggles "📝 Notes" ↔ "✕ Close"; dragging the panel then closing and reopening it always returns it to its default position (see 📒 Notes System → Draggable panel always resets)
 - [ ] Nav bar shows **both** 💾 Save Notes (`#2E2A6B`) and 🖨️ Print Lesson (`#0E5A8A`) as two distinct buttons — neither replaces the other
 - [ ] "💾 Save Notes" button: opens a printable summary page of every slide with notes (or alerts "No notes to save yet!" if none)
 - [ ] "🖨️ Print Lesson" button: all slides print one per page in original layout; cover page gets `.lesson-link-print` banner (lesson title + link); every other slide gets small grey `::before` page header; teacher's notes print at the bottom of relevant pages in light-blue block
@@ -1270,6 +1597,8 @@ Before considering a lesson complete, verify:
 - [ ] Wordbank exercises use the correct click pattern — Case A (click-tile-to-place) if every word is used unchanged, Case B (typed blank + click-to-mark-used) if any word changes form
 - [ ] Non-homework example numbering verified against the actual book page (never assumed); example answer words use the green highlight chip, not blue italic/underline; example placement follows the odd/even centering logic (see 🟢 Example Presentation Standards)
 - [ ] Arrow keys don't trigger navigation while typing in inputs or notes
+- [ ] A Bridge slide (🌉 banner) sits right after the Cover and before the Warm-Up, connecting to the previous lesson's skill through a short game/task — never stated explicitly as "review" (see 🌉 Bridge Slide standards)
+- [ ] Warm-Up includes at least one active/interactive element (Myth or Fact, guess-the-number, what's-wrong-with-this-picture, story, would-you-rather, dice/wheel) — not just a quote + questions; and the format differs from the previous lesson (see 🎬 Warm-Up Standards)
 - [ ] Spin the Wheel redraws on slide entry (if present)
 - [ ] Multi-column exercises follow the top-to-bottom, left-to-right column order rule
 - [ ] Homework slides: no book-reference letters/track numbers anywhere visible (see Homework Exercise Standards)
@@ -1282,7 +1611,7 @@ Before considering a lesson complete, verify:
 - [ ] Backup saved directly inside the lesson's own folder (no `backups/` subfolder) with date-time filename `index_backup_YYYYMMDD_HHMM.html`
 - [ ] Lesson folder lives inside `AEF-Courses/`, with no leftover nested `.git` folder
 - [ ] 🏠 All-Courses link present on the cover (bottom left, `href="../index.html"`) — see standard above
-- [ ] Saved-PDF link (`[LESSON_URL]` in `printAll()` and the cover banner) uses `https://teacher-nanda.github.io/AEF-Courses/[FOLDER]/index.html`
+- [ ] Saved-PDF link (`[LESSON_URL]` in `printAll()` and the cover banner) uses `https://teacher-nanda.github.io/Conversational-English/[FOLDER]/index.html`
 - [ ] Lesson added as a card in `AEF-Courses/index.html`'s `courses` list
 - [ ] Lesson URL added to the **🔗 Live Lesson URLs** table above
 
@@ -1308,7 +1637,7 @@ Claude will build the lesson matching all standards above exactly, without askin
 The teacher does not need to repeat any of the points below in their prompt — they are permanent standing behavior for every new lesson:
 
 - **Check every single rule in this file** — not just the sections that seem obviously relevant to the lesson at hand. Go through structure, banners, column-order, homework rules, cover/homework-cover spec, notes system, print/PDF setup, backups, and American English spelling before considering the lesson done.
-- **Be creative** — don't default to the plainest possible exercise type. Reach for the Speaking Activities / gamified mechanics (dice, wheel, MadLibs, bingo, breakout, timelines, CCQs) wherever they fit, without being asked.
+- **Be creative** — don't default to the plainest possible exercise type. Reach for the Speaking Activities / gamified mechanics (dice, wheel, MadLibs, bingo, breakout, timelines, CCQs) wherever they fit, without being asked. **This applies to the Warm-Up above all — see 🎬 Warm-Up Standards.**
 - **When in doubt, check a previous lesson before asking the teacher** — AEF4-3A is the reference implementation; if a convention isn't crystal clear from this file, see how an existing lesson actually handled that same situation and match it, rather than guessing or interrupting with a question. **Never invent a new "standard" by copying a pattern from a different lesson file without first verifying it against the current lesson's own book page** — this has caused real errors (see 🟢 Example Presentation Standards).
 - **Leave clearly labeled placeholders for any image or audio file not yet provided** — never invent content or silently skip a media slot. A styled placeholder `<div>` (images) or asking the teacher for the expected filename (audio) is correct; leaving the spot blank or inventing a fake file is not.
 - **Copy from the book as much as possible** — exercise wording, sentence order, and the answer key should match the textbook exactly. Only the interaction mechanic changes to fit an on-screen click/type format (see Exercise Type Reference) — never paraphrase or invent book content.
