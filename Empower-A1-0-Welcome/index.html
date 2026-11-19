@@ -1076,12 +1076,86 @@ body { background:#12304F; }
 
 .deckcard .dk-t:empty{display:none}
 
+
+/* ===== EDITORIAL THEME (welcome) ===== */
+:root { --navy:#1F2A24; --coral:#A0526B; --sky:#EEE6DB; --mint:#2F5F66; --lemon:#EEE6DB; --lilac:#D9CFB8; --paper:#FBF8F1; --mist:#EEE6DB;
+  --serif:'Fraunces','Playfair Display',Georgia,'Times New Roman',serif; }
+body { background:#FBF8F1 !important; color:#1F2A24 !important; }
+.slide { background:#FBF8F1; }
+h2 { font-family:var(--serif) !important; font-weight:600 !important; letter-spacing:-.01em; color:#1F2A24 !important; }
+h2::after { width:56px !important; height:2px !important; border-radius:0 !important; margin-top:10px !important; background:#A0526B !important; }
+h3,h4 { font-family:var(--serif); color:#1F2A24; }
+.banner { background:transparent !important; color:#2F5F66 !important; text-shadow:none !important; font-family:'DM Sans','Segoe UI',sans-serif !important;
+  font-size:1rem !important; font-weight:700 !important; letter-spacing:.2em !important; text-transform:uppercase; padding:16px 48px 12px !important;
+  border-bottom:1px solid #D9CFB8; gap:12px !important; }
+.banner .ico { color:#A0526B; flex:none; }
+.instruction { border-left:2px solid #A0526B !important; color:#1F2A24 !important; }
+.gram-note { background:#EEE6DB !important; border:none !important; border-left:3px solid #A0526B !important; border-radius:2px !important; color:#1F2A24 !important; }
+.person-card, .tf-row, .card { border-radius:4px !important; box-shadow:none !important; border:1px solid #D9CFB8 !important; background:#fff; }
+.btn-check, .btn-reset, .btn-suggest, .btn-akey, .btn-roul { border-radius:2px !important; box-shadow:none !important; border:1.5px solid #1F2A24 !important;
+  background:#1F2A24 !important; color:#fff !important; font-weight:600; letter-spacing:.04em; }
+.btn-reset, .btn-akey { background:transparent !important; color:#1F2A24 !important; }
+.btn-check:hover, .btn-reset:hover, .btn-suggest:hover, .btn-akey:hover, .btn-roul:hover { transform:none !important; box-shadow:none !important; background:#A0526B !important; border-color:#A0526B !important; color:#fff !important; }
+.example-badge { background:#2F5F66 !important; border-radius:50% !important; }
+.sticky-bank { background:#FBF8F1 !important; border-bottom:1px solid #D9CFB8 !important; }
+#nav { background:rgba(31,42,36,.96) !important; }
+.dot.active { background:#A0526B !important; }
+#progBar { background:#A0526B !important; height:3px !important; }
+.pe, .person-card .pe { filter:grayscale(.55) contrast(.95); }
+/* boxes */
+.read-box, .qcard, .audio-box, .gb-box, .step-card { border:1px solid #D9CFB8 !important; border-radius:4px !important; box-shadow:none !important; background:#fff; }
+.read-box h3, .gb-box h3, .qcard h3 { color:#A0526B !important; }
+.ans-input { background:#EEE6DB !important; border-bottom:1.5px solid #1F2A24 !important; border-radius:2px !important; }
+button { border-radius:2px; }
+.audio-box, .audio-box.pending { background:#EEE6DB !important; color:#1F2A24 !important; border:1px dashed #5C665E !important; }
+#notesPanel #notesToolbar button[title="Yellow"] { background:#FFE600 !important; }
+#notesPanel #notesToolbar button[title="Green"] { background:#90EE90 !important; }
+#notesPanel #notesToolbar button[title="Pink"] { background:#FFB3C6 !important; }
+#notesPanel #notesToolbar button[title="Blue"] { background:#ADD8E6 !important; }
+#notesPanel #notesToolbar button[title="Remove highlight"] { color:#5C665E !important; }
+/* chrome */
+.banner::after, .banner::before { display:none !important; content:none !important; }
+#notesBtn, #homeBtn { background:#EEE6DB !important; color:#1F2A24 !important; border:none !important; outline:none !important; border-radius:3px !important; box-shadow:none !important; font-weight:600; letter-spacing:.05em; display:inline-flex; align-items:center; gap:8px; }
+#notesBtn:hover, #homeBtn:hover { background:#D9CFB8 !important; }
+#notesBtn .ico, #homeBtn .ico { width:18px; height:18px; color:#A0526B; }
+#nav button { border:none !important; outline:none !important; box-shadow:none !important; border-radius:3px !important; background:transparent !important; color:#fff !important; font-weight:600; letter-spacing:.04em; }
+#nav button:hover:not(:disabled) { background:rgba(255,255,255,.12) !important; }
+#dlNotesBtn { background:transparent !important; color:#E6D3A8 !important; }
+#nav button[onclick*="clearAllNotes"] { background:transparent !important; color:rgba(255,255,255,.6) !important; border:none !important; }
+/* notes panel */
+#notesPanel { background:#FBF8F1 !important; border:1px solid #D9CFB8 !important; border-radius:4px !important; box-shadow:0 8px 30px rgba(31,42,36,.14) !important; }
+#notesPanel #notesToolbar { background:#EEE6DB !important; border-radius:3px 3px 0 0 !important; border-bottom:1px solid #D9CFB8 !important; }
+#notesPanel #notesToolbar button { background:transparent !important; color:#1F2A24 !important; border:none !important; border-radius:3px !important; }
+#notesPanel #notesToolbar button:hover { background:#D9CFB8 !important; }
+#notesPanel #notesToolbar button[title="Yellow"], #notesPanel #notesToolbar button[title="Green"], #notesPanel #notesToolbar button[title="Pink"], #notesPanel #notesToolbar button[title="Blue"] { border-radius:50% !important; width:16px !important; height:16px !important; opacity:.85; }
+#notesPanel #notesTA { background:#FBF8F1 repeating-linear-gradient(transparent,transparent 31px,#D9CFB8 31px,#D9CFB8 32px) !important; color:#1F2A24 !important; font-weight:500 !important; border-radius:0 0 3px 3px !important; }
+#notesPanel #notesTA:empty::before { color:#5C665E !important; }
+#notesPanel #notesTA [style*="background-color"] { color:#1F2A24 !important; }
+/* cover */
+#s1, #hw-cover { background:#F2EBDF !important; color:#1F2A24; display:flex; flex-direction:column; align-items:stretch !important; justify-content:flex-start !important; padding:0 !important; overflow:hidden; }
+#s1 .cv-top, #hw-cover .cv-top { flex:1; display:flex; flex-direction:column; justify-content:center; padding:48px 9vw 20px; position:relative; z-index:2; }
+.cv-kicker { font-family:'DM Sans',sans-serif; font-size:1.05rem; font-weight:700; letter-spacing:.28em; text-transform:uppercase; color:#A0526B; display:flex; align-items:center; gap:12px; }
+.cv-kicker .ico { width:26px; height:26px; }
+.cv-brand { font-family:'DM Sans',sans-serif; font-size:1.2rem; letter-spacing:.06em; color:#5C665E; margin-top:6px; }
+.cv-title { font-family:var(--serif); font-weight:600; font-size:clamp(3.2rem,8vw,7rem); line-height:1.02; letter-spacing:-.025em; color:#1F2A24; margin:26px 0 18px; max-width:1100px; }
+.cv-title em { font-style:italic; font-weight:500; color:#A0526B; }
+.cv-rule { width:84px; height:2px; background:#A0526B; margin:4px 0 20px; }
+.cv-sub { font-family:'DM Sans',sans-serif; font-size:1.35rem; color:#5C665E; max-width:760px; line-height:1.5; }
+.cv-art { display:block; width:100%; height:34vh; min-height:200px; flex:none; }
+.cv-actions { display:flex; align-items:center; gap:36px; margin-top:34px; }
+.cv-home { color:#5C665E; text-decoration:none; display:inline-flex; align-items:center; gap:8px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; font-size:.9rem; }
+.cv-home:hover { color:#A0526B; }
+.cv-home .ico { width:18px; height:18px; }
+#s1 button[onclick^="goToId"] { background:transparent !important; color:#1F2A24 !important; border:none !important; border-bottom:2px solid #A0526B !important; border-radius:0 !important; box-shadow:none !important; font-weight:700 !important; letter-spacing:.14em; text-transform:uppercase; font-size:.9rem !important; padding:6px 2px !important; cursor:pointer; }
+#s1 button[onclick^="goToId"]:hover { color:#A0526B !important; }
+.cover-bubble, .cover-heart { display:none !important; }
 </style>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&display=swap" rel="stylesheet">
 </head>
 <body>
 <div id="progBar"></div>
-<button id="homeBtn" onclick="goTo(0)">🏠</button>
-<button id="notesBtn" onclick="toggleNotes()">📝 Notes</button>
+<button id="homeBtn" onclick="goTo(0)"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/></svg></button>
+<button id="notesBtn" onclick="toggleNotes()"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/></svg> Notes</button>
 <div id="notesPanel">
   <div id="notesToolbar"><span id="notesDragHandle" title="Drag to move">⠷⠷</span>
     <button onclick="notesFormat('bold')" title="Bold"><b>B</b></button>
@@ -1099,25 +1173,10 @@ body { background:#12304F; }
 
 <div id="deck">
 
-<div class="slide active" id="s1">
-  <div class="cover-bubble cb1" aria-hidden="true">Hello!</div>
-  <div class="cover-bubble cb2" aria-hidden="true">I don't understand.</div>
-  <div class="cover-bubble cb3" aria-hidden="true">One more time, please.</div>
-  <div class="cover-bubble cb4" aria-hidden="true">Thank you!</div>
-  <div class="cover-heart h1" aria-hidden="true">🎈</div><div class="cover-heart h2" aria-hidden="true">📚</div><div class="cover-heart h3" aria-hidden="true">🎈</div><div class="cover-heart h4" aria-hidden="true">🗣️</div>
-  <div class="title-inner">
-    <div class="title-label">Conversational English</div>
-    <div class="title-sub">with teacher Nanda</div>
-    <div class="title-main">Hello,<br><span class="title-accent">English!</span></div>
-    <a href="../index.html" title="All Courses" style="position:absolute;bottom:70px;left:32px;font-size:1.7rem;line-height:1;text-decoration:none;filter:drop-shadow(0 1px 3px rgba(0,0,0,.3));z-index:5;">🏠</a>
-    <div style="position:absolute;bottom:70px;right:32px;z-index:5;">
-      <button onclick="goToId('hw-cover')" style="background:#1C2B3A;color:#fff;border:none;border-radius:10px;padding:11px 24px;font-size:.95rem;font-weight:700;cursor:pointer;letter-spacing:.03em;">📝 Homework</button>
-    </div>
-  </div>
-</div>
+<div class="slide active" id="s1"><div class="cv-top"><div class="cv-kicker"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H11l-5 4v-4H4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span>Welcome</span></div><div class="cv-brand">Conversational English &middot; with teacher Nanda</div><div class="cv-title">Hello,<br><em>English!</em></div><div class="cv-rule"></div><div class="cv-actions"><button onclick="goToId('hw-cover')">Homework &rarr;</button><a class="cv-home" href="../index.html" title="All Courses"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/></svg><span>All courses</span></a></div></div><svg class="cv-art" viewBox="0 0 1600 400" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><circle cx="1180" cy="200" r="64" fill="#EBC27F" opacity=".9"/><polygon points="0,400 0,278 80,276 160,270 240,266 320,264 400,264 480,265 560,263 640,257 720,248 800,241 880,239 960,243 1040,251 1120,260 1200,266 1280,267 1360,266 1440,265 1520,267 1600,271 1680,276 1600,400" fill="#D3E2E0" opacity="1"/><polygon points="0,400 0,300 80,301 160,300 240,295 320,289 400,284 480,283 560,287 640,294 720,303 800,308 880,310 960,308 1040,306 1120,306 1200,308 1280,311 1360,311 1440,307 1520,300 1600,291 1680,285 1600,400" fill="#A9CBC7" opacity="1"/><polygon points="0,400 0,323 80,322 160,325 240,332 320,339 400,344 480,346 560,344 640,341 720,340 800,340 880,342 960,342 1040,339 1120,333 1200,326 1280,321 1360,321 1440,324 1520,329 1600,334 1680,336 1600,400" fill="#72A5A2" opacity="1"/><polygon points="0,400 0,379 80,380 160,378 240,375 320,373 400,372 480,373 560,373 640,371 720,367 800,362 880,359 960,358 1040,361 1120,366 1200,371 1280,374 1360,374 1440,373 1520,373 1600,375 1680,378 1600,400" fill="#3F7A7C" opacity="1"/></svg></div>
 
 <div class="slide" id="s-name">
-  <div class="banner banner-bridge">🌉 Hello!</div>
+  <div class="banner banner-bridge"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 17h20"/><path d="M4 17c0-5 3-8 8-8s8 3 8 8"/><path d="M8 17v-6M12 17V9M16 17v-6"/></svg><span>Hello!</span></div>
   <div class="slide-main"><div class="content">
     <h2>Hello! I'm Nanda.</h2>
     <p class="instruction">Let&rsquo;s practice.</p>
@@ -1135,7 +1194,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="s-map">
-  <div class="banner banner-leadin">🎯 Lead-in</div>
+  <div class="banner banner-leadin"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r=".6"/></svg><span>Lead-in</span></div>
   <div class="slide-main"><div class="content">
     <h2>How we learn together</h2>
     <p class="instruction">This is our plan for every lesson.</p>
@@ -1146,7 +1205,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="s-cl1">
-  <div class="banner banner-vocab">📚 Vocabulary</div>
+  <div class="banner banner-vocab"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l9-9h8v8l-9 9z"/><circle cx="15.5" cy="8.5" r="1.2"/></svg><span>Vocabulary</span></div>
   <div class="slide-main"><div class="content">
     <h2>Classroom language</h2>
     <p class="instruction">These words are in every lesson.</p>
@@ -1157,7 +1216,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="s-cl2">
-  <div class="banner banner-vocab">📚 Vocabulary</div>
+  <div class="banner banner-vocab"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l9-9h8v8l-9 9z"/><circle cx="15.5" cy="8.5" r="1.2"/></svg><span>Vocabulary</span></div>
   <div class="slide-main"><div class="content">
     <h2>Match it!</h2>
     <p class="instruction">Listen to the command.<br>Say the <b>number</b> of the right picture.<br>Then say the word.</p>
@@ -1168,7 +1227,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="s-help">
-  <div class="banner banner-vocab">📚 Vocabulary</div>
+  <div class="banner banner-vocab"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l9-9h8v8l-9 9z"/><circle cx="15.5" cy="8.5" r="1.2"/></svg><span>Vocabulary</span></div>
   <div class="slide-main"><div class="content">
     <h2>Help phrases</h2>
     <p class="instruction">These phrases help you in our online lessons.<br>Say each phrase with me.</p>
@@ -1179,7 +1238,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="s-help2">
-  <div class="banner banner-vocab">📚 Vocabulary</div>
+  <div class="banner banner-vocab"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l9-9h8v8l-9 9z"/><circle cx="15.5" cy="8.5" r="1.2"/></svg><span>Vocabulary</span></div>
   <div class="slide-main"><div class="content">
     <h2>Which phrase?</h2>
     <p class="instruction">What do you say?<br>Say the correct phrase to me.</p>
@@ -1188,7 +1247,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="s-alpha">
-  <div class="banner banner-vocab">📚 Vocabulary</div>
+  <div class="banner banner-vocab"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l9-9h8v8l-9 9z"/><circle cx="15.5" cy="8.5" r="1.2"/></svg><span>Vocabulary</span></div>
   <div class="slide-main"><div class="content">
     <h2>The alphabet</h2>
     <p class="instruction">Say each letter with me.</p>
@@ -1199,7 +1258,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="s-spell">
-  <div class="banner banner-speaking">🗣️ Speaking</div>
+  <div class="banner banner-speaking"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H11l-5 4v-4H4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span>Speaking</span></div>
   <div class="slide-main"><div class="content">
     <h2>Spell your name</h2>
     <p class="instruction">How do you spell your name?<br>Spell it with me.</p>
@@ -1212,7 +1271,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="s-why">
-  <div class="banner banner-speaking">🗣️ Speaking</div>
+  <div class="banner banner-speaking"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H11l-5 4v-4H4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span>Speaking</span></div>
   <div class="slide-main"><div class="content">
     <h2>Why English?</h2>
     <p class="instruction">Why do you need English?<br>Say: <b>I need English for &hellip;</b></p>
@@ -1223,7 +1282,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="s-cp">
-  <div class="banner banner-review">🏁 Checkpoint</div>
+  <div class="banner banner-review"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg><span>Checkpoint</span></div>
   <div class="slide-main"><div class="content">
     <h2>I can&hellip;</h2>
     <p class="instruction">What can you do now?<br>What do you want to practice again?</p>
@@ -1235,7 +1294,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="s-next">
-  <div class="banner banner-review">🏁 Plan together</div>
+  <div class="banner banner-review"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg><span>Plan together</span></div>
   <div class="slide-main"><div class="content">
     <h2>What's next?</h2>
     <p class="instruction">What is your next step?</p>
@@ -1249,15 +1308,9 @@ body { background:#12304F; }
   </div></div>
 </div>
 
-<div class="slide" id="hw-cover">
-  <div class="title-inner">
-    <div class="hw-badge">📝 Homework</div>
-    <div class="title-main">Hello,<br><span class="title-accent">English!</span></div>
-  </div>
-</div>
-
+<div class="slide" id="hw-cover"><div class="cv-top"><div class="cv-kicker"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/></svg><span>Homework</span></div><div class="cv-brand">Conversational English &middot; with teacher Nanda</div><div class="cv-title">Hello,<br><em>English!</em></div><div class="cv-rule"></div><div class="cv-sub">Homework</div></div><svg class="cv-art" viewBox="0 0 1600 400" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><circle cx="1180" cy="200" r="64" fill="#EBC27F" opacity=".9"/><polygon points="0,400 0,278 80,276 160,270 240,266 320,264 400,264 480,265 560,263 640,257 720,248 800,241 880,239 960,243 1040,251 1120,260 1200,266 1280,267 1360,266 1440,265 1520,267 1600,271 1680,276 1600,400" fill="#D3E2E0" opacity="1"/><polygon points="0,400 0,300 80,301 160,300 240,295 320,289 400,284 480,283 560,287 640,294 720,303 800,308 880,310 960,308 1040,306 1120,306 1200,308 1280,311 1360,311 1440,307 1520,300 1600,291 1680,285 1600,400" fill="#A9CBC7" opacity="1"/><polygon points="0,400 0,323 80,322 160,325 240,332 320,339 400,344 480,346 560,344 640,341 720,340 800,340 880,342 960,342 1040,339 1120,333 1200,326 1280,321 1360,321 1440,324 1520,329 1600,334 1680,336 1600,400" fill="#72A5A2" opacity="1"/><polygon points="0,400 0,379 80,380 160,378 240,375 320,373 400,372 480,373 560,373 640,371 720,367 800,362 880,359 960,358 1040,361 1120,366 1200,371 1280,374 1360,374 1440,373 1520,373 1600,375 1680,378 1600,400" fill="#3F7A7C" opacity="1"/></svg></div>
 <div class="slide" id="hw-1">
-  <div class="banner banner-hw">📝 Homework</div>
+  <div class="banner banner-hw"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/></svg><span>Homework</span></div>
   <div class="slide-main"><div class="content">
     <h2>HW1 &mdash; What do you do?</h2>
     <p class="instruction">Read the situation.<br>Choose the right classroom command.</p>
@@ -1268,7 +1321,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="hw-2">
-  <div class="banner banner-hw">📝 Homework</div>
+  <div class="banner banner-hw"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/></svg><span>Homework</span></div>
   <div class="slide-main"><div class="content">
     <h2>HW2 &mdash; Help phrases</h2>
     <p class="instruction">Put the words in order to make help phrases.</p>
@@ -1277,7 +1330,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="hw-3">
-  <div class="banner banner-hw">📝 Homework</div>
+  <div class="banner banner-hw"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/></svg><span>Homework</span></div>
   <div class="slide-main"><div class="content">
     <h2>HW3 &mdash; The alphabet</h2>
     <p class="instruction">Read the letters.<br>Write the word.</p>
@@ -1296,9 +1349,9 @@ body { background:#12304F; }
   <div id="dots"></div>
   <div id="counter">1/1</div>
   <button id="nextBtn" onclick="goTo(current+1)">Next ▶</button>
-  <button id="dlNotesBtn" onclick="savePDF()" style="margin-left:10px;padding:5px 12px;background:#2E2A6B;color:#fff;border:none;border-radius:7px;font-size:.82rem;cursor:pointer;font-family:inherit;">💾 Save Notes</button>
+  <button id="dlNotesBtn" onclick="savePDF()" style="margin-left:10px;padding:5px 12px;background:#2E2A6B;color:#fff;border:none;border-radius:7px;font-size:.82rem;cursor:pointer;font-family:inherit;">Save Notes</button>
   
-  <button onclick="this.blur();clearAllNotes()" title="Delete all notes and start a new lesson" style="margin-left:6px;padding:5px 12px;background:#8B2E2E;color:#fff;border:none;border-radius:7px;font-size:.82rem;cursor:pointer;font-family:inherit;">🗑️ Clear Notes</button>
+  <button onclick="this.blur();clearAllNotes()" title="Delete all notes and start a new lesson" style="margin-left:6px;padding:5px 12px;background:#8B2E2E;color:#fff;border:none;border-radius:7px;font-size:.82rem;cursor:pointer;font-family:inherit;">Clear Notes</button>
 </div>
 
 <script>
@@ -1402,7 +1455,7 @@ function toggleNotes(){
   var panel = document.getElementById('notesPanel');
   panel.classList.toggle('open', notesOpen);
   if (current === 0) panel.classList.toggle('cover', notesOpen);
-  document.getElementById('notesBtn').textContent = notesOpen ? '✕ Close' : '📝 Notes';
+  document.getElementById('notesBtn').textContent = notesOpen ? '✕ Close' : '<svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/></svg> Notes';
   /* reset position on close */
   if (!notesOpen) { panel.style.left=''; panel.style.top=''; panel.style.right=''; panel.style.bottom=''; panel.style.transform=''; }
 }
@@ -1935,7 +1988,7 @@ function savePDF(){
     '<h1>'+document.title.replace(/^Lesson \d+\s*[—\-]\s*/,'')+'</h1><p class="dt">📅 '+today+'</p>'+
     '<div class="row"><p>Below are the notes from our class. Click the button to open the lesson material and the homework.</p>'+
     '<a class="bigbtn lesson" href="'+LESSON+'" target="_blank">▶ Open the lesson</a></div></div><!--hero-v3-->'+
-    (cards?'<h2 class="notes-title">📝 Notes from class</h2>':'')+cards+progressHTML()+'</body></html>';
+    (cards?'<h2 class="notes-title"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/></svg> Notes from class</h2>':'')+cards+progressHTML()+'</body></html>';
   win.document.write(html);
   win.document.close();
   setTimeout(function(){ win.print(); }, 700);

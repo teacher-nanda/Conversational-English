@@ -1082,12 +1082,86 @@ body { background:#12304F; }
 .ccard.asked{opacity:.35;background:#f1f1f1;box-shadow:none}
 .ccard.asked .cc-city{text-decoration:line-through;text-decoration-thickness:3px}
 
+
+/* ===== EDITORIAL THEME (world) ===== */
+:root { --navy:#1F2A24; --coral:#C2573A; --sky:#EFE7D9; --mint:#2E5A74; --lemon:#EFE7D9; --lilac:#D9CFB8; --paper:#FBF8F1; --mist:#EFE7D9;
+  --serif:'Fraunces','Playfair Display',Georgia,'Times New Roman',serif; }
+body { background:#FBF8F1 !important; color:#1F2A24 !important; }
+.slide { background:#FBF8F1; }
+h2 { font-family:var(--serif) !important; font-weight:600 !important; letter-spacing:-.01em; color:#1F2A24 !important; }
+h2::after { width:56px !important; height:2px !important; border-radius:0 !important; margin-top:10px !important; background:#C2573A !important; }
+h3,h4 { font-family:var(--serif); color:#1F2A24; }
+.banner { background:transparent !important; color:#2E5A74 !important; text-shadow:none !important; font-family:'DM Sans','Segoe UI',sans-serif !important;
+  font-size:1rem !important; font-weight:700 !important; letter-spacing:.2em !important; text-transform:uppercase; padding:16px 48px 12px !important;
+  border-bottom:1px solid #D9CFB8; gap:12px !important; }
+.banner .ico { color:#C2573A; flex:none; }
+.instruction { border-left:2px solid #C2573A !important; color:#1F2A24 !important; }
+.gram-note { background:#EFE7D9 !important; border:none !important; border-left:3px solid #C2573A !important; border-radius:2px !important; color:#1F2A24 !important; }
+.person-card, .tf-row, .card { border-radius:4px !important; box-shadow:none !important; border:1px solid #D9CFB8 !important; background:#fff; }
+.btn-check, .btn-reset, .btn-suggest, .btn-akey, .btn-roul { border-radius:2px !important; box-shadow:none !important; border:1.5px solid #1F2A24 !important;
+  background:#1F2A24 !important; color:#fff !important; font-weight:600; letter-spacing:.04em; }
+.btn-reset, .btn-akey { background:transparent !important; color:#1F2A24 !important; }
+.btn-check:hover, .btn-reset:hover, .btn-suggest:hover, .btn-akey:hover, .btn-roul:hover { transform:none !important; box-shadow:none !important; background:#C2573A !important; border-color:#C2573A !important; color:#fff !important; }
+.example-badge { background:#2E5A74 !important; border-radius:50% !important; }
+.sticky-bank { background:#FBF8F1 !important; border-bottom:1px solid #D9CFB8 !important; }
+#nav { background:rgba(31,42,36,.96) !important; }
+.dot.active { background:#C2573A !important; }
+#progBar { background:#C2573A !important; height:3px !important; }
+.pe, .person-card .pe { filter:grayscale(.55) contrast(.95); }
+/* boxes */
+.read-box, .qcard, .audio-box, .gb-box, .step-card { border:1px solid #D9CFB8 !important; border-radius:4px !important; box-shadow:none !important; background:#fff; }
+.read-box h3, .gb-box h3, .qcard h3 { color:#C2573A !important; }
+.ans-input { background:#EFE7D9 !important; border-bottom:1.5px solid #1F2A24 !important; border-radius:2px !important; }
+button { border-radius:2px; }
+.audio-box, .audio-box.pending { background:#EFE7D9 !important; color:#1F2A24 !important; border:1px dashed #5C665E !important; }
+#notesPanel #notesToolbar button[title="Yellow"] { background:#FFE600 !important; }
+#notesPanel #notesToolbar button[title="Green"] { background:#90EE90 !important; }
+#notesPanel #notesToolbar button[title="Pink"] { background:#FFB3C6 !important; }
+#notesPanel #notesToolbar button[title="Blue"] { background:#ADD8E6 !important; }
+#notesPanel #notesToolbar button[title="Remove highlight"] { color:#5C665E !important; }
+/* chrome */
+.banner::after, .banner::before { display:none !important; content:none !important; }
+#notesBtn, #homeBtn { background:#EFE7D9 !important; color:#1F2A24 !important; border:none !important; outline:none !important; border-radius:3px !important; box-shadow:none !important; font-weight:600; letter-spacing:.05em; display:inline-flex; align-items:center; gap:8px; }
+#notesBtn:hover, #homeBtn:hover { background:#D9CFB8 !important; }
+#notesBtn .ico, #homeBtn .ico { width:18px; height:18px; color:#C2573A; }
+#nav button { border:none !important; outline:none !important; box-shadow:none !important; border-radius:3px !important; background:transparent !important; color:#fff !important; font-weight:600; letter-spacing:.04em; }
+#nav button:hover:not(:disabled) { background:rgba(255,255,255,.12) !important; }
+#dlNotesBtn { background:transparent !important; color:#E6D3A8 !important; }
+#nav button[onclick*="clearAllNotes"] { background:transparent !important; color:rgba(255,255,255,.6) !important; border:none !important; }
+/* notes panel */
+#notesPanel { background:#FBF8F1 !important; border:1px solid #D9CFB8 !important; border-radius:4px !important; box-shadow:0 8px 30px rgba(31,42,36,.14) !important; }
+#notesPanel #notesToolbar { background:#EFE7D9 !important; border-radius:3px 3px 0 0 !important; border-bottom:1px solid #D9CFB8 !important; }
+#notesPanel #notesToolbar button { background:transparent !important; color:#1F2A24 !important; border:none !important; border-radius:3px !important; }
+#notesPanel #notesToolbar button:hover { background:#D9CFB8 !important; }
+#notesPanel #notesToolbar button[title="Yellow"], #notesPanel #notesToolbar button[title="Green"], #notesPanel #notesToolbar button[title="Pink"], #notesPanel #notesToolbar button[title="Blue"] { border-radius:50% !important; width:16px !important; height:16px !important; opacity:.85; }
+#notesPanel #notesTA { background:#FBF8F1 repeating-linear-gradient(transparent,transparent 31px,#D9CFB8 31px,#D9CFB8 32px) !important; color:#1F2A24 !important; font-weight:500 !important; border-radius:0 0 3px 3px !important; }
+#notesPanel #notesTA:empty::before { color:#5C665E !important; }
+#notesPanel #notesTA [style*="background-color"] { color:#1F2A24 !important; }
+/* cover */
+#s1, #hw-cover { background:#F1EADC !important; color:#1F2A24; display:flex; flex-direction:column; align-items:stretch !important; justify-content:flex-start !important; padding:0 !important; overflow:hidden; }
+#s1 .cv-top, #hw-cover .cv-top { flex:1; display:flex; flex-direction:column; justify-content:center; padding:48px 9vw 20px; position:relative; z-index:2; }
+.cv-kicker { font-family:'DM Sans',sans-serif; font-size:1.05rem; font-weight:700; letter-spacing:.28em; text-transform:uppercase; color:#C2573A; display:flex; align-items:center; gap:12px; }
+.cv-kicker .ico { width:26px; height:26px; }
+.cv-brand { font-family:'DM Sans',sans-serif; font-size:1.2rem; letter-spacing:.06em; color:#5C665E; margin-top:6px; }
+.cv-title { font-family:var(--serif); font-weight:600; font-size:clamp(3.2rem,8vw,7rem); line-height:1.02; letter-spacing:-.025em; color:#1F2A24; margin:26px 0 18px; max-width:1100px; }
+.cv-title em { font-style:italic; font-weight:500; color:#C2573A; }
+.cv-rule { width:84px; height:2px; background:#C2573A; margin:4px 0 20px; }
+.cv-sub { font-family:'DM Sans',sans-serif; font-size:1.35rem; color:#5C665E; max-width:760px; line-height:1.5; }
+.cv-art { display:block; width:100%; height:34vh; min-height:200px; flex:none; }
+.cv-actions { display:flex; align-items:center; gap:36px; margin-top:34px; }
+.cv-home { color:#5C665E; text-decoration:none; display:inline-flex; align-items:center; gap:8px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; font-size:.9rem; }
+.cv-home:hover { color:#C2573A; }
+.cv-home .ico { width:18px; height:18px; }
+#s1 button[onclick^="goToId"] { background:transparent !important; color:#1F2A24 !important; border:none !important; border-bottom:2px solid #C2573A !important; border-radius:0 !important; box-shadow:none !important; font-weight:700 !important; letter-spacing:.14em; text-transform:uppercase; font-size:.9rem !important; padding:6px 2px !important; cursor:pointer; }
+#s1 button[onclick^="goToId"]:hover { color:#C2573A !important; }
+.cover-bubble, .cover-heart { display:none !important; }
 </style>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&display=swap" rel="stylesheet">
 </head>
 <body>
 <div id="progBar"></div>
-<button id="homeBtn" onclick="goTo(0)">🏠</button>
-<button id="notesBtn" onclick="toggleNotes()">📝 Notes</button>
+<button id="homeBtn" onclick="goTo(0)"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/></svg></button>
+<button id="notesBtn" onclick="toggleNotes()"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/></svg> Notes</button>
 <div id="notesPanel">
   <div id="notesToolbar"><span id="notesDragHandle" title="Drag to move">⠷⠷</span>
     <button onclick="notesFormat('bold')" title="Bold"><b>B</b></button>
@@ -1105,25 +1179,10 @@ body { background:#12304F; }
 
 <div id="deck">
 
-<div class="slide active" id="s1">
-  <div class="cover-bubble cb1" aria-hidden="true">Hi, I'm Rubén.</div>
-  <div class="cover-bubble cb2" aria-hidden="true">I'm from Mexico.</div>
-  <div class="cover-bubble cb3" aria-hidden="true">Nice to meet you!</div>
-  <div class="cover-bubble cb4" aria-hidden="true">Are you from the U.S.?</div>
-  <div class="cover-heart h1" aria-hidden="true">🎈</div><div class="cover-heart h2" aria-hidden="true">🌎</div><div class="cover-heart h3" aria-hidden="true">🎈</div><div class="cover-heart h4" aria-hidden="true">✈️</div>
-  <div class="title-inner">
-    <div class="title-label">Conversational English</div>
-    <div class="title-sub">with teacher Nanda</div>
-    <div class="title-main">I'm from<br><span class="title-accent">Mexico</span></div>
-    <a href="../index.html" title="All Courses" style="position:absolute;bottom:70px;left:32px;font-size:1.7rem;line-height:1;text-decoration:none;filter:drop-shadow(0 1px 3px rgba(0,0,0,.3));z-index:5;">🏠</a>
-    <div style="position:absolute;bottom:70px;right:32px;z-index:5;">
-      <button onclick="goToId('hw-cover')" style="background:#1C2B3A;color:#fff;border:none;border-radius:10px;padding:11px 24px;font-size:.95rem;font-weight:700;cursor:pointer;letter-spacing:.03em;">📝 Homework</button>
-    </div>
-  </div>
-</div>
+<div class="slide active" id="s1"><div class="cv-top"><div class="cv-kicker"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg><span>Unit 1 · Lesson A</span></div><div class="cv-brand">Conversational English &middot; with teacher Nanda</div><div class="cv-title">I&rsquo;m from<br><em>Mexico</em></div><div class="cv-rule"></div><div class="cv-actions"><button onclick="goToId('hw-cover')">Homework &rarr;</button><a class="cv-home" href="../index.html" title="All Courses"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/></svg><span>All courses</span></a></div></div><svg class="cv-art" viewBox="0 0 1600 400" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><circle cx="1180" cy="200" r="64" fill="#E5B06A" opacity=".9"/><polygon points="0,400 0,185 165,166 271,177 438,170 608,163 706,162 797,142 947,184 1107,186 1221,155 1371,166 1531,170 1600,200 1600,400" fill="#CAD7DE"/><polygon points="0,400 0,220 109,246 218,227 357,213 448,218 546,250 711,258 839,211 932,243 1082,222 1221,215 1365,235 1528,232 1600,260 1600,400" fill="#9DB8C6"/><polygon points="0,400 0,330 80,324 160,322 240,323 320,323 400,319 480,310 560,300 640,294 720,295 800,304 880,316 960,327 1040,332 1120,331 1200,329 1280,328 1360,331 1440,336 1520,340 1600,337 1680,328 1600,400" fill="#5E8296" opacity="1"/><polygon points="0,400 0,360 80,367 160,373 240,377 320,376 400,373 480,370 560,369 640,370 720,371 800,369 880,365 960,359 1040,353 1120,350 1200,352 1280,357 1360,363 1440,367 1520,368 1600,368 1680,367 1600,400" fill="#2F4E63" opacity="1"/></svg></div>
 
 <div class="slide" id="s-chat">
-  <div class="banner banner-bridge">🌉 Hello!</div>
+  <div class="banner banner-bridge"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 17h20"/><path d="M4 17c0-5 3-8 8-8s8 3 8 8"/><path d="M8 17v-6M12 17V9M16 17v-6"/></svg><span>Hello!</span></div>
   <div class="slide-main"><div class="content">
     <h2>Hello!</h2>
     <p class="instruction">Answer the questions about you.</p>
@@ -1141,7 +1200,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="s-lead">
-  <div class="banner banner-leadin">🎯 Lead-in</div>
+  <div class="banner banner-leadin"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r=".6"/></svg><span>Lead-in</span></div>
   <div class="slide-main"><div class="content">
     <h2>Look at the flags</h2>
     <p class="instruction">Look at the picture.<br>What country flags do you see?</p>
@@ -1153,7 +1212,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="s-1a">
-  <div class="banner banner-listening">🎧 Listening &amp; Speaking</div>
+  <div class="banner banner-listening"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15v-3a8 8 0 0 1 16 0v3"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/></svg><span>Listening &amp; Speaking</span></div>
   <div class="slide-main"><div class="content">
     <h2>Hi, I'm ...</h2>
     <div style="display:flex;gap:24px;align-items:center;margin-bottom:6px;"><p class="instruction" style="flex:1;margin:0;">Listen.<br>Then say <i>Hi, I'm …</i> or <i>Hello, I'm …</i> and say your name.</p><div class="ins-audio" style="flex:1;"><div class="audio-box pending"><audio controls data-track="01.01"></audio></div></div></div>
@@ -1167,7 +1226,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="s-1b">
-  <div class="banner banner-listening">🎧 Listening &amp; Speaking</div>
+  <div class="banner banner-listening"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15v-3a8 8 0 0 1 16 0v3"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/></svg><span>Listening &amp; Speaking</span></div>
   <div class="slide-main"><div class="content">
     <h2>Three conversations</h2>
     <div style="display:flex;gap:24px;align-items:center;margin-bottom:6px;"><p class="instruction" style="flex:1;margin:0;">Read and listen to conversations 1&ndash;3.</p><div class="ins-audio" style="flex:1;"><div class="audio-box pending"><audio controls data-track="01.02"></audio></div></div></div>
@@ -1177,7 +1236,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="s-1b2">
-  <div class="banner banner-listening">🎧 Listening &amp; Speaking</div>
+  <div class="banner banner-listening"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15v-3a8 8 0 0 1 16 0v3"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/></svg><span>Listening &amp; Speaking</span></div>
   <div class="slide-main"><div class="content">
     <h2>Who is talking?</h2>
     <p class="instruction">Match the conversations with groups of people <b>a</b>&ndash;<b>c</b> in the picture.</p>
@@ -1193,7 +1252,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="s-1c">
-  <div class="banner banner-grammar">📐 Grammar</div>
+  <div class="banner banner-grammar"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1-4L16 5l3 3L8 19z"/><path d="M14 7l3 3"/></svg><span>Grammar</span></div>
   <div class="slide-main"><div class="content">
     <h2>be: I / you / we</h2>
     <p class="instruction">Complete the sentences in the chart.</p>
@@ -1212,7 +1271,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="s-gf1">
-  <div class="banner banner-grammar">📐 Grammar</div>
+  <div class="banner banner-grammar"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1-4L16 5l3 3L8 19z"/><path d="M14 7l3 3"/></svg><span>Grammar</span></div>
   <div class="slide-main"><div class="content">
     <h2>be: I / you / we</h2>
     <div style="display:flex;gap:24px;align-items:center;margin-bottom:6px;"><p class="instruction" style="flex:1;margin:0;">Listen and repeat.</p><div class="ins-audio" style="flex:1;"><div class="audio-box pending"><audio controls data-track="01.03"></audio></div></div></div>
@@ -1227,7 +1286,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="s-gf2">
-  <div class="banner banner-grammar">📐 Grammar</div>
+  <div class="banner banner-grammar"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1-4L16 5l3 3L8 19z"/><path d="M14 7l3 3"/></svg><span>Grammar</span></div>
   <div class="slide-main"><div class="content">
     <h2>Questions and short answers</h2>
     <div style="display:flex;gap:24px;align-items:center;margin-bottom:6px;"><p class="instruction" style="flex:1;margin:0;">Listen and repeat.<br>Notice the word order.</p><div class="ins-audio" style="flex:1;"><div class="audio-box pending"><audio controls data-track="01.04"></audio></div></div></div>
@@ -1242,7 +1301,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="s-gxa">
-  <div class="banner banner-grammar">📐 Grammar</div>
+  <div class="banner banner-grammar"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1-4L16 5l3 3L8 19z"/><path d="M14 7l3 3"/></svg><span>Grammar</span></div>
   <div class="slide-main"><div class="content">
     <h2>Short forms</h2>
     <p class="instruction">Say each sentence with <i>'re</i> or <i>'m</i>.</p>
@@ -1251,7 +1310,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="s-gf3">
-  <div class="banner banner-grammar">📐 Grammar</div>
+  <div class="banner banner-grammar"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1-4L16 5l3 3L8 19z"/><path d="M14 7l3 3"/></svg><span>Grammar</span></div>
   <div class="slide-main"><div class="content">
     <h2>Wh- questions</h2>
     <div style="display:flex;gap:24px;align-items:center;margin-bottom:6px;"><p class="instruction" style="flex:1;margin:0;">Listen and repeat.<br>Then ask me the questions.</p><div class="ins-audio" style="flex:1;"><div class="audio-box pending"><audio controls data-track="01.05"></audio></div></div></div>
@@ -1262,7 +1321,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="s-gxb">
-  <div class="banner banner-grammar">📐 Grammar</div>
+  <div class="banner banner-grammar"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1-4L16 5l3 3L8 19z"/><path d="M14 7l3 3"/></svg><span>Grammar</span></div>
   <div class="slide-main"><div class="content">
     <h2>Put the words in order</h2>
     <p class="instruction">Put the words in the correct order to make questions.</p>
@@ -1271,7 +1330,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="s-snd">
-  <div class="banner banner-pron">🎧 Pronunciation</div>
+  <div class="banner banner-pron"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10v4M8 7v10M12 4v16M16 8v8M20 10.5v3"/></svg><span>Pronunciation</span></div>
   <div class="slide-main"><div class="content">
     <h2>Sound and spelling: I'm, we're</h2>
     <div style="display:flex;gap:24px;align-items:center;margin-bottom:6px;"><p class="instruction" style="flex:1;margin:0;">Listen to the sound of <i>I'm</i> and <i>we're</i>.<br>Then say them with me.</p><div class="ins-audio" style="flex:1;"><div class="audio-box pending"><audio controls data-track="01.06"></audio></div></div></div>
@@ -1288,7 +1347,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="s-prac2">
-  <div class="banner banner-speaking">🗣️ Speaking</div>
+  <div class="banner banner-speaking"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H11l-5 4v-4H4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span>Speaking</span></div>
   <div class="slide-main"><div class="content">
     <h2>Now use your own name!</h2>
     <p class="instruction">Have conversations 1&ndash;3 again.<br>Make your own sentences.</p>
@@ -1297,7 +1356,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="s-cp1">
-  <div class="banner banner-review">🏁 Checkpoint 1</div>
+  <div class="banner banner-review"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg><span>Checkpoint 1</span></div>
   <div class="slide-main"><div class="content">
     <h2>Checkpoint 1</h2>
     
@@ -1311,7 +1370,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="s-2a">
-  <div class="banner banner-listening">🎧 Listening &amp; Speaking</div>
+  <div class="banner banner-listening"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15v-3a8 8 0 0 1 16 0v3"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/></svg><span>Listening &amp; Speaking</span></div>
   <div class="slide-main"><div class="content">
     <h2>Are you Rub&eacute;n?</h2>
     <div style="display:flex;gap:24px;align-items:center;margin-bottom:6px;"><p class="instruction" style="flex:1;margin:0;">Read and listen to the conversation.<br>Say the correct answer.</p><div class="ins-audio" style="flex:1;"><div class="audio-box pending"><audio controls data-track="01.07"></audio></div></div></div>
@@ -1326,7 +1385,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="s-2b">
-  <div class="banner banner-grammar">📐 Grammar</div>
+  <div class="banner banner-grammar"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1-4L16 5l3 3L8 19z"/><path d="M14 7l3 3"/></svg><span>Grammar</span></div>
   <div class="slide-main"><div class="content">
     <h2>be: I / you / we negative</h2>
     <p class="instruction">Complete the sentences in the chart.</p>
@@ -1345,7 +1404,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="s-gf4">
-  <div class="banner banner-grammar">📐 Grammar</div>
+  <div class="banner banner-grammar"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1-4L16 5l3 3L8 19z"/><path d="M14 7l3 3"/></svg><span>Grammar</span></div>
   <div class="slide-main"><div class="content">
     <h2>be: I / you / we negative</h2>
     <div style="display:flex;gap:24px;align-items:center;margin-bottom:6px;"><p class="instruction" style="flex:1;margin:0;">Listen and repeat.<br>Then say the sentences with me.</p><div class="ins-audio" style="flex:1;"><div class="audio-box pending"><audio controls data-track="01.08"></audio></div></div></div>
@@ -1360,7 +1419,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="s-gx2a">
-  <div class="banner banner-grammar">📐 Grammar</div>
+  <div class="banner banner-grammar"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1-4L16 5l3 3L8 19z"/><path d="M14 7l3 3"/></svg><span>Grammar</span></div>
   <div class="slide-main"><div class="content">
     <h2>Affirmative and negative</h2>
     <p class="instruction">Say one affirmative (+) and one negative (&ndash;) sentence for each item.</p>
@@ -1369,7 +1428,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="s-gx2b">
-  <div class="banner banner-grammar">📐 Grammar</div>
+  <div class="banner banner-grammar"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1-4L16 5l3 3L8 19z"/><path d="M14 7l3 3"/></svg><span>Grammar</span></div>
   <div class="slide-main"><div class="content">
     <h2>Short answers</h2>
     <p class="instruction">Say short answers.</p>
@@ -1378,7 +1437,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="s-2d">
-  <div class="banner banner-speaking">🗣️ Speaking</div>
+  <div class="banner banner-speaking"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H11l-5 4v-4H4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span>Speaking</span></div>
   <div class="slide-main"><div class="content">
     <h2>Make them true for you</h2>
     <p class="instruction">Read the sentences.<br>Make them true for you.<br>Then tell me.<br>Are they the same as mine?</p>
@@ -1389,7 +1448,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="s-cp2">
-  <div class="banner banner-review">🏁 Checkpoint 2</div>
+  <div class="banner banner-review"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg><span>Checkpoint 2</span></div>
   <div class="slide-main"><div class="content">
     <h2>Checkpoint 2</h2>
     
@@ -1403,7 +1462,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="s-3a">
-  <div class="banner banner-vocab">📚 Vocabulary &amp; Reading</div>
+  <div class="banner banner-vocab"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l9-9h8v8l-9 9z"/><circle cx="15.5" cy="8.5" r="1.2"/></svg><span>Vocabulary &amp; Reading</span></div>
   <div class="slide-main"><div class="content">
     <h2>Where are the cities?</h2>
     <p class="instruction">Match the countries in the box with maps 1&ndash;8.<br>Listen and check.</p>
@@ -1415,7 +1474,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="s-3b">
-  <div class="banner banner-vocab">📚 Vocabulary &amp; Reading</div>
+  <div class="banner banner-vocab"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l9-9h8v8l-9 9z"/><circle cx="15.5" cy="8.5" r="1.2"/></svg><span>Vocabulary &amp; Reading</span></div>
   <div class="slide-main"><div class="content">
     <h2>Our group</h2>
     <p class="instruction">Complete the sentences with the correct country.<br>Listen and check.</p>
@@ -1428,7 +1487,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="s-3c">
-  <div class="banner banner-vocab">📚 Vocabulary</div>
+  <div class="banner banner-vocab"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l9-9h8v8l-9 9z"/><circle cx="15.5" cy="8.5" r="1.2"/></svg><span>Vocabulary</span></div>
   <div class="slide-main"><div class="content">
     <h2>Listen and write the countries</h2>
     <div style="display:flex;gap:24px;align-items:center;margin-bottom:6px;"><p class="instruction" style="flex:1;margin:0;">Write the country for each flag.<br>Listen and check.</p><div class="ins-audio" style="flex:1;"><div class="audio-box pending"><audio controls data-track="01.11"></audio></div></div></div>
@@ -1441,7 +1500,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="s-3d">
-  <div class="banner banner-speaking">🗣️ Speaking</div>
+  <div class="banner banner-speaking"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H11l-5 4v-4H4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span>Speaking</span></div>
   <div class="slide-main"><div class="content">
     <h2>Where am I from?</h2>
     <p class="instruction">Guess my secret city.<br>Ask me: <b>Are you from &hellip; ?</b></p>
@@ -1452,7 +1511,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="s-4a">
-  <div class="banner banner-speaking">🗣️ Speaking</div>
+  <div class="banner banner-speaking"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H11l-5 4v-4H4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span>Speaking</span></div>
   <div class="slide-main"><div class="content">
     <h2>Hello, I'm Yoshi</h2>
     <p class="instruction">You are <b>Yoshi</b> from Japan.<br>You're a student.<br>Complete the conversation.</p>
@@ -1473,7 +1532,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="s-4b">
-  <div class="banner banner-speaking">🗣️ Speaking</div>
+  <div class="banner banner-speaking"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H11l-5 4v-4H4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span>Speaking</span></div>
   <div class="slide-main"><div class="content">
     <h2>A new conversation</h2>
     <p class="instruction">Choose a name and a country and have another conversation.<br>Then do it again with <b>your</b> name and <b>your</b> country.</p>
@@ -1487,7 +1546,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="s-cp3">
-  <div class="banner banner-review">🏁 Checkpoint 3</div>
+  <div class="banner banner-review"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg><span>Checkpoint 3</span></div>
   <div class="slide-main"><div class="content">
     <h2>I can&hellip;</h2>
     <p class="instruction">What can you do now?<br>What do you want to practice again?</p>
@@ -1499,7 +1558,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="s-next">
-  <div class="banner banner-review">🏁 Plan together</div>
+  <div class="banner banner-review"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg><span>Plan together</span></div>
   <div class="slide-main"><div class="content">
     <h2>What's next?</h2>
     <p class="instruction">What is your next step: A or B?</p>
@@ -1513,15 +1572,9 @@ body { background:#12304F; }
   </div></div>
 </div>
 
-<div class="slide" id="hw-cover">
-  <div class="title-inner">
-    <div class="hw-badge">📝 Homework</div>
-    <div class="title-main">I'm from<br><span class="title-accent">Mexico</span></div>
-  </div>
-</div>
-
+<div class="slide" id="hw-cover"><div class="cv-top"><div class="cv-kicker"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/></svg><span>Homework</span></div><div class="cv-brand">Conversational English &middot; with teacher Nanda</div><div class="cv-title">I&rsquo;m from<br><em>Mexico</em></div><div class="cv-rule"></div><div class="cv-sub">Homework</div></div><svg class="cv-art" viewBox="0 0 1600 400" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><circle cx="1180" cy="200" r="64" fill="#E5B06A" opacity=".9"/><polygon points="0,400 0,185 165,166 271,177 438,170 608,163 706,162 797,142 947,184 1107,186 1221,155 1371,166 1531,170 1600,200 1600,400" fill="#CAD7DE"/><polygon points="0,400 0,220 109,246 218,227 357,213 448,218 546,250 711,258 839,211 932,243 1082,222 1221,215 1365,235 1528,232 1600,260 1600,400" fill="#9DB8C6"/><polygon points="0,400 0,330 80,324 160,322 240,323 320,323 400,319 480,310 560,300 640,294 720,295 800,304 880,316 960,327 1040,332 1120,331 1200,329 1280,328 1360,331 1440,336 1520,340 1600,337 1680,328 1600,400" fill="#5E8296" opacity="1"/><polygon points="0,400 0,360 80,367 160,373 240,377 320,376 400,373 480,370 560,369 640,370 720,371 800,369 880,365 960,359 1040,353 1120,350 1200,352 1280,357 1360,363 1440,367 1520,368 1600,368 1680,367 1600,400" fill="#2F4E63" opacity="1"/></svg></div>
 <div class="slide" id="hw-1a">
-  <div class="banner banner-hw">📝 Homework</div>
+  <div class="banner banner-hw"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/></svg><span>Homework</span></div>
   <div class="slide-main"><div class="content">
     <h2>HW1 &mdash; Grammar</h2>
     <p class="instruction"><b>a.</b> Choose the correct words.</p>
@@ -1530,7 +1583,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="hw-1b">
-  <div class="banner banner-hw">📝 Homework</div>
+  <div class="banner banner-hw"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/></svg><span>Homework</span></div>
   <div class="slide-main"><div class="content">
     <h2>HW1 &mdash; Grammar</h2>
     <p class="instruction"><b>b.</b> Put the words in the correct order to make sentences and questions.</p>
@@ -1539,7 +1592,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="hw-2a">
-  <div class="banner banner-hw">📝 Homework</div>
+  <div class="banner banner-hw"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/></svg><span>Homework</span></div>
   <div class="slide-main"><div class="content">
     <h2>HW2 &mdash; Vocabulary: Countries</h2>
     <p class="instruction"><b>a.</b> Find seven countries in the word snake.</p>
@@ -1551,7 +1604,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="hw-2b">
-  <div class="banner banner-hw">📝 Homework</div>
+  <div class="banner banner-hw"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/></svg><span>Homework</span></div>
   <div class="slide-main"><div class="content">
     <h2>HW2 &mdash; Vocabulary: Countries</h2>
     <p class="instruction"><b>b.</b> Complete the sentences with the country names.<br>Use the letters in parentheses.</p>
@@ -1560,7 +1613,7 @@ body { background:#12304F; }
 </div>
 
 <div class="slide" id="hw-3">
-  <div class="banner banner-hw">📝 Homework</div>
+  <div class="banner banner-hw"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/></svg><span>Homework</span></div>
   <div class="slide-main"><div class="content">
     <h2>HW3 &mdash; Pronunciation: <i>I'm, we're</i></h2>
     <div style="display:flex;gap:24px;align-items:center;margin-bottom:6px;"><p class="instruction" style="flex:1;margin:0;"><b>a.</b> Listen to the conversation.<br>Complete the sentences.</p><div class="ins-audio" style="flex:1;"><div class="audio-box pending"><audio controls data-track="WB01.01"></audio></div></div></div>
@@ -1583,9 +1636,9 @@ body { background:#12304F; }
   <div id="dots"></div>
   <div id="counter">1/1</div>
   <button id="nextBtn" onclick="goTo(current+1)">Next ▶</button>
-  <button id="dlNotesBtn" onclick="savePDF()" style="margin-left:10px;padding:5px 12px;background:#2E2A6B;color:#fff;border:none;border-radius:7px;font-size:.82rem;cursor:pointer;font-family:inherit;">💾 Save Notes</button>
+  <button id="dlNotesBtn" onclick="savePDF()" style="margin-left:10px;padding:5px 12px;background:#2E2A6B;color:#fff;border:none;border-radius:7px;font-size:.82rem;cursor:pointer;font-family:inherit;">Save Notes</button>
   
-  <button onclick="this.blur();clearAllNotes()" title="Delete all notes and start a new lesson" style="margin-left:6px;padding:5px 12px;background:#8B2E2E;color:#fff;border:none;border-radius:7px;font-size:.82rem;cursor:pointer;font-family:inherit;">🗑️ Clear Notes</button>
+  <button onclick="this.blur();clearAllNotes()" title="Delete all notes and start a new lesson" style="margin-left:6px;padding:5px 12px;background:#8B2E2E;color:#fff;border:none;border-radius:7px;font-size:.82rem;cursor:pointer;font-family:inherit;">Clear Notes</button>
 </div>
 
 <script>
@@ -1689,7 +1742,7 @@ function toggleNotes(){
   var panel = document.getElementById('notesPanel');
   panel.classList.toggle('open', notesOpen);
   if (current === 0) panel.classList.toggle('cover', notesOpen);
-  document.getElementById('notesBtn').textContent = notesOpen ? '✕ Close' : '📝 Notes';
+  document.getElementById('notesBtn').textContent = notesOpen ? '✕ Close' : '<svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/></svg> Notes';
   /* reset position on close */
   if (!notesOpen) { panel.style.left=''; panel.style.top=''; panel.style.right=''; panel.style.bottom=''; panel.style.transform=''; }
 }
@@ -2222,7 +2275,7 @@ function savePDF(){
     '<h1>'+document.title.replace(/^Lesson \d+\s*[—\-]\s*/,'')+'</h1><p class="dt">📅 '+today+'</p>'+
     '<div class="row"><p>Below are the notes from our class. Click the button to open the lesson material and the homework.</p>'+
     '<a class="bigbtn lesson" href="'+LESSON+'" target="_blank">▶ Open the lesson</a></div></div><!--hero-v3-->'+
-    (cards?'<h2 class="notes-title">📝 Notes from class</h2>':'')+cards+progressHTML()+'</body></html>';
+    (cards?'<h2 class="notes-title"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/></svg> Notes from class</h2>':'')+cards+progressHTML()+'</body></html>';
   win.document.write(html);
   win.document.close();
   setTimeout(function(){ win.print(); }, 700);
