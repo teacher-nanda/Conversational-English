@@ -1077,80 +1077,120 @@ body { background:#12304F; }
 .deckcard .dk-t:empty{display:none}
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ===== EDITORIAL THEME (welcome) ===== */
-:root { --navy:#1F2A24; --coral:#A0526B; --sky:#EEE6DB; --mint:#2F5F66; --lemon:#EEE6DB; --lilac:#D9CFB8; --paper:#FBF8F1; --mist:#EEE6DB;
-  --serif:'Fraunces','Playfair Display',Georgia,'Times New Roman',serif; }
-body { background:#FBF8F1 !important; color:#1F2A24 !important; }
-.slide { background:#FBF8F1; }
-h2 { font-family:var(--serif) !important; font-weight:600 !important; letter-spacing:-.01em; color:#1F2A24 !important; }
+:root { --navy:#2A2433; --coral:#A0526B; --sky:#EEE6DB; --mint:#2F5F66; --lemon:#EEE6DB; --lilac:#DDD2C2; --paper:#FCF9F3; --mist:#EEE6DB;
+  --serif:'Libre Baskerville',Georgia,serif; --sans:'DM Sans','Segoe UI',sans-serif; }
+body, button, input, select, textarea { font-family:var(--sans) !important; }
+body { background:#FCF9F3 !important; color:#2A2433 !important; }
+.slide { background:#FCF9F3; }
+h2 { font-family:var(--serif) !important; font-weight:600 !important; letter-spacing:-.01em; text-transform:none; color:#2A2433 !important; }
 h2::after { width:56px !important; height:2px !important; border-radius:0 !important; margin-top:10px !important; background:#A0526B !important; }
-h3,h4 { font-family:var(--serif); color:#1F2A24; }
-.banner { background:transparent !important; color:#2F5F66 !important; text-shadow:none !important; font-family:'DM Sans','Segoe UI',sans-serif !important;
+h3,h4 { font-family:var(--serif); color:#2A2433; }
+.banner { background:transparent !important; color:#2F5F66 !important; text-shadow:none !important; font-family:var(--sans) !important;
   font-size:1rem !important; font-weight:700 !important; letter-spacing:.2em !important; text-transform:uppercase; padding:16px 48px 12px !important;
-  border-bottom:1px solid #D9CFB8; gap:12px !important; }
+  border-bottom:1px solid #DDD2C2; gap:12px !important; }
 .banner .ico { color:#A0526B; flex:none; }
-.instruction { border-left:2px solid #A0526B !important; color:#1F2A24 !important; }
-.gram-note { background:#EEE6DB !important; border:none !important; border-left:3px solid #A0526B !important; border-radius:2px !important; color:#1F2A24 !important; }
-.person-card, .tf-row, .card { border-radius:4px !important; box-shadow:none !important; border:1px solid #D9CFB8 !important; background:#fff; }
-.btn-check, .btn-reset, .btn-suggest, .btn-akey, .btn-roul { border-radius:2px !important; box-shadow:none !important; border:1.5px solid #1F2A24 !important;
-  background:#1F2A24 !important; color:#fff !important; font-weight:600; letter-spacing:.04em; }
-.btn-reset, .btn-akey { background:transparent !important; color:#1F2A24 !important; }
+.instruction { border-left:2px solid #A0526B !important; color:#2A2433 !important; }
+.gram-note { background:#EEE6DB !important; border:none !important; border-left:3px solid #A0526B !important; border-radius:2px !important; color:#2A2433 !important; }
+.person-card, .tf-row, .card { border-radius:4px !important; box-shadow:none !important; border:1px solid #DDD2C2 !important; background:#fff; }
+.btn-check, .btn-reset, .btn-suggest, .btn-akey, .btn-roul { border-radius:2px !important; box-shadow:none !important; border:1.5px solid #2A2433 !important;
+  background:#2A2433 !important; color:#fff !important; font-weight:600; letter-spacing:.04em; }
+.btn-reset, .btn-akey { background:transparent !important; color:#2A2433 !important; }
 .btn-check:hover, .btn-reset:hover, .btn-suggest:hover, .btn-akey:hover, .btn-roul:hover { transform:none !important; box-shadow:none !important; background:#A0526B !important; border-color:#A0526B !important; color:#fff !important; }
 .example-badge { background:#2F5F66 !important; border-radius:50% !important; }
-.sticky-bank { background:#FBF8F1 !important; border-bottom:1px solid #D9CFB8 !important; }
+.sticky-bank { background:#FCF9F3 !important; border-bottom:1px solid #DDD2C2 !important; }
 #nav { background:rgba(31,42,36,.96) !important; }
 .dot.active { background:#A0526B !important; }
 #progBar { background:#A0526B !important; height:3px !important; }
 .pe, .person-card .pe { filter:grayscale(.55) contrast(.95); }
 /* boxes */
-.read-box, .qcard, .audio-box, .gb-box, .step-card { border:1px solid #D9CFB8 !important; border-radius:4px !important; box-shadow:none !important; background:#fff; }
+.read-box, .qcard, .audio-box, .gb-box, .step-card { border:1px solid #DDD2C2 !important; border-radius:4px !important; box-shadow:none !important; background:#fff; }
 .read-box h3, .gb-box h3, .qcard h3 { color:#A0526B !important; }
-.ans-input { background:#EEE6DB !important; border-bottom:1.5px solid #1F2A24 !important; border-radius:2px !important; }
+.ans-input { background:#EEE6DB !important; border-bottom:1.5px solid #2A2433 !important; border-radius:2px !important; }
 button { border-radius:2px; }
-.audio-box, .audio-box.pending { background:#EEE6DB !important; color:#1F2A24 !important; border:1px dashed #5C665E !important; }
+.audio-box, .audio-box.pending { background:#EEE6DB !important; color:#2A2433 !important; border:1px dashed #6A6275 !important; }
 #notesPanel #notesToolbar button[title="Yellow"] { background:#FFE600 !important; }
 #notesPanel #notesToolbar button[title="Green"] { background:#90EE90 !important; }
 #notesPanel #notesToolbar button[title="Pink"] { background:#FFB3C6 !important; }
 #notesPanel #notesToolbar button[title="Blue"] { background:#ADD8E6 !important; }
-#notesPanel #notesToolbar button[title="Remove highlight"] { color:#5C665E !important; }
+#notesPanel #notesToolbar button[title="Remove highlight"] { color:#6A6275 !important; }
 /* chrome */
 .banner::after, .banner::before { display:none !important; content:none !important; }
-#notesBtn, #homeBtn { background:#EEE6DB !important; color:#1F2A24 !important; border:none !important; outline:none !important; border-radius:3px !important; box-shadow:none !important; font-weight:600; letter-spacing:.05em; display:inline-flex; align-items:center; gap:8px; }
-#notesBtn:hover, #homeBtn:hover { background:#D9CFB8 !important; }
+#notesBtn, #homeBtn { background:#EEE6DB !important; color:#2A2433 !important; border:none !important; outline:none !important; border-radius:3px !important; box-shadow:none !important; font-weight:600; letter-spacing:.05em; display:inline-flex; align-items:center; gap:8px; }
+#notesBtn:hover, #homeBtn:hover { background:#DDD2C2 !important; }
 #notesBtn .ico, #homeBtn .ico { width:18px; height:18px; color:#A0526B; }
 #nav button { border:none !important; outline:none !important; box-shadow:none !important; border-radius:3px !important; background:transparent !important; color:#fff !important; font-weight:600; letter-spacing:.04em; }
 #nav button:hover:not(:disabled) { background:rgba(255,255,255,.12) !important; }
 #dlNotesBtn { background:transparent !important; color:#E6D3A8 !important; }
 #nav button[onclick*="clearAllNotes"] { background:transparent !important; color:rgba(255,255,255,.6) !important; border:none !important; }
 /* notes panel */
-#notesPanel { background:#FBF8F1 !important; border:1px solid #D9CFB8 !important; border-radius:4px !important; box-shadow:0 8px 30px rgba(31,42,36,.14) !important; }
-#notesPanel #notesToolbar { background:#EEE6DB !important; border-radius:3px 3px 0 0 !important; border-bottom:1px solid #D9CFB8 !important; }
-#notesPanel #notesToolbar button { background:transparent !important; color:#1F2A24 !important; border:none !important; border-radius:3px !important; }
-#notesPanel #notesToolbar button:hover { background:#D9CFB8 !important; }
+#notesPanel { background:#FCF9F3 !important; border:1px solid #DDD2C2 !important; border-radius:4px !important; box-shadow:0 8px 30px rgba(31,42,36,.14) !important; }
+#notesPanel #notesToolbar { background:#EEE6DB !important; border-radius:3px 3px 0 0 !important; border-bottom:1px solid #DDD2C2 !important; }
+#notesPanel #notesToolbar button { background:transparent !important; color:#2A2433 !important; border:none !important; border-radius:3px !important; }
+#notesPanel #notesToolbar button:hover { background:#DDD2C2 !important; }
 #notesPanel #notesToolbar button[title="Yellow"], #notesPanel #notesToolbar button[title="Green"], #notesPanel #notesToolbar button[title="Pink"], #notesPanel #notesToolbar button[title="Blue"] { border-radius:50% !important; width:16px !important; height:16px !important; opacity:.85; }
-#notesPanel #notesTA { background:#FBF8F1 repeating-linear-gradient(transparent,transparent 31px,#D9CFB8 31px,#D9CFB8 32px) !important; color:#1F2A24 !important; font-weight:500 !important; border-radius:0 0 3px 3px !important; }
-#notesPanel #notesTA:empty::before { color:#5C665E !important; }
-#notesPanel #notesTA [style*="background-color"] { color:#1F2A24 !important; }
+#notesPanel #notesTA { background:#FCF9F3 repeating-linear-gradient(transparent,transparent 31px,#DDD2C2 31px,#DDD2C2 32px) !important; background-attachment:local !important; color:#2A2433 !important; font-weight:500 !important; border-radius:0 0 3px 3px !important; line-height:32px !important; padding:0 16px !important; font-size:1.2rem !important; }
+#notesPanel #notesTA:empty::before { content:none !important; display:none !important; }
+#notesPanel #notesTA * { line-height:32px; }
+#notesPanel #notesToolbar .nt-emojis { display:flex; gap:2px; align-items:center; margin-left:8px; padding-left:8px; border-left:1px solid #DDD2C2; }
+#notesPanel #notesToolbar .nt-emojis button { font-size:1.15rem !important; line-height:1; padding:3px 6px !important; cursor:pointer; }
+#notesPanel #notesTA [style*="background-color"] { color:#2A2433 !important; }
 /* cover */
-#s1, #hw-cover { background:#F2EBDF !important; color:#1F2A24; display:flex; flex-direction:column; align-items:stretch !important; justify-content:flex-start !important; padding:0 !important; overflow:hidden; }
+#s1, #hw-cover { background:#F2EBDF !important; color:#2A2433; display:flex; flex-direction:column; align-items:stretch !important; justify-content:flex-start !important; padding:0 !important; overflow:hidden; }
 #s1 .cv-top, #hw-cover .cv-top { flex:1; display:flex; flex-direction:column; justify-content:center; padding:48px 9vw 20px; position:relative; z-index:2; }
-.cv-kicker { font-family:'DM Sans',sans-serif; font-size:1.05rem; font-weight:700; letter-spacing:.28em; text-transform:uppercase; color:#A0526B; display:flex; align-items:center; gap:12px; }
+.cv-kicker { font-family:var(--sans); font-size:1.05rem; font-weight:700; letter-spacing:.28em; text-transform:uppercase; color:#A0526B; display:flex; align-items:center; gap:12px; }
 .cv-kicker .ico { width:26px; height:26px; }
-.cv-brand { font-family:'DM Sans',sans-serif; font-size:1.2rem; letter-spacing:.06em; color:#5C665E; margin-top:6px; }
-.cv-title { font-family:var(--serif); font-weight:600; font-size:clamp(3.2rem,8vw,7rem); line-height:1.02; letter-spacing:-.025em; color:#1F2A24; margin:26px 0 18px; max-width:1100px; }
+.cv-brand { font-family:var(--sans); font-size:1.2rem; letter-spacing:.06em; color:#6A6275; margin-top:6px; }
+.cv-title { font-family:var(--serif); font-weight:600; font-size:clamp(3.2rem,8vw,7rem); line-height:1.02; letter-spacing:-.025em; text-transform:none; color:#2A2433; margin:26px 0 18px; max-width:1100px; }
 .cv-title em { font-style:italic; font-weight:500; color:#A0526B; }
 .cv-rule { width:84px; height:2px; background:#A0526B; margin:4px 0 20px; }
-.cv-sub { font-family:'DM Sans',sans-serif; font-size:1.35rem; color:#5C665E; max-width:760px; line-height:1.5; }
+.cv-sub { font-family:var(--sans); font-size:1.35rem; color:#6A6275; max-width:760px; line-height:1.5; }
 .cv-art { display:block; width:100%; height:34vh; min-height:200px; flex:none; }
 .cv-actions { display:flex; align-items:center; gap:36px; margin-top:34px; }
-.cv-home { color:#5C665E; text-decoration:none; display:inline-flex; align-items:center; gap:8px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; font-size:.9rem; }
+.cv-home { color:#6A6275; text-decoration:none; display:inline-flex; align-items:center; gap:8px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; font-size:.9rem; }
 .cv-home:hover { color:#A0526B; }
 .cv-home .ico { width:18px; height:18px; }
-#s1 button[onclick^="goToId"] { background:transparent !important; color:#1F2A24 !important; border:none !important; border-bottom:2px solid #A0526B !important; border-radius:0 !important; box-shadow:none !important; font-weight:700 !important; letter-spacing:.14em; text-transform:uppercase; font-size:.9rem !important; padding:6px 2px !important; cursor:pointer; }
-#s1 button[onclick^="goToId"]:hover { color:#A0526B !important; }
 .cover-bubble, .cover-heart { display:none !important; }
+
+#nav .nav-cover { display:none; position:absolute; top:50%; transform:translateY(-50%); margin:0 !important; padding:8px 18px !important; background:transparent !important; color:#fff !important; border:1.5px solid rgba(255,255,255,.55) !important; border-radius:2px !important; font-size:.85rem !important; font-weight:700 !important; letter-spacing:.14em !important; text-transform:uppercase; text-decoration:none; cursor:pointer; align-items:center; gap:8px; box-shadow:none !important; font-family:var(--sans); }
+#nav .nav-cover .ico { width:16px; height:16px; }
+#navHome { left:20px; } #navHw { right:20px; }
+body.on-cover #nav .nav-cover { display:inline-flex; }
+#nav .nav-cover:hover { background:#A0526B !important; border-color:#A0526B !important; }
+/* hide the placeholder text once the audio file is wired */
+.audio-box:not(.pending) .ph { display:none !important; }
+/* Check Answers / Reset: right after the exercises, small buttons, no docking */
+.check-dock { position:static !important; background:transparent !important; border:none !important; padding:0 !important; margin:10px 0 4px !important; display:flex; justify-content:center; gap:10px; }
+.check-dock .btn-check, .check-dock .btn-reset { padding:7px 20px !important; font-size:.95rem !important; min-width:0 !important; width:auto !important; }
+.ans-input.pick { width:64px !important; min-width:0; text-align:center; font-weight:800; padding:2px 4px !important; margin:0 6px; }
+/* compact audio player: full seek line + play, time, volume, options */
+.ins-audio { flex:none !important; width:340px; max-width:30vw; }
+.audio-box:not(.pending) { background:#EEE6DB !important; border:1px solid #DDD2C2 !important; padding:3px !important; margin:0 !important; border-radius:999px !important; display:block !important; width:100%; box-shadow:none !important; }
+.audio-box:not(.pending) audio { display:block; width:100% !important; height:38px !important; min-width:0; }
+/* cover layout: center */
+#s1 .cv-top, #hw-cover .cv-top { align-items:center; text-align:center; }
+#s1 .cv-kicker, #hw-cover .cv-kicker { justify-content:center; } .cv-rule { margin-left:auto; margin-right:auto; } .cv-sub { margin:0 auto; }
+#s1 .cv-title, #hw-cover .cv-title { margin-left:auto; margin-right:auto; }
 </style>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&display=swap" rel="stylesheet">
+<link data-theme-font href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,700;1,400&family=DM+Sans:wght@400;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 <div id="progBar"></div>
@@ -1167,16 +1207,17 @@ button { border-radius:2px; }
       <button onclick="notesHilite('#ADD8E6')" title="Blue"   style="background:#ADD8E6;width:20px;height:20px;padding:0;border-radius:4px;border:none;cursor:pointer;"></button>
       <button onclick="notesHilite('remove')" title="Remove highlight" style="font-size:.78rem;padding:2px 7px;color:#ff9999;margin-left:2px;background:rgba(255,255,255,.1);border:none;border-radius:4px;cursor:pointer;">✕</button>
     </span>
+                <span class="nt-emojis"><button onmousedown="event.preventDefault()" onclick="notesEmoji('✅')" title="Correct">✅</button><button onmousedown="event.preventDefault()" onclick="notesEmoji('❌')" title="Mistake">❌</button><button onmousedown="event.preventDefault()" onclick="notesEmoji('🔊')" title="Pronunciation">🔊</button><button onmousedown="event.preventDefault()" onclick="notesEmoji('📐')" title="Grammar">📐</button><button onmousedown="event.preventDefault()" onclick="notesEmoji('🏷️')" title="Vocabulary">🏷️</button><button onmousedown="event.preventDefault()" onclick="notesEmoji('💬')" title="Expression">💬</button><button onmousedown="event.preventDefault()" onclick="notesEmoji('⭐')" title="Important">⭐</button><button onmousedown="event.preventDefault()" onclick="notesEmoji('❓')" title="Question">❓</button></span>
   </div>
-  <div id="notesTA" contenteditable="true" data-placeholder="Your notes for this slide…" spellcheck="false" oninput="saveNotes()"></div>
+  <div id="notesTA" contenteditable="true" spellcheck="false" oninput="saveNotes()"></div>
 </div>
 
 <div id="deck">
 
-<div class="slide active" id="s1"><div class="cv-top"><div class="cv-kicker"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H11l-5 4v-4H4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span>Welcome</span></div><div class="cv-brand">Conversational English &middot; with teacher Nanda</div><div class="cv-title">Hello,<br><em>English!</em></div><div class="cv-rule"></div><div class="cv-actions"><button onclick="goToId('hw-cover')">Homework &rarr;</button><a class="cv-home" href="../index.html" title="All Courses"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/></svg><span>All courses</span></a></div></div><svg class="cv-art" viewBox="0 0 1600 400" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><circle cx="1180" cy="200" r="64" fill="#EBC27F" opacity=".9"/><polygon points="0,400 0,278 80,276 160,270 240,266 320,264 400,264 480,265 560,263 640,257 720,248 800,241 880,239 960,243 1040,251 1120,260 1200,266 1280,267 1360,266 1440,265 1520,267 1600,271 1680,276 1600,400" fill="#D3E2E0" opacity="1"/><polygon points="0,400 0,300 80,301 160,300 240,295 320,289 400,284 480,283 560,287 640,294 720,303 800,308 880,310 960,308 1040,306 1120,306 1200,308 1280,311 1360,311 1440,307 1520,300 1600,291 1680,285 1600,400" fill="#A9CBC7" opacity="1"/><polygon points="0,400 0,323 80,322 160,325 240,332 320,339 400,344 480,346 560,344 640,341 720,340 800,340 880,342 960,342 1040,339 1120,333 1200,326 1280,321 1360,321 1440,324 1520,329 1600,334 1680,336 1600,400" fill="#72A5A2" opacity="1"/><polygon points="0,400 0,379 80,380 160,378 240,375 320,373 400,372 480,373 560,373 640,371 720,367 800,362 880,359 960,358 1040,361 1120,366 1200,371 1280,374 1360,374 1440,373 1520,373 1600,375 1680,378 1600,400" fill="#3F7A7C" opacity="1"/></svg></div>
+<div class="slide active" id="s1"><div class="cv-top"><div class="cv-kicker"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H11l-5 4v-4H4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span>Welcome</span></div><div class="cv-brand">Conversational English &middot; with teacher Nanda</div><div class="cv-title">Hello,<br><em>English!</em></div><div class="cv-rule"></div></div><svg class="cv-art" viewBox="0 0 1600 400" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><circle cx="1180" cy="200" r="64" fill="#EBC27F" opacity=".9"/><polygon points="0,400 0,278 80,276 160,270 240,266 320,264 400,264 480,265 560,263 640,257 720,248 800,241 880,239 960,243 1040,251 1120,260 1200,266 1280,267 1360,266 1440,265 1520,267 1600,271 1680,276 1600,400" fill="#D3E2E0" opacity="1"/><polygon points="0,400 0,300 80,301 160,300 240,295 320,289 400,284 480,283 560,287 640,294 720,303 800,308 880,310 960,308 1040,306 1120,306 1200,308 1280,311 1360,311 1440,307 1520,300 1600,291 1680,285 1600,400" fill="#A9CBC7" opacity="1"/><polygon points="0,400 0,323 80,322 160,325 240,332 320,339 400,344 480,346 560,344 640,341 720,340 800,340 880,342 960,342 1040,339 1120,333 1200,326 1280,321 1360,321 1440,324 1520,329 1600,334 1680,336 1600,400" fill="#72A5A2" opacity="1"/><polygon points="0,400 0,379 80,380 160,378 240,375 320,373 400,372 480,373 560,373 640,371 720,367 800,362 880,359 960,358 1040,361 1120,366 1200,371 1280,374 1360,374 1440,373 1520,373 1600,375 1680,378 1600,400" fill="#3F7A7C" opacity="1"/></svg></div>
 
 <div class="slide" id="s-name">
-  <div class="banner banner-bridge"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 17h20"/><path d="M4 17c0-5 3-8 8-8s8 3 8 8"/><path d="M8 17v-6M12 17V9M16 17v-6"/></svg><span>Hello!</span></div>
+  <div class="banner banner-bridge"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 17h20"/><path d="M4 17c0-5 3-8 8-8s8 3 8 8"/><path d="M8 17v-6M12 17V9M16 17v-6"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Hello!</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
   <div class="slide-main"><div class="content">
     <h2>Hello! I'm Nanda.</h2>
     <p class="instruction">Let&rsquo;s practice.</p>
@@ -1194,7 +1235,7 @@ button { border-radius:2px; }
 </div>
 
 <div class="slide" id="s-map">
-  <div class="banner banner-leadin"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r=".6"/></svg><span>Lead-in</span></div>
+  <div class="banner banner-leadin"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r=".6"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Lead-in</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
   <div class="slide-main"><div class="content">
     <h2>How we learn together</h2>
     <p class="instruction">This is our plan for every lesson.</p>
@@ -1205,7 +1246,7 @@ button { border-radius:2px; }
 </div>
 
 <div class="slide" id="s-cl1">
-  <div class="banner banner-vocab"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l9-9h8v8l-9 9z"/><circle cx="15.5" cy="8.5" r="1.2"/></svg><span>Vocabulary</span></div>
+  <div class="banner banner-vocab"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l9-9h8v8l-9 9z"/><circle cx="15.5" cy="8.5" r="1.2"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Vocabulary</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
   <div class="slide-main"><div class="content">
     <h2>Classroom language</h2>
     <p class="instruction">These words are in every lesson.</p>
@@ -1216,18 +1257,16 @@ button { border-radius:2px; }
 </div>
 
 <div class="slide" id="s-cl2">
-  <div class="banner banner-vocab"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l9-9h8v8l-9 9z"/><circle cx="15.5" cy="8.5" r="1.2"/></svg><span>Vocabulary</span></div>
-  <div class="slide-main"><div class="content">
-    <h2>Match it!</h2>
-    <p class="instruction">Listen to the command.<br>Say the <b>number</b> of the right picture.<br>Then say the word.</p>
-    
-    <div id="xcm" class="numopts"><div class="fixed-two-col"><div><div class="ex-row"><span class="circ-num">1</span><b style="font-size:1.5rem;">Listen.</b><br><span class="syl" style="margin-left:34px;display:flex;flex-wrap:nowrap;gap:12px;font-size:2.2rem;"><button class="circ-opt" data-group="cm-1" data-correct="👂" onclick="circPick(this)">👂</button><button class="circ-opt" data-group="cm-1" data-correct="👂" onclick="circPick(this)">📖</button><button class="circ-opt" data-group="cm-1" data-correct="👂" onclick="circPick(this)">✍️</button></span></div><div class="ex-row"><span class="circ-num">2</span><b style="font-size:1.5rem;">Read.</b><br><span class="syl" style="margin-left:34px;display:flex;flex-wrap:nowrap;gap:12px;font-size:2.2rem;"><button class="circ-opt" data-group="cm-2" data-correct="📖" onclick="circPick(this)">🗣️</button><button class="circ-opt" data-group="cm-2" data-correct="📖" onclick="circPick(this)">📖</button><button class="circ-opt" data-group="cm-2" data-correct="📖" onclick="circPick(this)">📺</button></span></div><div class="ex-row"><span class="circ-num">3</span><b style="font-size:1.5rem;">Write.</b><br><span class="syl" style="margin-left:34px;display:flex;flex-wrap:nowrap;gap:12px;font-size:2.2rem;"><button class="circ-opt" data-group="cm-3" data-correct="✍️" onclick="circPick(this)">✍️</button><button class="circ-opt" data-group="cm-3" data-correct="✍️" onclick="circPick(this)">👂</button><button class="circ-opt" data-group="cm-3" data-correct="✍️" onclick="circPick(this)">🖥️</button></span></div></div><div><div class="ex-row"><span class="circ-num">4</span><b style="font-size:1.5rem;">Watch.</b><br><span class="syl" style="margin-left:34px;display:flex;flex-wrap:nowrap;gap:12px;font-size:2.2rem;"><button class="circ-opt" data-group="cm-4" data-correct="📺" onclick="circPick(this)">📖</button><button class="circ-opt" data-group="cm-4" data-correct="📺" onclick="circPick(this)">✍️</button><button class="circ-opt" data-group="cm-4" data-correct="📺" onclick="circPick(this)">📺</button></span></div><div class="ex-row"><span class="circ-num">5</span><b style="font-size:1.5rem;">Look at the screen.</b><br><span class="syl" style="margin-left:34px;display:flex;flex-wrap:nowrap;gap:12px;font-size:2.2rem;"><button class="circ-opt" data-group="cm-5" data-correct="🖥️" onclick="circPick(this)">👂</button><button class="circ-opt" data-group="cm-5" data-correct="🖥️" onclick="circPick(this)">🖥️</button><button class="circ-opt" data-group="cm-5" data-correct="🖥️" onclick="circPick(this)">🗣️</button></span></div><div class="ex-row"><span class="circ-num">6</span><b style="font-size:1.5rem;">Say it again.</b><br><span class="syl" style="margin-left:34px;display:flex;flex-wrap:nowrap;gap:12px;font-size:2.2rem;"><button class="circ-opt" data-group="cm-6" data-correct="🔁" onclick="circPick(this)">🔁</button><button class="circ-opt" data-group="cm-6" data-correct="🔁" onclick="circPick(this)">👂</button><button class="circ-opt" data-group="cm-6" data-correct="🔁" onclick="circPick(this)">📖</button></span></div></div></div></div>
-    <div class="btn-row"><button class="btn-check" onclick="checkCircSlide('xcm')">Check Answers</button><button class="btn-reset" onclick="resetCircSlide('xcm')">Reset</button></div>
-  </div></div>
+<div class="banner banner-vocab"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l9-9h8v8l-9 9z"/><circle cx="15.5" cy="8.5" r="1.2"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Vocabulary</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
+<div class="slide-main"><div class="content">
+<h2>Match it!</h2>
+<p class="instruction">Listen to the command.<br/>Say the <b>number</b> of the right picture.<br/>Then say the word.</p>
+<div class="numopts" id="xcm"><div class="fixed-two-col"><div><div class="ex-row"><span class="circ-num">1</span><b style="font-size:1.5rem;">Listen.</b><br/><span class="syl" style="margin-left:34px;display:flex;flex-wrap:nowrap;gap:12px;font-size:2.2rem;"><button class="circ-opt" data-correct="👂" data-group="cm-1" onclick="circPick(this)">👂</button><button class="circ-opt" data-correct="👂" data-group="cm-1" onclick="circPick(this)">📖</button><button class="circ-opt" data-correct="👂" data-group="cm-1" onclick="circPick(this)">✍️</button></span></div><div class="ex-row"><span class="circ-num">2</span><b style="font-size:1.5rem;">Read.</b><br/><span class="syl" style="margin-left:34px;display:flex;flex-wrap:nowrap;gap:12px;font-size:2.2rem;"><button class="circ-opt" data-correct="📖" data-group="cm-2" onclick="circPick(this)">🗣️</button><button class="circ-opt" data-correct="📖" data-group="cm-2" onclick="circPick(this)">📖</button><button class="circ-opt" data-correct="📖" data-group="cm-2" onclick="circPick(this)">📺</button></span></div><div class="ex-row"><span class="circ-num">3</span><b style="font-size:1.5rem;">Write.</b><br/><span class="syl" style="margin-left:34px;display:flex;flex-wrap:nowrap;gap:12px;font-size:2.2rem;"><button class="circ-opt" data-correct="✍️" data-group="cm-3" onclick="circPick(this)">✍️</button><button class="circ-opt" data-correct="✍️" data-group="cm-3" onclick="circPick(this)">👂</button><button class="circ-opt" data-correct="✍️" data-group="cm-3" onclick="circPick(this)">🖥️</button></span></div></div><div><div class="ex-row"><span class="circ-num">4</span><b style="font-size:1.5rem;">Watch.</b><br/><span class="syl" style="margin-left:34px;display:flex;flex-wrap:nowrap;gap:12px;font-size:2.2rem;"><button class="circ-opt" data-correct="📺" data-group="cm-4" onclick="circPick(this)">📖</button><button class="circ-opt" data-correct="📺" data-group="cm-4" onclick="circPick(this)">✍️</button><button class="circ-opt" data-correct="📺" data-group="cm-4" onclick="circPick(this)">📺</button></span></div><div class="ex-row"><span class="circ-num">5</span><b style="font-size:1.5rem;">Look at the screen.</b><br/><span class="syl" style="margin-left:34px;display:flex;flex-wrap:nowrap;gap:12px;font-size:2.2rem;"><button class="circ-opt" data-correct="🖥️" data-group="cm-5" onclick="circPick(this)">👂</button><button class="circ-opt" data-correct="🖥️" data-group="cm-5" onclick="circPick(this)">🖥️</button><button class="circ-opt" data-correct="🖥️" data-group="cm-5" onclick="circPick(this)">🗣️</button></span></div><div class="ex-row"><span class="circ-num">6</span><b style="font-size:1.5rem;">Say it again.</b><br/><span class="syl" style="margin-left:34px;display:flex;flex-wrap:nowrap;gap:12px;font-size:2.2rem;"><button class="circ-opt" data-correct="🔁" data-group="cm-6" onclick="circPick(this)">🔁</button><button class="circ-opt" data-correct="🔁" data-group="cm-6" onclick="circPick(this)">👂</button><button class="circ-opt" data-correct="🔁" data-group="cm-6" onclick="circPick(this)">📖</button></span></div></div></div></div>
+<div class="btn-row check-dock"><button class="btn-check" onclick="checkCircSlide('xcm')">Check Answers</button><button class="btn-reset" onclick="resetCircSlide('xcm')">Reset</button></div>
+</div></div>
 </div>
-
 <div class="slide" id="s-help">
-  <div class="banner banner-vocab"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l9-9h8v8l-9 9z"/><circle cx="15.5" cy="8.5" r="1.2"/></svg><span>Vocabulary</span></div>
+  <div class="banner banner-vocab"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l9-9h8v8l-9 9z"/><circle cx="15.5" cy="8.5" r="1.2"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Vocabulary</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
   <div class="slide-main"><div class="content">
     <h2>Help phrases</h2>
     <p class="instruction">These phrases help you in our online lessons.<br>Say each phrase with me.</p>
@@ -1238,16 +1277,15 @@ button { border-radius:2px; }
 </div>
 
 <div class="slide" id="s-help2">
-  <div class="banner banner-vocab"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l9-9h8v8l-9 9z"/><circle cx="15.5" cy="8.5" r="1.2"/></svg><span>Vocabulary</span></div>
-  <div class="slide-main"><div class="content">
-    <h2>Which phrase?</h2>
-    <p class="instruction">What do you say?<br>Say the correct phrase to me.</p>
-    <div id="xsit"><div class="ex-row"><span class="circ-num">1</span><b>😕 You don't understand the teacher.</b><br><span class="syl" style="margin-left:34px;display:flex;flex-wrap:nowrap;gap:6px;"><button class="circ-opt" data-group="sit-1" data-correct="I don&#x27;t understand." onclick="circPick(this)">Slowly, please.</button><button class="circ-opt" data-group="sit-1" data-correct="I don&#x27;t understand." onclick="circPick(this)">I don't understand.</button><button class="circ-opt" data-group="sit-1" data-correct="I don&#x27;t understand." onclick="circPick(this)">I can't hear you.</button></span></div><div class="ex-row"><span class="circ-num">2</span><b>🐢 The teacher speaks fast.</b><br><span class="syl" style="margin-left:34px;display:flex;flex-wrap:nowrap;gap:6px;"><button class="circ-opt" data-group="sit-2" data-correct="Slowly, please." onclick="circPick(this)">Slowly, please.</button><button class="circ-opt" data-group="sit-2" data-correct="Slowly, please." onclick="circPick(this)">One more time, please.</button><button class="circ-opt" data-group="sit-2" data-correct="Slowly, please." onclick="circPick(this)">What does ___ mean?</button></span></div><div class="ex-row"><span class="circ-num">3</span><b>🔁 You want to hear the audio again.</b><br><span class="syl" style="margin-left:34px;display:flex;flex-wrap:nowrap;gap:6px;"><button class="circ-opt" data-group="sit-3" data-correct="One more time, please." onclick="circPick(this)">I don't understand.</button><button class="circ-opt" data-group="sit-3" data-correct="One more time, please." onclick="circPick(this)">How do you say ___ in English?</button><button class="circ-opt" data-group="sit-3" data-correct="One more time, please." onclick="circPick(this)">One more time, please.</button></span></div><div class="ex-row"><span class="circ-num">4</span><b>🔇 The sound is bad. You can't hear the teacher.</b><br><span class="syl" style="margin-left:34px;display:flex;flex-wrap:nowrap;gap:6px;"><button class="circ-opt" data-group="sit-4" data-correct="I can&#x27;t hear you." onclick="circPick(this)">Slowly, please.</button><button class="circ-opt" data-group="sit-4" data-correct="I can&#x27;t hear you." onclick="circPick(this)">I can't hear you.</button><button class="circ-opt" data-group="sit-4" data-correct="I can&#x27;t hear you." onclick="circPick(this)">I don't understand.</button></span></div></div><div class="btn-row"><button class="btn-check" onclick="checkCircSlide('xsit')">Check Answers</button><button class="btn-reset" onclick="resetCircSlide('xsit')">Reset</button></div>
-  </div></div>
+<div class="banner banner-vocab"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l9-9h8v8l-9 9z"/><circle cx="15.5" cy="8.5" r="1.2"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Vocabulary</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
+<div class="slide-main"><div class="content">
+<h2>Which phrase?</h2>
+<p class="instruction">What do you say?<br/>Say the correct phrase to me.</p>
+<div id="xsit"><div class="ex-row"><span class="circ-num">1</span><b>😕 You don't understand the teacher.</b><br/><span class="syl" style="margin-left:34px;display:flex;flex-wrap:nowrap;gap:6px;"><button class="circ-opt" data-correct="I don't understand." data-group="sit-1" onclick="circPick(this)">Slowly, please.</button><button class="circ-opt" data-correct="I don't understand." data-group="sit-1" onclick="circPick(this)">I don't understand.</button><button class="circ-opt" data-correct="I don't understand." data-group="sit-1" onclick="circPick(this)">I can't hear you.</button></span></div><div class="ex-row"><span class="circ-num">2</span><b>🐢 The teacher speaks fast.</b><br/><span class="syl" style="margin-left:34px;display:flex;flex-wrap:nowrap;gap:6px;"><button class="circ-opt" data-correct="Slowly, please." data-group="sit-2" onclick="circPick(this)">Slowly, please.</button><button class="circ-opt" data-correct="Slowly, please." data-group="sit-2" onclick="circPick(this)">One more time, please.</button><button class="circ-opt" data-correct="Slowly, please." data-group="sit-2" onclick="circPick(this)">What does ___ mean?</button></span></div><div class="ex-row"><span class="circ-num">3</span><b>🔁 You want to hear the audio again.</b><br/><span class="syl" style="margin-left:34px;display:flex;flex-wrap:nowrap;gap:6px;"><button class="circ-opt" data-correct="One more time, please." data-group="sit-3" onclick="circPick(this)">I don't understand.</button><button class="circ-opt" data-correct="One more time, please." data-group="sit-3" onclick="circPick(this)">How do you say ___ in English?</button><button class="circ-opt" data-correct="One more time, please." data-group="sit-3" onclick="circPick(this)">One more time, please.</button></span></div><div class="ex-row"><span class="circ-num">4</span><b>🔇 The sound is bad. You can't hear the teacher.</b><br/><span class="syl" style="margin-left:34px;display:flex;flex-wrap:nowrap;gap:6px;"><button class="circ-opt" data-correct="I can't hear you." data-group="sit-4" onclick="circPick(this)">Slowly, please.</button><button class="circ-opt" data-correct="I can't hear you." data-group="sit-4" onclick="circPick(this)">I can't hear you.</button><button class="circ-opt" data-correct="I can't hear you." data-group="sit-4" onclick="circPick(this)">I don't understand.</button></span></div></div><div class="btn-row check-dock"><button class="btn-check" onclick="checkCircSlide('xsit')">Check Answers</button><button class="btn-reset" onclick="resetCircSlide('xsit')">Reset</button></div>
+</div></div>
 </div>
-
 <div class="slide" id="s-alpha">
-  <div class="banner banner-vocab"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l9-9h8v8l-9 9z"/><circle cx="15.5" cy="8.5" r="1.2"/></svg><span>Vocabulary</span></div>
+  <div class="banner banner-vocab"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l9-9h8v8l-9 9z"/><circle cx="15.5" cy="8.5" r="1.2"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Vocabulary</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
   <div class="slide-main"><div class="content">
     <h2>The alphabet</h2>
     <p class="instruction">Say each letter with me.</p>
@@ -1258,7 +1296,7 @@ button { border-radius:2px; }
 </div>
 
 <div class="slide" id="s-spell">
-  <div class="banner banner-speaking"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H11l-5 4v-4H4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span>Speaking</span></div>
+  <div class="banner banner-speaking"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H11l-5 4v-4H4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Speaking</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
   <div class="slide-main"><div class="content">
     <h2>Spell your name</h2>
     <p class="instruction">How do you spell your name?<br>Spell it with me.</p>
@@ -1271,7 +1309,7 @@ button { border-radius:2px; }
 </div>
 
 <div class="slide" id="s-why">
-  <div class="banner banner-speaking"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H11l-5 4v-4H4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span>Speaking</span></div>
+  <div class="banner banner-speaking"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H11l-5 4v-4H4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Speaking</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
   <div class="slide-main"><div class="content">
     <h2>Why English?</h2>
     <p class="instruction">Why do you need English?<br>Say: <b>I need English for &hellip;</b></p>
@@ -1282,7 +1320,7 @@ button { border-radius:2px; }
 </div>
 
 <div class="slide" id="s-cp">
-  <div class="banner banner-review"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg><span>Checkpoint</span></div>
+  <div class="banner banner-review"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Checkpoint</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
   <div class="slide-main"><div class="content">
     <h2>I can&hellip;</h2>
     <p class="instruction">What can you do now?<br>What do you want to practice again?</p>
@@ -1294,7 +1332,7 @@ button { border-radius:2px; }
 </div>
 
 <div class="slide" id="s-next">
-  <div class="banner banner-review"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg><span>Plan together</span></div>
+  <div class="banner banner-review"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Plan together</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
   <div class="slide-main"><div class="content">
     <h2>What's next?</h2>
     <p class="instruction">What is your next step?</p>
@@ -1310,41 +1348,37 @@ button { border-radius:2px; }
 
 <div class="slide" id="hw-cover"><div class="cv-top"><div class="cv-kicker"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/></svg><span>Homework</span></div><div class="cv-brand">Conversational English &middot; with teacher Nanda</div><div class="cv-title">Hello,<br><em>English!</em></div><div class="cv-rule"></div><div class="cv-sub">Homework</div></div><svg class="cv-art" viewBox="0 0 1600 400" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><circle cx="1180" cy="200" r="64" fill="#EBC27F" opacity=".9"/><polygon points="0,400 0,278 80,276 160,270 240,266 320,264 400,264 480,265 560,263 640,257 720,248 800,241 880,239 960,243 1040,251 1120,260 1200,266 1280,267 1360,266 1440,265 1520,267 1600,271 1680,276 1600,400" fill="#D3E2E0" opacity="1"/><polygon points="0,400 0,300 80,301 160,300 240,295 320,289 400,284 480,283 560,287 640,294 720,303 800,308 880,310 960,308 1040,306 1120,306 1200,308 1280,311 1360,311 1440,307 1520,300 1600,291 1680,285 1600,400" fill="#A9CBC7" opacity="1"/><polygon points="0,400 0,323 80,322 160,325 240,332 320,339 400,344 480,346 560,344 640,341 720,340 800,340 880,342 960,342 1040,339 1120,333 1200,326 1280,321 1360,321 1440,324 1520,329 1600,334 1680,336 1600,400" fill="#72A5A2" opacity="1"/><polygon points="0,400 0,379 80,380 160,378 240,375 320,373 400,372 480,373 560,373 640,371 720,367 800,362 880,359 960,358 1040,361 1120,366 1200,371 1280,374 1360,374 1440,373 1520,373 1600,375 1680,378 1600,400" fill="#3F7A7C" opacity="1"/></svg></div>
 <div class="slide" id="hw-1">
-  <div class="banner banner-hw"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/></svg><span>Homework</span></div>
-  <div class="slide-main"><div class="content">
-    <h2>HW1 &mdash; What do you do?</h2>
-    <p class="instruction">Read the situation.<br>Choose the right classroom command.</p>
-    
-    <div id="xhw1"><div class="fixed-two-col"><div><div class="ex-row"><span class="example-badge">1</span><b>A video starts on the screen.</b><br><span style="margin-left:34px;display:inline-block;margin-top:6px;"><span style="color:#1A7A4A;font-weight:800;background:#E3F5EA;padding:1px 7px;border-radius:5px;">Watch.</span></span></div><div class="ex-row"><span class="circ-num">2</span><b>Your teacher plays an audio.</b><br><span class="syl" style="margin-left:34px;display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;"><button class="circ-opt" data-group="hw1-2" data-correct="Listen." onclick="circPick(this)">Listen.</button><button class="circ-opt" data-group="hw1-2" data-correct="Listen." onclick="circPick(this)">Watch.</button><button class="circ-opt" data-group="hw1-2" data-correct="Listen." onclick="circPick(this)">Say it again.</button></span></div><div class="ex-row"><span class="circ-num">3</span><b>There is a new word on the page.</b><br><span class="syl" style="margin-left:34px;display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;"><button class="circ-opt" data-group="hw1-3" data-correct="Read." onclick="circPick(this)">Say it again.</button><button class="circ-opt" data-group="hw1-3" data-correct="Read." onclick="circPick(this)">Write.</button><button class="circ-opt" data-group="hw1-3" data-correct="Read." onclick="circPick(this)">Read.</button></span></div></div><div><div class="ex-row"><span class="circ-num">4</span><b>You need a pencil and a piece of paper.</b><br><span class="syl" style="margin-left:34px;display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;"><button class="circ-opt" data-group="hw1-4" data-correct="Write." onclick="circPick(this)">Listen.</button><button class="circ-opt" data-group="hw1-4" data-correct="Write." onclick="circPick(this)">Write.</button><button class="circ-opt" data-group="hw1-4" data-correct="Write." onclick="circPick(this)">Watch.</button></span></div><div class="ex-row"><span class="circ-num">5</span><b>Your teacher circles something in the slides.</b><br><span class="syl" style="margin-left:34px;display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;"><button class="circ-opt" data-group="hw1-5" data-correct="Look at the screen." onclick="circPick(this)">Read.</button><button class="circ-opt" data-group="hw1-5" data-correct="Look at the screen." onclick="circPick(this)">Say it again.</button><button class="circ-opt" data-group="hw1-5" data-correct="Look at the screen." onclick="circPick(this)">Look at the screen.</button></span></div><div class="ex-row"><span class="circ-num">6</span><b>Your teacher says a word. You say it too.</b><br><span class="syl" style="margin-left:34px;display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;"><button class="circ-opt" data-group="hw1-6" data-correct="Say it again." onclick="circPick(this)">Say it again.</button><button class="circ-opt" data-group="hw1-6" data-correct="Say it again." onclick="circPick(this)">Read.</button><button class="circ-opt" data-group="hw1-6" data-correct="Say it again." onclick="circPick(this)">Listen.</button></span></div></div></div></div>
-    <div class="btn-row"><button class="btn-check" onclick="checkCircSlide('xhw1')">Check Answers</button><button class="btn-reset" onclick="resetCircSlide('xhw1')">Reset</button></div>
-  </div></div>
+<div class="banner banner-hw"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Homework</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
+<div class="slide-main"><div class="content">
+<h2>HW1 — What do you do?</h2>
+<p class="instruction">Read the situation.<br/>Choose the right classroom command.</p>
+<div id="xhw1"><div class="fixed-two-col"><div><div class="ex-row"><span class="example-badge">1</span><b>A video starts on the screen.</b><br/><span style="margin-left:34px;display:inline-block;margin-top:6px;"><span style="color:#1A7A4A;font-weight:800;background:#E3F5EA;padding:1px 7px;border-radius:5px;">Watch.</span></span></div><div class="ex-row"><span class="circ-num">2</span><b>Your teacher plays an audio.</b><br/><span class="syl" style="margin-left:34px;display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;"><button class="circ-opt" data-correct="Listen." data-group="hw1-2" onclick="circPick(this)">Listen.</button><button class="circ-opt" data-correct="Listen." data-group="hw1-2" onclick="circPick(this)">Watch.</button><button class="circ-opt" data-correct="Listen." data-group="hw1-2" onclick="circPick(this)">Say it again.</button></span></div><div class="ex-row"><span class="circ-num">3</span><b>There is a new word on the page.</b><br/><span class="syl" style="margin-left:34px;display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;"><button class="circ-opt" data-correct="Read." data-group="hw1-3" onclick="circPick(this)">Say it again.</button><button class="circ-opt" data-correct="Read." data-group="hw1-3" onclick="circPick(this)">Write.</button><button class="circ-opt" data-correct="Read." data-group="hw1-3" onclick="circPick(this)">Read.</button></span></div></div><div><div class="ex-row"><span class="circ-num">4</span><b>You need a pencil and a piece of paper.</b><br/><span class="syl" style="margin-left:34px;display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;"><button class="circ-opt" data-correct="Write." data-group="hw1-4" onclick="circPick(this)">Listen.</button><button class="circ-opt" data-correct="Write." data-group="hw1-4" onclick="circPick(this)">Write.</button><button class="circ-opt" data-correct="Write." data-group="hw1-4" onclick="circPick(this)">Watch.</button></span></div><div class="ex-row"><span class="circ-num">5</span><b>Your teacher circles something in the slides.</b><br/><span class="syl" style="margin-left:34px;display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;"><button class="circ-opt" data-correct="Look at the screen." data-group="hw1-5" onclick="circPick(this)">Read.</button><button class="circ-opt" data-correct="Look at the screen." data-group="hw1-5" onclick="circPick(this)">Say it again.</button><button class="circ-opt" data-correct="Look at the screen." data-group="hw1-5" onclick="circPick(this)">Look at the screen.</button></span></div><div class="ex-row"><span class="circ-num">6</span><b>Your teacher says a word. You say it too.</b><br/><span class="syl" style="margin-left:34px;display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;"><button class="circ-opt" data-correct="Say it again." data-group="hw1-6" onclick="circPick(this)">Say it again.</button><button class="circ-opt" data-correct="Say it again." data-group="hw1-6" onclick="circPick(this)">Read.</button><button class="circ-opt" data-correct="Say it again." data-group="hw1-6" onclick="circPick(this)">Listen.</button></span></div></div></div></div>
+<div class="btn-row check-dock"><button class="btn-check" onclick="checkCircSlide('xhw1')">Check Answers</button><button class="btn-reset" onclick="resetCircSlide('xhw1')">Reset</button></div>
+</div></div>
 </div>
-
 <div class="slide" id="hw-2">
-  <div class="banner banner-hw"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/></svg><span>Homework</span></div>
-  <div class="slide-main"><div class="content">
-    <h2>HW2 &mdash; Help phrases</h2>
-    <p class="instruction">Put the words in order to make help phrases.</p>
-    <div id="xhw2" class="compact"><div class="fixed-two-col"><div><div class="ex-row"><span class="example-badge">1</span><span style="color:#4F7396">understand. / don't / I</span><br><span style="margin-left:34px;display:inline-block;margin-top:6px;"><span style="color:#1A7A4A;font-weight:800;background:#E3F5EA;padding:1px 7px;border-radius:5px;">I don't understand.</span></span></div><div class="ex-row wo-row"><span class="circ-num">2</span><div class="wo" data-ans="I can&#x27;t hear you."><div class="wo-line"></div><div class="wo-bank"><button class="wo-chip" onclick="woPick(this)">hear</button><button class="wo-chip" onclick="woPick(this)">you.</button><button class="wo-chip" onclick="woPick(this)">I</button><button class="wo-chip" onclick="woPick(this)">can't</button></div></div></div><div class="ex-row wo-row"><span class="circ-num">3</span><div class="wo" data-ans="One more time, please."><div class="wo-line"></div><div class="wo-bank"><button class="wo-chip" onclick="woPick(this)">please.</button><button class="wo-chip" onclick="woPick(this)">time,</button><button class="wo-chip" onclick="woPick(this)">One</button><button class="wo-chip" onclick="woPick(this)">more</button></div></div></div></div><div><div class="ex-row wo-row"><span class="circ-num">4</span><div class="wo" data-ans="What does hello mean?"><div class="wo-line"></div><div class="wo-bank"><button class="wo-chip" onclick="woPick(this)">mean?</button><button class="wo-chip" onclick="woPick(this)">hello</button><button class="wo-chip" onclick="woPick(this)">does</button><button class="wo-chip" onclick="woPick(this)">What</button></div></div></div><div class="ex-row wo-row"><span class="circ-num">5</span><div class="wo" data-ans="How do you say apple in English?"><div class="wo-line"></div><div class="wo-bank"><button class="wo-chip" onclick="woPick(this)">English?</button><button class="wo-chip" onclick="woPick(this)">say</button><button class="wo-chip" onclick="woPick(this)">How</button><button class="wo-chip" onclick="woPick(this)">in</button><button class="wo-chip" onclick="woPick(this)">apple</button><button class="wo-chip" onclick="woPick(this)">you</button><button class="wo-chip" onclick="woPick(this)">do</button></div></div></div><div class="ex-row wo-row"><span class="circ-num">6</span><div class="wo" data-ans="I can&#x27;t hear it."><div class="wo-line"></div><div class="wo-bank"><button class="wo-chip" onclick="woPick(this)">it.</button><button class="wo-chip" onclick="woPick(this)">I</button><button class="wo-chip" onclick="woPick(this)">hear</button><button class="wo-chip" onclick="woPick(this)">can't</button></div></div></div></div></div></div><div class="btn-row"><button class="btn-check" onclick="checkWO('xhw2')">Check Answers</button><button class="btn-reset" onclick="resetWO('xhw2')">Reset</button></div>
-  </div></div>
+<div class="banner banner-hw"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Homework</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
+<div class="slide-main"><div class="content">
+<h2>HW2 — Help phrases</h2>
+<p class="instruction">Put the words in order to make help phrases.</p>
+<div class="compact" id="xhw2"><div class="fixed-two-col"><div><div class="ex-row"><span class="example-badge">1</span><span style="color:#4F7396">understand. / don't / I</span><br/><span style="margin-left:34px;display:inline-block;margin-top:6px;"><span style="color:#1A7A4A;font-weight:800;background:#E3F5EA;padding:1px 7px;border-radius:5px;">I don't understand.</span></span></div><div class="ex-row wo-row"><span class="circ-num">2</span><div class="wo" data-ans="I can't hear you."><div class="wo-line"></div><div class="wo-bank"><button class="wo-chip" onclick="woPick(this)">hear</button><button class="wo-chip" onclick="woPick(this)">you.</button><button class="wo-chip" onclick="woPick(this)">I</button><button class="wo-chip" onclick="woPick(this)">can't</button></div></div></div><div class="ex-row wo-row"><span class="circ-num">3</span><div class="wo" data-ans="One more time, please."><div class="wo-line"></div><div class="wo-bank"><button class="wo-chip" onclick="woPick(this)">please.</button><button class="wo-chip" onclick="woPick(this)">time,</button><button class="wo-chip" onclick="woPick(this)">One</button><button class="wo-chip" onclick="woPick(this)">more</button></div></div></div></div><div><div class="ex-row wo-row"><span class="circ-num">4</span><div class="wo" data-ans="What does hello mean?"><div class="wo-line"></div><div class="wo-bank"><button class="wo-chip" onclick="woPick(this)">mean?</button><button class="wo-chip" onclick="woPick(this)">hello</button><button class="wo-chip" onclick="woPick(this)">does</button><button class="wo-chip" onclick="woPick(this)">What</button></div></div></div><div class="ex-row wo-row"><span class="circ-num">5</span><div class="wo" data-ans="How do you say apple in English?"><div class="wo-line"></div><div class="wo-bank"><button class="wo-chip" onclick="woPick(this)">English?</button><button class="wo-chip" onclick="woPick(this)">say</button><button class="wo-chip" onclick="woPick(this)">How</button><button class="wo-chip" onclick="woPick(this)">in</button><button class="wo-chip" onclick="woPick(this)">apple</button><button class="wo-chip" onclick="woPick(this)">you</button><button class="wo-chip" onclick="woPick(this)">do</button></div></div></div><div class="ex-row wo-row"><span class="circ-num">6</span><div class="wo" data-ans="I can't hear it."><div class="wo-line"></div><div class="wo-bank"><button class="wo-chip" onclick="woPick(this)">it.</button><button class="wo-chip" onclick="woPick(this)">I</button><button class="wo-chip" onclick="woPick(this)">hear</button><button class="wo-chip" onclick="woPick(this)">can't</button></div></div></div></div></div></div><div class="btn-row check-dock"><button class="btn-check" onclick="checkWO('xhw2')">Check Answers</button><button class="btn-reset" onclick="resetWO('xhw2')">Reset</button></div>
+</div></div>
 </div>
-
 <div class="slide" id="hw-3">
-  <div class="banner banner-hw"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/></svg><span>Homework</span></div>
-  <div class="slide-main"><div class="content">
-    <h2>HW3 &mdash; The alphabet</h2>
-    <p class="instruction">Read the letters.<br>Write the word.</p>
-    
-    <div id="xhw3"><div class="fixed-two-col"><div><div class="ex-row"><span class="example-badge">1</span><span style="font-family:Fredoka,sans-serif;font-weight:600;letter-spacing:.12em;color:var(--navy);">H-E-L-L-O</span> &rarr; <span style="color:#1A7A4A;font-weight:800;background:#E3F5EA;padding:1px 7px;border-radius:5px;">hello</span></div><div class="ex-row"><span class="circ-num">2</span><span style="font-family:Fredoka,sans-serif;font-weight:600;letter-spacing:.12em;color:var(--navy);">E-N-G-L-I-S-H</span> &rarr; <input class="ans-input" style="width:170px" data-ans="English" aria-label="word 2"></div><div class="ex-row"><span class="circ-num">3</span><span style="font-family:Fredoka,sans-serif;font-weight:600;letter-spacing:.12em;color:var(--navy);">S-L-O-W-L-Y</span> &rarr; <input class="ans-input" style="width:170px" data-ans="slowly" aria-label="word 3"></div></div><div><div class="ex-row"><span class="circ-num">4</span><span style="font-family:Fredoka,sans-serif;font-weight:600;letter-spacing:.12em;color:var(--navy);">T-E-A-C-H-E-R</span> &rarr; <input class="ans-input" style="width:170px" data-ans="teacher" aria-label="word 4"></div><div class="ex-row"><span class="circ-num">5</span><span style="font-family:Fredoka,sans-serif;font-weight:600;letter-spacing:.12em;color:var(--navy);">S-C-R-E-E-N</span> &rarr; <input class="ans-input" style="width:170px" data-ans="screen" aria-label="word 5"></div><div class="ex-row"><span class="circ-num">6</span><span style="font-family:Fredoka,sans-serif;font-weight:600;letter-spacing:.12em;color:var(--navy);">W-A-T-C-H</span> &rarr; <input class="ans-input" style="width:170px" data-ans="watch" aria-label="word 6"></div></div></div></div>
-    <div class="btn-row"><button class="btn-check" onclick="checkSlide('xhw3')">Check Answers</button><button class="btn-reset" onclick="resetSlide('xhw3')">Reset</button></div>
-    <div class="gram-note">Now spell your name and your city out loud.<br>Say each letter!</div>
-  </div></div>
+<div class="banner banner-hw"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Homework</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
+<div class="slide-main"><div class="content">
+<h2>HW3 — The alphabet</h2>
+<p class="instruction">Read the letters.<br/>Write the word.</p>
+<div id="xhw3"><div class="fixed-two-col"><div><div class="ex-row"><span class="example-badge">1</span><span style="font-family:Fredoka,sans-serif;font-weight:600;letter-spacing:.12em;color:var(--navy);">H-E-L-L-O</span> → <span style="color:#1A7A4A;font-weight:800;background:#E3F5EA;padding:1px 7px;border-radius:5px;">hello</span></div><div class="ex-row"><span class="circ-num">2</span><span style="font-family:Fredoka,sans-serif;font-weight:600;letter-spacing:.12em;color:var(--navy);">E-N-G-L-I-S-H</span> → <input aria-label="word 2" class="ans-input" data-ans="English" style="width:170px"/></div><div class="ex-row"><span class="circ-num">3</span><span style="font-family:Fredoka,sans-serif;font-weight:600;letter-spacing:.12em;color:var(--navy);">S-L-O-W-L-Y</span> → <input aria-label="word 3" class="ans-input" data-ans="slowly" style="width:170px"/></div></div><div><div class="ex-row"><span class="circ-num">4</span><span style="font-family:Fredoka,sans-serif;font-weight:600;letter-spacing:.12em;color:var(--navy);">T-E-A-C-H-E-R</span> → <input aria-label="word 4" class="ans-input" data-ans="teacher" style="width:170px"/></div><div class="ex-row"><span class="circ-num">5</span><span style="font-family:Fredoka,sans-serif;font-weight:600;letter-spacing:.12em;color:var(--navy);">S-C-R-E-E-N</span> → <input aria-label="word 5" class="ans-input" data-ans="screen" style="width:170px"/></div><div class="ex-row"><span class="circ-num">6</span><span style="font-family:Fredoka,sans-serif;font-weight:600;letter-spacing:.12em;color:var(--navy);">W-A-T-C-H</span> → <input aria-label="word 6" class="ans-input" data-ans="watch" style="width:170px"/></div></div></div></div>
+<div class="btn-row check-dock"><button class="btn-check" onclick="checkSlide('xhw3')">Check Answers</button><button class="btn-reset" onclick="resetSlide('xhw3')">Reset</button></div>
+<div class="gram-note">Now spell your name and your city out loud.<br/>Say each letter!</div>
+</div></div>
 </div>
-
-</div><!-- END #deck -->
+<!-- END #deck -->
 
 
 <div id="nav">
+  <a id="navHome" class="nav-cover" href="../index.html" title="All Courses"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/></svg><span>All courses</span></a>
   <button id="prevBtn" onclick="goTo(current-1)">◀ Prev</button>
   <div id="dots"></div>
   <div id="counter">1/1</div>
@@ -1352,6 +1386,7 @@ button { border-radius:2px; }
   <button id="dlNotesBtn" onclick="savePDF()" style="margin-left:10px;padding:5px 12px;background:#2E2A6B;color:#fff;border:none;border-radius:7px;font-size:.82rem;cursor:pointer;font-family:inherit;">Save Notes</button>
   
   <button onclick="this.blur();clearAllNotes()" title="Delete all notes and start a new lesson" style="margin-left:6px;padding:5px 12px;background:#8B2E2E;color:#fff;border:none;border-radius:7px;font-size:.82rem;cursor:pointer;font-family:inherit;">Clear Notes</button>
+                      <button id="navHw" class="nav-cover" onclick="goToId('hw-cover')">Homework &rarr;</button>
 </div>
 
 <script>
@@ -1455,7 +1490,7 @@ function toggleNotes(){
   var panel = document.getElementById('notesPanel');
   panel.classList.toggle('open', notesOpen);
   if (current === 0) panel.classList.toggle('cover', notesOpen);
-  document.getElementById('notesBtn').textContent = notesOpen ? '✕ Close' : '<svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/></svg> Notes';
+  document.getElementById('notesBtn').innerHTML = notesOpen ? 'Close' : '<svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/></svg> Notes';
   /* reset position on close */
   if (!notesOpen) { panel.style.left=''; panel.style.top=''; panel.style.right=''; panel.style.bottom=''; panel.style.transform=''; }
 }
@@ -2003,6 +2038,12 @@ function hwSpell(v){ var o=document.getElementById('hw-sp-out'); o.innerHTML='';
 function spellShow(v){ var o=document.getElementById('sp-out'); o.innerHTML=''; (v||'').toUpperCase().replace(/[^A-Z]/g,'').split('').forEach(function(c){ var b=document.createElement('button'); b.textContent=c; b.onclick=function(){say(c);}; o.appendChild(b); }); }
 function spellSay(){ var v=(document.getElementById('sp-in').value||'').toUpperCase().replace(/[^A-Z]/g,'').split('').join(', '); if(v) say(v); }
 
+/* notes-emoji-js */
+function notesEmoji(e){ var ta = document.getElementById('notesTA'); ta.focus(); document.execCommand('insertText', false, e + ' '); saveNotes(); }
+/* end notes-emoji-js */
+/* cover-nav-js */
+(function(){ var g = goTo; goTo = function(n){ g(n); document.body.classList.toggle('on-cover', current === 0); }; document.body.classList.toggle('on-cover', current === 0); })();
+/* end cover-nav-js */
 </script>
 </body>
 </html>
