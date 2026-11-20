@@ -69,3 +69,59 @@ def move_checks(html):
             if changed: seg = str(soup)
         out.append(seg + tail)
     return ''.join(out)
+
+
+SHOWK = re.compile(r"showKeys\(this,\s*'([^']+)'\)")
+def move_show_answers(html):
+    """'Show answers' buttons never go before the exercise: they sit after it, in the same small button row as Check Answers."""
+    parts = re.split(r'(?=<div class="slide[ "])', html)
+    out = [parts[0]]
+    for seg in parts[1:]:
+        end = seg.find('<!-- END #deck -->')
+        tail = ''
+        if end > -1: seg, tail = seg[:end], seg[end:]
+        if 'showKeys' in seg or 'Show the answer' in seg or 'Show answers' in seg:
+            soup = BeautifulSoup(seg, 'html.parser'); changed = False
+            # 1) showKeys buttons living in the sticky bar at the top
+            for b in list(soup.find_all('button')):
+                m = SHOWK.match(b.get('onclick', '') or '')
+                if not m: continue
+                target = soup.find(id=m.group(1))
+                if target is None: continue
+                nxt = target.find_next_sibling(class_='check-dock')
+                bank = b.find_parent(class_='sticky-bank')
+                if bank is None and nxt is not None and b.parent is nxt: continue
+                b.extract(); b['style'] = ''
+                if nxt is None:
+                    nxt = soup.new_tag('div', attrs={'class': 'btn-row check-dock'}); target.insert_after(nxt)
+                nxt.append(b); changed = True
+                if bank is not None:
+                    for r in bank.select('.stickyrow'):
+                        if not r.get_text(strip=True) and not r.find(True): r.decompose()
+                    if not bank.get_text(strip=True) and not bank.find(True): bank.decompose()
+            # 2) 'Show the answer(s)' key buttons placed before the content: move button + key box to the end of the slide
+            content = soup.select_one('.content')
+            if content is not None:
+                for b in list(soup.find_all('button')):
+                    oc = b.get('onclick', '') or ''
+                    if not oc.startswith('toggleSuggested') or not re.search(r'show (the )?answers?', b.get_text(' ', strip=True), re.I): continue
+                    kid = re.search(r"toggleSuggested\('([^']+)'\)", oc).group(1)
+                    kb = soup.find(id=kid)
+                    kids = [x for x in content.descendants if getattr(x, 'name', None)]
+                    pos = kids.index(b) if b in kids else -1
+                    later = [x for x in kids[pos+1:] if x.name in ('input','select') or any(c in (x.get('class') or []) for c in ('read-box','qcard','ex-row','qline','circ-opt'))] if pos >= 0 else []
+                    if not later: continue
+                    b.extract(); b['style'] = ''
+                    if kb is not None: kb.extract()
+                    docks = [d for d in content.select('.check-dock')]
+                    if docks:
+                        row = docks[-1]; row.append(b)
+                        if kb is not None: row.insert_after(kb)
+                    else:
+                        row = soup.new_tag('div', attrs={'class': 'btn-row check-dock'}); row.append(b)
+                        content.append(row)
+                        if kb is not None: row.insert_after(kb)
+                    changed = True
+            if changed: seg = str(soup)
+        out.append(seg + tail)
+    return ''.join(out)

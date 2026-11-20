@@ -126,7 +126,7 @@ THEMES['welcome'] = dict(    # Empower A1 Welcome: friendly, centered cover
     cover_bg='#F2EBDF', cover_ink='#2A2433', cover_accent='#A0526B', cover_muted='#6A6275',
     scene=('#D3E2E0','#A9CBC7','#72A5A2','#3F7A7C','#EBC27F'), banner=_BAN('#2F5F66'), kind_icons={})
 THEMES['b2lost'] = dict(     # Empower B2 2A "It was getting late and I was lost": night at sea, poster cover
-    label='Unit 2 · Lesson A', scene_kind='night', icon='lifebuoy', emblem='lifebuoy', tfont='oswald', bfont='worksans', layout='poster', tcase='upper', sw='1.7',
+    label='Unit 2 · Lesson A', scene_kind='night', icon='lifebuoy', emblem='lifebuoy', tfont='bitter', bfont='dmsans', layout='poster', tcase='none', sw='1.7',
     paper='#F6F4EE', ink='#14222F', muted='#556573', accent='#C4532D', accent2='#1F4A66', soft='#E6E4DA', rule='#CFCFC4',
     cover_bg='#12263A', cover_ink='#F3EEDF', cover_accent='#F0A468', cover_muted='#A9BACB',
     scene=('#1D3A56','#173049','#10253B','#0A1A2B','#F2E4B8'), banner=_BAN('#1F4A66'), kind_icons={'leadin':'lifebuoy','bridge':'wave'})
@@ -236,7 +236,7 @@ body.on-cover #nav .nav-cover {{ display:inline-flex; }}
 .audio-box:not(.pending) .ph {{ display:none !important; }}
 /* Check Answers / Reset: right after the exercises, small buttons, no docking */
 .check-dock {{ position:static !important; background:transparent !important; border:none !important; padding:0 !important; margin:10px 0 4px !important; display:flex; justify-content:center; gap:10px; }}
-.check-dock .btn-check, .check-dock .btn-reset {{ padding:7px 20px !important; font-size:.95rem !important; min-width:0 !important; width:auto !important; }}
+.check-dock .btn-check, .check-dock .btn-reset, .check-dock .btn-suggest {{ padding:7px 20px !important; font-size:.95rem !important; min-width:0 !important; width:auto !important; }}
 .ans-input.pick {{ width:64px !important; min-width:0; text-align:center; font-weight:800; padding:2px 4px !important; margin:0 6px; }}
 /* compact audio player: full seek line + play, time, volume, options */
 .ins-audio {{ flex:none !important; width:340px; max-width:30vw; }}
@@ -306,7 +306,8 @@ def apply_theme(html, tname, title_html=None, sub='', label=None, scene_kind=Non
     i = html.index('<div class="slide" id="hw-cover">'); j = html.index('<div class="slide"', i+10); j = html.rfind('<!--',i,j) if html.rfind('<!--',i,j)>i else j
     hw = ('<div class="slide" id="hw-cover">'+cover(t,title_html,'Homework','Homework',art).replace('@@ACT@@','').replace(IC(t['icon'], t), IC('hw', t),1)+art+'</div>\n')
     html = html[:i]+hw+html[j:]
-    from normalize import move_checks, single_char_selects_to_inputs
+    from normalize import move_checks, move_show_answers, single_char_selects_to_inputs
     html = single_char_selects_to_inputs(html)
     html = move_checks(html)
+    html = move_show_answers(html)
     return html

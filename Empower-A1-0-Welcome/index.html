@@ -1095,6 +1095,8 @@ body { background:#12304F; }
 
 
 
+
+
 /* ===== EDITORIAL THEME (welcome) ===== */
 :root { --navy:#2A2433; --coral:#A0526B; --sky:#EEE6DB; --mint:#2F5F66; --lemon:#EEE6DB; --lilac:#DDD2C2; --paper:#FCF9F3; --mist:#EEE6DB;
   --serif:'Libre Baskerville',Georgia,serif; --sans:'DM Sans','Segoe UI',sans-serif; }
@@ -1179,7 +1181,7 @@ body.on-cover #nav .nav-cover { display:inline-flex; }
 .audio-box:not(.pending) .ph { display:none !important; }
 /* Check Answers / Reset: right after the exercises, small buttons, no docking */
 .check-dock { position:static !important; background:transparent !important; border:none !important; padding:0 !important; margin:10px 0 4px !important; display:flex; justify-content:center; gap:10px; }
-.check-dock .btn-check, .check-dock .btn-reset { padding:7px 20px !important; font-size:.95rem !important; min-width:0 !important; width:auto !important; }
+.check-dock .btn-check, .check-dock .btn-reset, .check-dock .btn-suggest { padding:7px 20px !important; font-size:.95rem !important; min-width:0 !important; width:auto !important; }
 .ans-input.pick { width:64px !important; min-width:0; text-align:center; font-weight:800; padding:2px 4px !important; margin:0 6px; }
 /* compact audio player: full seek line + play, time, volume, options */
 .ins-audio { flex:none !important; width:340px; max-width:30vw; }
@@ -1207,7 +1209,7 @@ body.on-cover #nav .nav-cover { display:inline-flex; }
       <button onclick="notesHilite('#ADD8E6')" title="Blue"   style="background:#ADD8E6;width:20px;height:20px;padding:0;border-radius:4px;border:none;cursor:pointer;"></button>
       <button onclick="notesHilite('remove')" title="Remove highlight" style="font-size:.78rem;padding:2px 7px;color:#ff9999;margin-left:2px;background:rgba(255,255,255,.1);border:none;border-radius:4px;cursor:pointer;">✕</button>
     </span>
-                <span class="nt-emojis"><button onmousedown="event.preventDefault()" onclick="notesEmoji('✅')" title="Correct">✅</button><button onmousedown="event.preventDefault()" onclick="notesEmoji('❌')" title="Mistake">❌</button><button onmousedown="event.preventDefault()" onclick="notesEmoji('🔊')" title="Pronunciation">🔊</button><button onmousedown="event.preventDefault()" onclick="notesEmoji('📐')" title="Grammar">📐</button><button onmousedown="event.preventDefault()" onclick="notesEmoji('🏷️')" title="Vocabulary">🏷️</button><button onmousedown="event.preventDefault()" onclick="notesEmoji('💬')" title="Expression">💬</button><button onmousedown="event.preventDefault()" onclick="notesEmoji('⭐')" title="Important">⭐</button><button onmousedown="event.preventDefault()" onclick="notesEmoji('❓')" title="Question">❓</button></span>
+                    <span class="nt-emojis"><button onmousedown="event.preventDefault()" onclick="notesEmoji('✅')" title="Correct">✅</button><button onmousedown="event.preventDefault()" onclick="notesEmoji('❌')" title="Mistake">❌</button><button onmousedown="event.preventDefault()" onclick="notesEmoji('🔊')" title="Pronunciation">🔊</button><button onmousedown="event.preventDefault()" onclick="notesEmoji('📐')" title="Grammar">📐</button><button onmousedown="event.preventDefault()" onclick="notesEmoji('🏷️')" title="Vocabulary">🏷️</button><button onmousedown="event.preventDefault()" onclick="notesEmoji('💬')" title="Expression">💬</button><button onmousedown="event.preventDefault()" onclick="notesEmoji('⭐')" title="Important">⭐</button><button onmousedown="event.preventDefault()" onclick="notesEmoji('❓')" title="Question">❓</button></span>
   </div>
   <div id="notesTA" contenteditable="true" spellcheck="false" oninput="saveNotes()"></div>
 </div>
@@ -1217,7 +1219,7 @@ body.on-cover #nav .nav-cover { display:inline-flex; }
 <div class="slide active" id="s1"><div class="cv-top"><div class="cv-kicker"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H11l-5 4v-4H4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span>Welcome</span></div><div class="cv-brand">Conversational English &middot; with teacher Nanda</div><div class="cv-title">Hello,<br><em>English!</em></div><div class="cv-rule"></div></div><svg class="cv-art" viewBox="0 0 1600 400" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><circle cx="1180" cy="200" r="64" fill="#EBC27F" opacity=".9"/><polygon points="0,400 0,278 80,276 160,270 240,266 320,264 400,264 480,265 560,263 640,257 720,248 800,241 880,239 960,243 1040,251 1120,260 1200,266 1280,267 1360,266 1440,265 1520,267 1600,271 1680,276 1600,400" fill="#D3E2E0" opacity="1"/><polygon points="0,400 0,300 80,301 160,300 240,295 320,289 400,284 480,283 560,287 640,294 720,303 800,308 880,310 960,308 1040,306 1120,306 1200,308 1280,311 1360,311 1440,307 1520,300 1600,291 1680,285 1600,400" fill="#A9CBC7" opacity="1"/><polygon points="0,400 0,323 80,322 160,325 240,332 320,339 400,344 480,346 560,344 640,341 720,340 800,340 880,342 960,342 1040,339 1120,333 1200,326 1280,321 1360,321 1440,324 1520,329 1600,334 1680,336 1600,400" fill="#72A5A2" opacity="1"/><polygon points="0,400 0,379 80,380 160,378 240,375 320,373 400,372 480,373 560,373 640,371 720,367 800,362 880,359 960,358 1040,361 1120,366 1200,371 1280,374 1360,374 1440,373 1520,373 1600,375 1680,378 1600,400" fill="#3F7A7C" opacity="1"/></svg></div>
 
 <div class="slide" id="s-name">
-  <div class="banner banner-bridge"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 17h20"/><path d="M4 17c0-5 3-8 8-8s8 3 8 8"/><path d="M8 17v-6M12 17V9M16 17v-6"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Hello!</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
+  <div class="banner banner-bridge"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 17h20"/><path d="M4 17c0-5 3-8 8-8s8 3 8 8"/><path d="M8 17v-6M12 17V9M16 17v-6"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Hello!</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
   <div class="slide-main"><div class="content">
     <h2>Hello! I'm Nanda.</h2>
     <p class="instruction">Let&rsquo;s practice.</p>
@@ -1235,7 +1237,7 @@ body.on-cover #nav .nav-cover { display:inline-flex; }
 </div>
 
 <div class="slide" id="s-map">
-  <div class="banner banner-leadin"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r=".6"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Lead-in</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
+  <div class="banner banner-leadin"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r=".6"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Lead-in</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
   <div class="slide-main"><div class="content">
     <h2>How we learn together</h2>
     <p class="instruction">This is our plan for every lesson.</p>
@@ -1246,7 +1248,7 @@ body.on-cover #nav .nav-cover { display:inline-flex; }
 </div>
 
 <div class="slide" id="s-cl1">
-  <div class="banner banner-vocab"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l9-9h8v8l-9 9z"/><circle cx="15.5" cy="8.5" r="1.2"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Vocabulary</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
+  <div class="banner banner-vocab"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l9-9h8v8l-9 9z"/><circle cx="15.5" cy="8.5" r="1.2"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Vocabulary</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
   <div class="slide-main"><div class="content">
     <h2>Classroom language</h2>
     <p class="instruction">These words are in every lesson.</p>
@@ -1257,7 +1259,7 @@ body.on-cover #nav .nav-cover { display:inline-flex; }
 </div>
 
 <div class="slide" id="s-cl2">
-<div class="banner banner-vocab"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l9-9h8v8l-9 9z"/><circle cx="15.5" cy="8.5" r="1.2"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Vocabulary</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
+<div class="banner banner-vocab"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l9-9h8v8l-9 9z"/><circle cx="15.5" cy="8.5" r="1.2"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Vocabulary</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
 <div class="slide-main"><div class="content">
 <h2>Match it!</h2>
 <p class="instruction">Listen to the command.<br/>Say the <b>number</b> of the right picture.<br/>Then say the word.</p>
@@ -1266,7 +1268,7 @@ body.on-cover #nav .nav-cover { display:inline-flex; }
 </div></div>
 </div>
 <div class="slide" id="s-help">
-  <div class="banner banner-vocab"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l9-9h8v8l-9 9z"/><circle cx="15.5" cy="8.5" r="1.2"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Vocabulary</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
+  <div class="banner banner-vocab"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l9-9h8v8l-9 9z"/><circle cx="15.5" cy="8.5" r="1.2"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Vocabulary</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
   <div class="slide-main"><div class="content">
     <h2>Help phrases</h2>
     <p class="instruction">These phrases help you in our online lessons.<br>Say each phrase with me.</p>
@@ -1277,7 +1279,7 @@ body.on-cover #nav .nav-cover { display:inline-flex; }
 </div>
 
 <div class="slide" id="s-help2">
-<div class="banner banner-vocab"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l9-9h8v8l-9 9z"/><circle cx="15.5" cy="8.5" r="1.2"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Vocabulary</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
+<div class="banner banner-vocab"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l9-9h8v8l-9 9z"/><circle cx="15.5" cy="8.5" r="1.2"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Vocabulary</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
 <div class="slide-main"><div class="content">
 <h2>Which phrase?</h2>
 <p class="instruction">What do you say?<br/>Say the correct phrase to me.</p>
@@ -1285,7 +1287,7 @@ body.on-cover #nav .nav-cover { display:inline-flex; }
 </div></div>
 </div>
 <div class="slide" id="s-alpha">
-  <div class="banner banner-vocab"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l9-9h8v8l-9 9z"/><circle cx="15.5" cy="8.5" r="1.2"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Vocabulary</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
+  <div class="banner banner-vocab"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l9-9h8v8l-9 9z"/><circle cx="15.5" cy="8.5" r="1.2"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Vocabulary</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
   <div class="slide-main"><div class="content">
     <h2>The alphabet</h2>
     <p class="instruction">Say each letter with me.</p>
@@ -1296,7 +1298,7 @@ body.on-cover #nav .nav-cover { display:inline-flex; }
 </div>
 
 <div class="slide" id="s-spell">
-  <div class="banner banner-speaking"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H11l-5 4v-4H4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Speaking</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
+  <div class="banner banner-speaking"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H11l-5 4v-4H4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Speaking</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
   <div class="slide-main"><div class="content">
     <h2>Spell your name</h2>
     <p class="instruction">How do you spell your name?<br>Spell it with me.</p>
@@ -1309,7 +1311,7 @@ body.on-cover #nav .nav-cover { display:inline-flex; }
 </div>
 
 <div class="slide" id="s-why">
-  <div class="banner banner-speaking"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H11l-5 4v-4H4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Speaking</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
+  <div class="banner banner-speaking"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H11l-5 4v-4H4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Speaking</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
   <div class="slide-main"><div class="content">
     <h2>Why English?</h2>
     <p class="instruction">Why do you need English?<br>Say: <b>I need English for &hellip;</b></p>
@@ -1320,7 +1322,7 @@ body.on-cover #nav .nav-cover { display:inline-flex; }
 </div>
 
 <div class="slide" id="s-cp">
-  <div class="banner banner-review"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Checkpoint</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
+  <div class="banner banner-review"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Checkpoint</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
   <div class="slide-main"><div class="content">
     <h2>I can&hellip;</h2>
     <p class="instruction">What can you do now?<br>What do you want to practice again?</p>
@@ -1332,7 +1334,7 @@ body.on-cover #nav .nav-cover { display:inline-flex; }
 </div>
 
 <div class="slide" id="s-next">
-  <div class="banner banner-review"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Plan together</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
+  <div class="banner banner-review"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Plan together</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
   <div class="slide-main"><div class="content">
     <h2>What's next?</h2>
     <p class="instruction">What is your next step?</p>
@@ -1348,7 +1350,7 @@ body.on-cover #nav .nav-cover { display:inline-flex; }
 
 <div class="slide" id="hw-cover"><div class="cv-top"><div class="cv-kicker"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/></svg><span>Homework</span></div><div class="cv-brand">Conversational English &middot; with teacher Nanda</div><div class="cv-title">Hello,<br><em>English!</em></div><div class="cv-rule"></div><div class="cv-sub">Homework</div></div><svg class="cv-art" viewBox="0 0 1600 400" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><circle cx="1180" cy="200" r="64" fill="#EBC27F" opacity=".9"/><polygon points="0,400 0,278 80,276 160,270 240,266 320,264 400,264 480,265 560,263 640,257 720,248 800,241 880,239 960,243 1040,251 1120,260 1200,266 1280,267 1360,266 1440,265 1520,267 1600,271 1680,276 1600,400" fill="#D3E2E0" opacity="1"/><polygon points="0,400 0,300 80,301 160,300 240,295 320,289 400,284 480,283 560,287 640,294 720,303 800,308 880,310 960,308 1040,306 1120,306 1200,308 1280,311 1360,311 1440,307 1520,300 1600,291 1680,285 1600,400" fill="#A9CBC7" opacity="1"/><polygon points="0,400 0,323 80,322 160,325 240,332 320,339 400,344 480,346 560,344 640,341 720,340 800,340 880,342 960,342 1040,339 1120,333 1200,326 1280,321 1360,321 1440,324 1520,329 1600,334 1680,336 1600,400" fill="#72A5A2" opacity="1"/><polygon points="0,400 0,379 80,380 160,378 240,375 320,373 400,372 480,373 560,373 640,371 720,367 800,362 880,359 960,358 1040,361 1120,366 1200,371 1280,374 1360,374 1440,373 1520,373 1600,375 1680,378 1600,400" fill="#3F7A7C" opacity="1"/></svg></div>
 <div class="slide" id="hw-1">
-<div class="banner banner-hw"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Homework</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
+<div class="banner banner-hw"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Homework</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
 <div class="slide-main"><div class="content">
 <h2>HW1 — What do you do?</h2>
 <p class="instruction">Read the situation.<br/>Choose the right classroom command.</p>
@@ -1357,7 +1359,7 @@ body.on-cover #nav .nav-cover { display:inline-flex; }
 </div></div>
 </div>
 <div class="slide" id="hw-2">
-<div class="banner banner-hw"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Homework</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
+<div class="banner banner-hw"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Homework</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
 <div class="slide-main"><div class="content">
 <h2>HW2 — Help phrases</h2>
 <p class="instruction">Put the words in order to make help phrases.</p>
@@ -1365,7 +1367,7 @@ body.on-cover #nav .nav-cover { display:inline-flex; }
 </div></div>
 </div>
 <div class="slide" id="hw-3">
-<div class="banner banner-hw"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Homework</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
+<div class="banner banner-hw"><svg class="ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/></svg><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Homework</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
 <div class="slide-main"><div class="content">
 <h2>HW3 — The alphabet</h2>
 <p class="instruction">Read the letters.<br/>Write the word.</p>
@@ -1386,7 +1388,7 @@ body.on-cover #nav .nav-cover { display:inline-flex; }
   <button id="dlNotesBtn" onclick="savePDF()" style="margin-left:10px;padding:5px 12px;background:#2E2A6B;color:#fff;border:none;border-radius:7px;font-size:.82rem;cursor:pointer;font-family:inherit;">Save Notes</button>
   
   <button onclick="this.blur();clearAllNotes()" title="Delete all notes and start a new lesson" style="margin-left:6px;padding:5px 12px;background:#8B2E2E;color:#fff;border:none;border-radius:7px;font-size:.82rem;cursor:pointer;font-family:inherit;">Clear Notes</button>
-                      <button id="navHw" class="nav-cover" onclick="goToId('hw-cover')">Homework &rarr;</button>
+                          <button id="navHw" class="nav-cover" onclick="goToId('hw-cover')">Homework &rarr;</button>
 </div>
 
 <script>

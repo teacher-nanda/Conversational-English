@@ -1,27 +1,26 @@
-import sys
-from playwright.sync_api import sync_playwright
-JS = """(function(){
- var out=[];
- document.querySelectorAll('.slide').forEach(function(s){
-  var ex=s.querySelectorAll('.ans-input,.gsel,.circ-opt,.wb-blank,.wo-chip,.wo-line,.classify-cols,.fcard,.strbtn,[data-stress],.sentbtn,.feelbtn,.tf-row button,.ex-row');
-  s.querySelectorAll('button').forEach(function(b){
-    var oc=(b.getAttribute('onclick')||'');
-    if(!/^(check|reset)[A-Za-z]*\\(/.test(oc)) return;
-    var after=0; ex.forEach(function(e){ if(b.compareDocumentPosition(e) & Node.DOCUMENT_POSITION_FOLLOWING) after++; });
-    if(after>0) out.push([s.id, b.textContent.trim(), oc.slice(0,30), after, !!b.closest('.sticky-bank')]);
-  });
- });
- return out;})()"""
-with sync_playwright() as p:
-    b=p.chromium.launch(); pg=b.new_page(viewport={'width':1440,'height':900})
-    pg.route('**/fonts.googleapis.com/**', lambda r: r.abort())
-    tot=0
-    for f in sys.argv[1:]:
-        pg.goto('file://'+f); pg.wait_for_timeout(500)
-        r=pg.evaluate(JS); seen=set(); 
-        print('==',f.split('/')[-2], len(r))
-        for x in r:
-            if x[0] in seen: continue
-            seen.add(x[0]); print('  ',x)
-        tot+=len(seen)
-    print('slides with Check BEFORE exercises:',tot)
+import sys, os
+BASE = (sys.argv[1] if len(sys.argv)>1 else os.path.expanduser('~/Desktop/Conversational-English')).rstrip('/') + '/'
+import re
+from bs4 import BeautifulSoup
+EXC=('circ-opt','wb-blank','pr-s','ex-row','gsel','ans-input','qline','qcard','mp-item','sent','tf-row','cls-item','cs-item','dk-card','read-box')
+def exlike(e):
+    n=getattr(e,'name',None)
+    if not n: return False
+    if n in('input','select','textarea'): return True
+    c=e.get('class') or []
+    return any(x in EXC for x in c)
+for f in ['Empower-B2-2A','AEF4-5A','Empower-A1-1A','Empower-A1-0-Welcome']:
+    sp=BeautifulSoup(open(BASE+f+'/index.html',encoding='utf-8').read(),'html.parser')
+    for sc in sp.select('script,style'): sc.decompose()
+    for s in sp.select('.slide'):
+        body=s.select_one('.content') or s
+        els=[e for e in body.descendants if getattr(e,'name',None)]
+        for i,e in enumerate(els):
+            if e.name!='button': continue
+            oc=e.get('onclick','') or ''; tx=e.get_text(' ',strip=True)
+            if not (re.search(r'(^|[^a-z])check[A-Za-z]*\(|showKeys|toggleSuggested|mpCheck|prCheck',oc) ): continue
+            if e.find_parent('button'): continue
+            after=[x for x in els[i+1:] if exlike(x) and not x.find_parent('button') and not x.find_parent(class_=['sticky-bank','keybox'])]
+            # exclude things inside the button's own key box
+            kb=None
+            if after: print(f,s.get('id'),'| BUTTON before %d exercise elements |'%len(after),tx[:40],'|',oc[:30])
