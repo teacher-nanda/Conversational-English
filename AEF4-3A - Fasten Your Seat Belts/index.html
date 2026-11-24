@@ -174,20 +174,15 @@ h2{font-size:1.85rem;font-weight:800;color:#0A2836;margin-bottom:14px}
 .tp-correct{background:#1A7A4A!important;color:#fff!important}
 .tp-wrong{background:#C4614A!important;color:#fff!important}
 .tp-empty{background:#E07000!important;color:#fff!important}
-.tl-wrap{display:grid;grid-template-columns:minmax(0,430px) minmax(0,1fr);gap:22px;align-items:start;margin-top:10px}
-.tl-panel{background:#F4F8FA;border:1px solid #C8D8E8;border-radius:14px;padding:14px 18px 16px}
-.tl-head{display:flex;align-items:center;gap:10px;margin-bottom:12px;font-size:1.05rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#0B5A68}
-.tl-step{background:#0E7A8A;color:#fff;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:1rem;letter-spacing:0}
-.tl-words{display:grid;grid-template-columns:1fr 1fr;gap:8px 18px}
-.tl-word{display:flex;flex-direction:column;gap:4px;background:#fff;border:1px solid #D8E3EC;border-radius:10px;padding:8px 12px}
-.tl-word b{font-size:1.15rem;color:#1C2B3A}
-.tl-ws{height:36px;border:none;border-radius:8px;font-size:1.05rem;font-weight:800;cursor:pointer;font-family:inherit;background:#E0E7EF;color:#8899AA;width:100%}
-.tl-ws.s1{background:#0E7A8A;color:#fff}.tl-ws.s2{background:#1E4D8C;color:#fff}.tl-ws.s3{background:#6B4A8C;color:#fff}
-.tl-ws.tp-correct{background:#1A7A4A!important;color:#fff!important}.tl-ws.tp-wrong{background:#C4614A!important;color:#fff!important}
-.tl-clips{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px 14px}
-.tl-clip{min-width:0;display:flex;align-items:center;gap:10px;background:#fff;border:1px solid #D8E3EC;border-radius:12px;padding:8px 10px}
-.tl-clip audio{flex:1;min-width:0;height:34px}
-.tl-letter{background:#0A1628;color:#fff;border-radius:8px;width:34px;height:34px;display:flex;align-items:center;justify-content:center;font-size:1.15rem;font-weight:800;flex-shrink:0}
+.vm-bank{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:10px 0 18px}
+.vm-chip{border:1.5px solid #C8D8E8;background:#fff;color:#0A1628;border-radius:10px;padding:8px 10px;font-size:1.05rem;font-weight:700;font-family:inherit;cursor:pointer;text-align:left}
+.vm-chip.used{text-decoration:line-through;opacity:.5;border-style:dashed}
+.vm-cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 32px}
+.vm-row{display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-bottom:1px solid #E3EAF0}
+.vm-l{font-weight:800;color:#0E7A8A;font-size:1.15rem;min-width:20px;padding-top:2px}
+.vm-in{width:52px!important;text-align:center;flex-shrink:0}
+.vm-def{font-size:1.1rem;line-height:1.45;color:#1C2B3A}
+
 
 /* Audio placeholder */
 .audio-box{background:linear-gradient(135deg,#0E7A8A,#0B5A68);border-radius:12px;padding:14px 20px;margin:10px 0;display:flex;align-items:center;gap:14px;color:#fff}
@@ -486,12 +481,33 @@ h2{font-size:1.85rem;font-weight:800;color:#0A2836;margin-bottom:14px}
   <div class="banner banner-listening">🎧 Listening</div>
   <div class="slide-main"><div class="content">
     <h2>Train or Plane?</h2>
-    <p class="instruction">Listen to the announcements one by one. Would you hear each one on a train or on a plane?<br>Then say which words helped you decide.</p>
-    <div class="tl-wrap">
-      <div class="tl-panel"><div class="tl-head"><span class="tl-step">1</span>Warm-up</div><div class="tl-words"><div class="tl-word"><b>gate</b><button class="tl-ws" data-state="0" data-ans="P" onclick="wsCycle(this)">?</button></div><div class="tl-word"><b>platform</b><button class="tl-ws" data-state="0" data-ans="T" onclick="wsCycle(this)">?</button></div><div class="tl-word"><b>delayed</b><button class="tl-ws" data-state="0" data-ans="B" onclick="wsCycle(this)">?</button></div><div class="tl-word"><b>seat belt</b><button class="tl-ws" data-state="0" data-ans="P" onclick="wsCycle(this)">?</button></div><div class="tl-word"><b>track</b><button class="tl-ws" data-state="0" data-ans="T" onclick="wsCycle(this)">?</button></div><div class="tl-word"><b>luggage</b><button class="tl-ws" data-state="0" data-ans="B" onclick="wsCycle(this)">?</button></div><div class="tl-word"><b>dining car</b><button class="tl-ws" data-state="0" data-ans="T" onclick="wsCycle(this)">?</button></div><div class="tl-word"><b>cabin crew</b><button class="tl-ws" data-state="0" data-ans="P" onclick="wsCycle(this)">?</button></div><div class="tl-word"><b>conductor</b><button class="tl-ws" data-state="0" data-ans="T" onclick="wsCycle(this)">?</button></div><div class="tl-word"><b>runway</b><button class="tl-ws" data-state="0" data-ans="P" onclick="wsCycle(this)">?</button></div></div></div>
-      <div class="tl-panel"><div class="tl-head"><span class="tl-step">2</span>Listen: train or plane?</div><div class="tl-clips"><div class="tl-clip"><span class="tl-letter">A</span><audio controls preload="none" src="AEF3e_Level_4_SB_3.01-A.mp3"></audio><button class="tp-toggle tp-blank" data-ans="P" data-state="0" onclick="tpCycle(this)">?</button></div><div class="tl-clip"><span class="tl-letter">B</span><audio controls preload="none" src="AEF3e_Level_4_SB_3.01-B.mp3"></audio><button class="tp-toggle tp-blank" data-ans="T" data-state="0" onclick="tpCycle(this)">?</button></div><div class="tl-clip"><span class="tl-letter">C</span><audio controls preload="none" src="AEF3e_Level_4_SB_3.01-C.mp3"></audio><button class="tp-toggle tp-blank" data-ans="T" data-state="0" onclick="tpCycle(this)">?</button></div><div class="tl-clip"><span class="tl-letter">D</span><audio controls preload="none" src="AEF3e_Level_4_SB_3.01-D.mp3"></audio><button class="tp-toggle tp-blank" data-ans="P" data-state="0" onclick="tpCycle(this)">?</button></div><div class="tl-clip"><span class="tl-letter">E</span><audio controls preload="none" src="AEF3e_Level_4_SB_3.01-E.mp3"></audio><button class="tp-toggle tp-blank" data-ans="P" data-state="0" onclick="tpCycle(this)">?</button></div><div class="tl-clip"><span class="tl-letter">F</span><audio controls preload="none" src="AEF3e_Level_4_SB_3.01-F.mp3"></audio><button class="tp-toggle tp-blank" data-ans="P" data-state="0" onclick="tpCycle(this)">?</button></div><div class="tl-clip"><span class="tl-letter">G</span><audio controls preload="none" src="AEF3e_Level_4_SB_3.01-G.mp3"></audio><button class="tp-toggle tp-blank" data-ans="T" data-state="0" onclick="tpCycle(this)">?</button></div><div class="tl-clip"><span class="tl-letter">H</span><audio controls preload="none" src="AEF3e_Level_4_SB_3.01-H.mp3"></audio><button class="tp-toggle tp-blank" data-ans="T" data-state="0" onclick="tpCycle(this)">?</button></div><div class="tl-clip"><span class="tl-letter">I</span><audio controls preload="none" src="AEF3e_Level_4_SB_3.01-I.mp3"></audio><button class="tp-toggle tp-blank" data-ans="P" data-state="0" onclick="tpCycle(this)">?</button></div><div class="tl-clip"><span class="tl-letter">J</span><audio controls preload="none" src="AEF3e_Level_4_SB_3.01-J.mp3"></audio><button class="tp-toggle tp-blank" data-ans="P" data-state="0" onclick="tpCycle(this)">?</button></div></div>
-        <div class="lesson-btns" style="margin-top:14px"><button class="btn-check" onclick="tlCheck()">✓ Check Answers</button><button class="btn-reset" onclick="tlReset()">↺ Reset</button></div>
-      </div>
+    <div style="display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:start">
+    <div>
+    <p class="instruction">Listen to some announcements.<br>Would you hear them when traveling by train or by plane? Click to select <strong>T</strong> or <strong>P</strong>.<br>Then say which words in each announcement helped you decide.</p>
+    <div style="background:#f0f4f8;border-radius:999px;padding:10px 18px;margin-bottom:16px">
+      <audio controls src="AEF3e_Level_4_SB_3.01.mp3" style="width:100%;height:36px"></audio>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px 32px;margin-top:20px">
+      <div class="tp-item"><span class="tp-letter">A</span><button class="tp-toggle tp-blank" data-ans="P" data-state="0" onclick="tpCycle(this)">?</button><input class="ans-input tp-clue" aria-label="words that helped you decide" autocomplete="off" style="flex:1;min-width:0;"></div>
+      <div class="tp-item"><span class="tp-letter">F</span><button class="tp-toggle tp-blank" data-ans="P" data-state="0" onclick="tpCycle(this)">?</button><input class="ans-input tp-clue" aria-label="words that helped you decide" autocomplete="off" style="flex:1;min-width:0;"></div>
+      <div class="tp-item"><span class="tp-letter">B</span><button class="tp-toggle tp-blank" data-ans="T" data-state="0" onclick="tpCycle(this)">?</button><input class="ans-input tp-clue" aria-label="words that helped you decide" autocomplete="off" style="flex:1;min-width:0;"></div>
+      <div class="tp-item"><span class="tp-letter">G</span><button class="tp-toggle tp-blank" data-ans="T" data-state="0" onclick="tpCycle(this)">?</button><input class="ans-input tp-clue" aria-label="words that helped you decide" autocomplete="off" style="flex:1;min-width:0;"></div>
+      <div class="tp-item"><span class="tp-letter">C</span><button class="tp-toggle tp-blank" data-ans="T" data-state="0" onclick="tpCycle(this)">?</button><input class="ans-input tp-clue" aria-label="words that helped you decide" autocomplete="off" style="flex:1;min-width:0;"></div>
+      <div class="tp-item"><span class="tp-letter">H</span><button class="tp-toggle tp-blank" data-ans="T" data-state="0" onclick="tpCycle(this)">?</button><input class="ans-input tp-clue" aria-label="words that helped you decide" autocomplete="off" style="flex:1;min-width:0;"></div>
+      <div class="tp-item"><span class="tp-letter">D</span><button class="tp-toggle tp-blank" data-ans="P" data-state="0" onclick="tpCycle(this)">?</button><input class="ans-input tp-clue" aria-label="words that helped you decide" autocomplete="off" style="flex:1;min-width:0;"></div>
+      <div class="tp-item"><span class="tp-letter">I</span><button class="tp-toggle tp-blank" data-ans="P" data-state="0" onclick="tpCycle(this)">?</button><input class="ans-input tp-clue" aria-label="words that helped you decide" autocomplete="off" style="flex:1;min-width:0;"></div>
+      <div class="tp-item"><span class="tp-letter">E</span><button class="tp-toggle tp-blank" data-ans="P" data-state="0" onclick="tpCycle(this)">?</button><input class="ans-input tp-clue" aria-label="words that helped you decide" autocomplete="off" style="flex:1;min-width:0;"></div>
+      <div class="tp-item"><span class="tp-letter">J</span><button class="tp-toggle tp-blank" data-ans="P" data-state="0" onclick="tpCycle(this)">?</button><input class="ans-input tp-clue" aria-label="words that helped you decide" autocomplete="off" style="flex:1;min-width:0;"></div>
+    </div>
+    <div class="lesson-btns">
+      <button class="btn-check" onclick="checkTP('s-listen1')">✓ Check Answers</button>
+      <button class="btn-reset" onclick="resetTP('s-listen1')">↺ Reset</button>
+    </div>
+    </div>
+    <div>
+    <img src="images/kenny-wu-dHE9pAgtbhk-unsplash.jpg" alt="Airport announcements" style="width:100%;height:340px;object-fit:cover;border-radius:14px;box-shadow:0 4px 18px rgba(0,0,0,.15)">
+    <p style="font-size:.68rem;color:#999;text-align:center;margin:4px 0 0;font-style:italic">Photo: Kenny Wu / Unsplash</p>
+    </div>
     </div>
   </div></div>
 </div>
@@ -734,51 +750,9 @@ h2{font-size:1.85rem;font-weight:800;color:#0A2836;margin-bottom:14px}
   <div class="banner banner-vocab">📚 Vocabulary</div>
   <div class="slide-main"><div class="content">
     <h2>At the Airport</h2>
-    <p class="inst-light">Click a word, then click its matching sentence to pair them.</p>
-
-    <!-- Two-column layout: LEFT = words | RIGHT = definitions A-J -->
-    <div style="display:grid;grid-template-columns:2fr 3fr;gap:40px;margin:12px 0 8px;align-items:start">
-
-      <!-- LEFT: word buttons 2 per row -->
-      <div style="display:flex;flex-direction:column;gap:8px">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-          <button class="match-word-btn" data-key="1"  data-match="A" onclick="matchVoc1Click(this,'word')">🏢 1. Airport terminal</button>
-          <button class="match-word-btn" data-key="2"  data-match="D" onclick="matchVoc1Click(this,'word')">🧳 2. Bag(gage) drop</button>
-        </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-          <button class="match-word-btn" data-key="3"  data-match="I" onclick="matchVoc1Click(this,'word')">🛄 3. Baggage claim</button>
-          <button class="match-word-btn" data-key="4"  data-match="C" onclick="matchVoc1Click(this,'word')">🪪 4. Check-in desk</button>
-        </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-          <button class="match-word-btn" data-key="5"  data-match="J" onclick="matchVoc1Click(this,'word')">🚨 5. Customs</button>
-          <button class="match-word-btn" data-key="6"  data-match="B" onclick="matchVoc1Click(this,'word')">📺 6. Departures board</button>
-        </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-          <button class="match-word-btn" data-key="7"  data-match="G" onclick="matchVoc1Click(this,'word')">🚪 7. Gate</button>
-          <button class="match-word-btn" data-key="8"  data-match="H" onclick="matchVoc1Click(this,'word')">🛬 8. Runway</button>
-        </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-          <button class="match-word-btn" data-key="9"  data-match="E" onclick="matchVoc1Click(this,'word')">🔍 9. Security</button>
-          <button class="match-word-btn" data-key="10" data-match="F" onclick="matchVoc1Click(this,'word')">🛋️ 10. (Airline) Lounge</button>
-        </div>
-      </div>
-
-      <!-- RIGHT: definition buttons A-J stacked -->
-      <div style="display:flex;flex-direction:column;gap:6px">
-        <button class="match-def-btn" data-key="A" onclick="matchVoc1Click(this,'def')"><strong>A</strong> a building at an airport divided into Arrivals and Departures</button>
-        <button class="match-def-btn" data-key="B" onclick="matchVoc1Click(this,'def')"><strong>B</strong> an electronic display showing flight times and if the flight is on time, boarding, closed, or delayed</button>
-        <button class="match-def-btn" data-key="C" onclick="matchVoc1Click(this,'def')"><strong>C</strong> where you hand in any checked baggage (bags, suitcases, etc.) and are given a boarding pass if you don't already have one</button>
-        <button class="match-def-btn" data-key="D" onclick="matchVoc1Click(this,'def')"><strong>D</strong> where you take your luggage to check it in if you already have your boarding pass</button>
-        <button class="match-def-btn" data-key="E" onclick="matchVoc1Click(this,'def')"><strong>E</strong> where they check that you are not trying to take prohibited items (e.g., liquids or sharp objects) onto the plane, by scanning your carry-on luggage and making you walk through a metal detector</button>
-        <button class="match-def-btn" data-key="F" onclick="matchVoc1Click(this,'def')"><strong>F</strong> where passengers who are traveling business or first class can wait for their flight</button>
-        <button class="match-def-btn" data-key="G" onclick="matchVoc1Click(this,'def')"><strong>G</strong> where you show your boarding pass and ID and board your flight</button>
-        <button class="match-def-btn" data-key="H" onclick="matchVoc1Click(this,'def')"><strong>H</strong> where planes take off and land</button>
-        <button class="match-def-btn" data-key="I" onclick="matchVoc1Click(this,'def')"><strong>I</strong> where you collect your luggage on arrival, and where there are usually carts for carrying heavy suitcases</button>
-        <button class="match-def-btn" data-key="J" onclick="matchVoc1Click(this,'def')"><strong>J</strong> where your luggage may be checked to see if you are bringing illegal goods into the country</button>
-      </div>
-
-    </div>
-    <div id="match-voc1-msg" style="min-height:22px;font-size:1.05rem;color:#0E7A8A;margin-top:4px;font-weight:600"></div>
+    <p class="inst-light">Match each place with its meaning. Write the number of the word.</p>
+    <div class="vm-bank"><button class="vm-chip" onclick="this.classList.toggle('used')">🏢 1 Airport terminal</button><button class="vm-chip" onclick="this.classList.toggle('used')">🧳 2 Bag(gage) drop</button><button class="vm-chip" onclick="this.classList.toggle('used')">🛄 3 Baggage claim</button><button class="vm-chip" onclick="this.classList.toggle('used')">🪪 4 Check-in desk</button><button class="vm-chip" onclick="this.classList.toggle('used')">🚨 5 Customs</button><button class="vm-chip" onclick="this.classList.toggle('used')">📺 6 Departures board</button><button class="vm-chip" onclick="this.classList.toggle('used')">🚪 7 Gate</button><button class="vm-chip" onclick="this.classList.toggle('used')">🛬 8 Runway</button><button class="vm-chip" onclick="this.classList.toggle('used')">🔍 9 Security</button><button class="vm-chip" onclick="this.classList.toggle('used')">🛋️ 10 (Airline) Lounge</button></div>
+    <div class="vm-cols"><div><div class="vm-row"><span class="vm-l">A</span><input class="ans-input vm-in" data-ans="1" maxlength="2" inputmode="numeric" autocomplete="off" aria-label="number for A"><span class="vm-def">a building at an airport divided into Arrivals and Departures</span></div><div class="vm-row"><span class="vm-l">B</span><input class="ans-input vm-in" data-ans="6" maxlength="2" inputmode="numeric" autocomplete="off" aria-label="number for B"><span class="vm-def">an electronic display showing flight times and if the flight is on time, boarding, closed, or delayed</span></div><div class="vm-row"><span class="vm-l">C</span><input class="ans-input vm-in" data-ans="4" maxlength="2" inputmode="numeric" autocomplete="off" aria-label="number for C"><span class="vm-def">where you hand in any checked baggage (bags, suitcases, etc.) and are given a boarding pass if you don't already have one</span></div><div class="vm-row"><span class="vm-l">D</span><input class="ans-input vm-in" data-ans="2" maxlength="2" inputmode="numeric" autocomplete="off" aria-label="number for D"><span class="vm-def">where you take your luggage to check it in if you already have your boarding pass</span></div><div class="vm-row"><span class="vm-l">E</span><input class="ans-input vm-in" data-ans="9" maxlength="2" inputmode="numeric" autocomplete="off" aria-label="number for E"><span class="vm-def">where they check that you are not trying to take prohibited items (e.g., liquids or sharp objects) onto the plane, by scanning your carry-on luggage and making you walk through a metal detector</span></div></div><div><div class="vm-row"><span class="vm-l">F</span><input class="ans-input vm-in" data-ans="10" maxlength="2" inputmode="numeric" autocomplete="off" aria-label="number for F"><span class="vm-def">where passengers who are traveling business or first class can wait for their flight</span></div><div class="vm-row"><span class="vm-l">G</span><input class="ans-input vm-in" data-ans="7" maxlength="2" inputmode="numeric" autocomplete="off" aria-label="number for G"><span class="vm-def">where you show your boarding pass and ID and board your flight</span></div><div class="vm-row"><span class="vm-l">H</span><input class="ans-input vm-in" data-ans="8" maxlength="2" inputmode="numeric" autocomplete="off" aria-label="number for H"><span class="vm-def">where planes take off and land</span></div><div class="vm-row"><span class="vm-l">I</span><input class="ans-input vm-in" data-ans="3" maxlength="2" inputmode="numeric" autocomplete="off" aria-label="number for I"><span class="vm-def">where you collect your luggage on arrival, and where there are usually carts for carrying heavy suitcases</span></div><div class="vm-row"><span class="vm-l">J</span><input class="ans-input vm-in" data-ans="5" maxlength="2" inputmode="numeric" autocomplete="off" aria-label="number for J"><span class="vm-def">where your luggage may be checked to see if you are bringing illegal goods into the country</span></div></div></div>
     <div class="lesson-btns">
       <button class="btn-check" onclick="checkMatchVoc1()">✓ Check Answers</button>
       <button class="btn-reset" onclick="resetMatchVoc1()">↺ Reset</button>
@@ -786,7 +760,6 @@ h2{font-size:1.85rem;font-weight:800;color:#0A2836;margin-bottom:14px}
   </div></div>
 </div>
 
-<!-- ══════════════════════════════════════════ SLIDE 5: VOCAB – ON BOARD -->
 <div class="slide" id="s-vocab2">
   <div class="banner banner-vocab">📚 Vocabulary</div>
   <div class="slide-main"><div class="content">
@@ -2863,31 +2836,6 @@ function tpCycle(btn){
   btn.textContent=['?','T','P'][s];
   btn.className='tp-toggle '+['tp-blank','tp-t','tp-p'][s];
 }
-function wsCycle(btn){
-  var st=(parseInt(btn.dataset.state)+1)%4;
-  btn.dataset.state=st;
-  btn.textContent=['?','Train','Plane','Both'][st];
-  btn.className='tl-ws'+(st?' s'+st:'');
-}
-function tlCheck(){
-  checkTP('s-listen1');
-  document.querySelectorAll('#s-listen1 .tl-ws').forEach(function(b){
-    var st=parseInt(b.dataset.state);
-    b.classList.remove('tp-correct','tp-wrong');
-    if(!st)return;
-    b.classList.add(['','T','P','B'][st]===b.dataset.ans?'tp-correct':'tp-wrong');
-  });
-}
-function tlReset(){
-  resetTP('s-listen1');
-  document.querySelectorAll('#s-listen1 .tl-ws').forEach(function(b){b.dataset.state='0';b.textContent='?';b.className='tl-ws';});
-  document.querySelectorAll('#s-listen1 audio').forEach(function(a){a.pause();a.currentTime=0;});
-}
-document.addEventListener('play',function(e){
-  if(e.target&&e.target.closest&&e.target.closest('#s-listen1')){
-    document.querySelectorAll('#s-listen1 audio').forEach(function(a){if(a!==e.target)a.pause();});
-  }
-},true);
 function checkTP(sid){
   document.querySelectorAll('#'+sid+' .tp-toggle').forEach(function(btn){
     var s=parseInt(btn.dataset.state);
@@ -2903,6 +2851,7 @@ function resetTP(sid){
     btn.dataset.state='0';btn.textContent='?';
     btn.className='tp-toggle tp-blank';
   });
+  document.querySelectorAll('#'+sid+' .tp-clue').forEach(function(i){i.value='';});
 }
 
 function goTo(n){
@@ -3556,6 +3505,18 @@ function updateMatchMsg(){
 }
 
 function checkMatchVoc1(){
+  document.querySelectorAll('#s-vocab1 .vm-in').forEach(function(i){
+    i.classList.remove('correct','wrong');
+    var v=i.value.trim();
+    if(!v)return;
+    i.classList.add(v===i.dataset.ans?'correct':'wrong');
+  });
+}
+function resetMatchVoc1(){
+  document.querySelectorAll('#s-vocab1 .vm-in').forEach(function(i){i.value='';i.classList.remove('correct','wrong');});
+  document.querySelectorAll('#s-vocab1 .vm-chip').forEach(function(c){c.classList.remove('used');});
+}
+function checkMatchVoc1_old(){
   var wordBtns=document.querySelectorAll('#s-vocab1 .match-word-btn');
   var defBtns=document.querySelectorAll('#s-vocab1 .match-def-btn');
   wordBtns.forEach(function(wb){
@@ -3579,7 +3540,7 @@ function checkMatchVoc1(){
   });
 }
 
-function resetMatchVoc1(){
+function resetMatchVoc1_old(){
   matchVoc1State={};
   matchVoc1SelWord=null;
   matchVoc1SelDef=null;
