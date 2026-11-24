@@ -174,6 +174,20 @@ h2{font-size:1.85rem;font-weight:800;color:#0A2836;margin-bottom:14px}
 .tp-correct{background:#1A7A4A!important;color:#fff!important}
 .tp-wrong{background:#C4614A!important;color:#fff!important}
 .tp-empty{background:#E07000!important;color:#fff!important}
+.tl-wrap{display:grid;grid-template-columns:minmax(0,430px) minmax(0,1fr);gap:22px;align-items:start;margin-top:10px}
+.tl-panel{background:#F4F8FA;border:1px solid #C8D8E8;border-radius:14px;padding:14px 18px 16px}
+.tl-head{display:flex;align-items:center;gap:10px;margin-bottom:12px;font-size:1.05rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#0B5A68}
+.tl-step{background:#0E7A8A;color:#fff;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:1rem;letter-spacing:0}
+.tl-words{display:grid;grid-template-columns:1fr 1fr;gap:8px 18px}
+.tl-word{display:flex;flex-direction:column;gap:4px;background:#fff;border:1px solid #D8E3EC;border-radius:10px;padding:8px 12px}
+.tl-word b{font-size:1.15rem;color:#1C2B3A}
+.tl-ws{height:36px;border:none;border-radius:8px;font-size:1.05rem;font-weight:800;cursor:pointer;font-family:inherit;background:#E0E7EF;color:#8899AA;width:100%}
+.tl-ws.s1{background:#0E7A8A;color:#fff}.tl-ws.s2{background:#1E4D8C;color:#fff}.tl-ws.s3{background:#6B4A8C;color:#fff}
+.tl-ws.tp-correct{background:#1A7A4A!important;color:#fff!important}.tl-ws.tp-wrong{background:#C4614A!important;color:#fff!important}
+.tl-clips{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px 14px}
+.tl-clip{min-width:0;display:flex;align-items:center;gap:10px;background:#fff;border:1px solid #D8E3EC;border-radius:12px;padding:8px 10px}
+.tl-clip audio{flex:1;min-width:0;height:34px}
+.tl-letter{background:#0A1628;color:#fff;border-radius:8px;width:34px;height:34px;display:flex;align-items:center;justify-content:center;font-size:1.15rem;font-weight:800;flex-shrink:0}
 
 /* Audio placeholder */
 .audio-box{background:linear-gradient(135deg,#0E7A8A,#0B5A68);border-radius:12px;padding:14px 20px;margin:10px 0;display:flex;align-items:center;gap:14px;color:#fff}
@@ -472,33 +486,12 @@ h2{font-size:1.85rem;font-weight:800;color:#0A2836;margin-bottom:14px}
   <div class="banner banner-listening">🎧 Listening</div>
   <div class="slide-main"><div class="content">
     <h2>Train or Plane?</h2>
-    <div style="display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:start">
-    <div>
-    <p class="instruction">Listen to some announcements. Would you hear them when traveling by train or by plane? Click to select <strong>T</strong> or <strong>P</strong>.</p>
-    <div style="background:#f0f4f8;border-radius:999px;padding:10px 18px;margin-bottom:16px">
-      <audio controls src="AEF3e_Level_4_SB_3.01.mp3" style="width:100%;height:36px"></audio>
-    </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px 32px;margin-top:20px">
-      <div class="tp-item"><span class="tp-letter">A</span><button class="tp-toggle tp-blank" data-ans="P" data-state="0" onclick="tpCycle(this)">?</button></div>
-      <div class="tp-item"><span class="tp-letter">F</span><button class="tp-toggle tp-blank" data-ans="P" data-state="0" onclick="tpCycle(this)">?</button></div>
-      <div class="tp-item"><span class="tp-letter">B</span><button class="tp-toggle tp-blank" data-ans="T" data-state="0" onclick="tpCycle(this)">?</button></div>
-      <div class="tp-item"><span class="tp-letter">G</span><button class="tp-toggle tp-blank" data-ans="T" data-state="0" onclick="tpCycle(this)">?</button></div>
-      <div class="tp-item"><span class="tp-letter">C</span><button class="tp-toggle tp-blank" data-ans="T" data-state="0" onclick="tpCycle(this)">?</button></div>
-      <div class="tp-item"><span class="tp-letter">H</span><button class="tp-toggle tp-blank" data-ans="T" data-state="0" onclick="tpCycle(this)">?</button></div>
-      <div class="tp-item"><span class="tp-letter">D</span><button class="tp-toggle tp-blank" data-ans="P" data-state="0" onclick="tpCycle(this)">?</button></div>
-      <div class="tp-item"><span class="tp-letter">I</span><button class="tp-toggle tp-blank" data-ans="P" data-state="0" onclick="tpCycle(this)">?</button></div>
-      <div class="tp-item"><span class="tp-letter">E</span><button class="tp-toggle tp-blank" data-ans="P" data-state="0" onclick="tpCycle(this)">?</button></div>
-      <div class="tp-item"><span class="tp-letter">J</span><button class="tp-toggle tp-blank" data-ans="P" data-state="0" onclick="tpCycle(this)">?</button></div>
-    </div>
-    <div class="lesson-btns">
-      <button class="btn-check" onclick="checkTP('s-listen1')">✓ Check Answers</button>
-      <button class="btn-reset" onclick="resetTP('s-listen1')">↺ Reset</button>
-    </div>
-    </div>
-    <div>
-    <img src="images/kenny-wu-dHE9pAgtbhk-unsplash.jpg" alt="Airport announcements" style="width:100%;height:340px;object-fit:cover;border-radius:14px;box-shadow:0 4px 18px rgba(0,0,0,.15)">
-    <p style="font-size:.68rem;color:#999;text-align:center;margin:4px 0 0;font-style:italic">Photo: Kenny Wu / Unsplash</p>
-    </div>
+    <p class="instruction">Listen to the announcements one by one. Would you hear each one on a train or on a plane?<br>Then say which words helped you decide.</p>
+    <div class="tl-wrap">
+      <div class="tl-panel"><div class="tl-head"><span class="tl-step">1</span>Warm-up</div><div class="tl-words"><div class="tl-word"><b>gate</b><button class="tl-ws" data-state="0" data-ans="P" onclick="wsCycle(this)">?</button></div><div class="tl-word"><b>platform</b><button class="tl-ws" data-state="0" data-ans="T" onclick="wsCycle(this)">?</button></div><div class="tl-word"><b>delayed</b><button class="tl-ws" data-state="0" data-ans="B" onclick="wsCycle(this)">?</button></div><div class="tl-word"><b>seat belt</b><button class="tl-ws" data-state="0" data-ans="P" onclick="wsCycle(this)">?</button></div><div class="tl-word"><b>track</b><button class="tl-ws" data-state="0" data-ans="T" onclick="wsCycle(this)">?</button></div><div class="tl-word"><b>luggage</b><button class="tl-ws" data-state="0" data-ans="B" onclick="wsCycle(this)">?</button></div><div class="tl-word"><b>dining car</b><button class="tl-ws" data-state="0" data-ans="T" onclick="wsCycle(this)">?</button></div><div class="tl-word"><b>cabin crew</b><button class="tl-ws" data-state="0" data-ans="P" onclick="wsCycle(this)">?</button></div><div class="tl-word"><b>conductor</b><button class="tl-ws" data-state="0" data-ans="T" onclick="wsCycle(this)">?</button></div><div class="tl-word"><b>runway</b><button class="tl-ws" data-state="0" data-ans="P" onclick="wsCycle(this)">?</button></div></div></div>
+      <div class="tl-panel"><div class="tl-head"><span class="tl-step">2</span>Listen: train or plane?</div><div class="tl-clips"><div class="tl-clip"><span class="tl-letter">A</span><audio controls preload="none" src="AEF3e_Level_4_SB_3.01-A.mp3"></audio><button class="tp-toggle tp-blank" data-ans="P" data-state="0" onclick="tpCycle(this)">?</button></div><div class="tl-clip"><span class="tl-letter">B</span><audio controls preload="none" src="AEF3e_Level_4_SB_3.01-B.mp3"></audio><button class="tp-toggle tp-blank" data-ans="T" data-state="0" onclick="tpCycle(this)">?</button></div><div class="tl-clip"><span class="tl-letter">C</span><audio controls preload="none" src="AEF3e_Level_4_SB_3.01-C.mp3"></audio><button class="tp-toggle tp-blank" data-ans="T" data-state="0" onclick="tpCycle(this)">?</button></div><div class="tl-clip"><span class="tl-letter">D</span><audio controls preload="none" src="AEF3e_Level_4_SB_3.01-D.mp3"></audio><button class="tp-toggle tp-blank" data-ans="P" data-state="0" onclick="tpCycle(this)">?</button></div><div class="tl-clip"><span class="tl-letter">E</span><audio controls preload="none" src="AEF3e_Level_4_SB_3.01-E.mp3"></audio><button class="tp-toggle tp-blank" data-ans="P" data-state="0" onclick="tpCycle(this)">?</button></div><div class="tl-clip"><span class="tl-letter">F</span><audio controls preload="none" src="AEF3e_Level_4_SB_3.01-F.mp3"></audio><button class="tp-toggle tp-blank" data-ans="P" data-state="0" onclick="tpCycle(this)">?</button></div><div class="tl-clip"><span class="tl-letter">G</span><audio controls preload="none" src="AEF3e_Level_4_SB_3.01-G.mp3"></audio><button class="tp-toggle tp-blank" data-ans="T" data-state="0" onclick="tpCycle(this)">?</button></div><div class="tl-clip"><span class="tl-letter">H</span><audio controls preload="none" src="AEF3e_Level_4_SB_3.01-H.mp3"></audio><button class="tp-toggle tp-blank" data-ans="T" data-state="0" onclick="tpCycle(this)">?</button></div><div class="tl-clip"><span class="tl-letter">I</span><audio controls preload="none" src="AEF3e_Level_4_SB_3.01-I.mp3"></audio><button class="tp-toggle tp-blank" data-ans="P" data-state="0" onclick="tpCycle(this)">?</button></div><div class="tl-clip"><span class="tl-letter">J</span><audio controls preload="none" src="AEF3e_Level_4_SB_3.01-J.mp3"></audio><button class="tp-toggle tp-blank" data-ans="P" data-state="0" onclick="tpCycle(this)">?</button></div></div>
+        <div class="lesson-btns" style="margin-top:14px"><button class="btn-check" onclick="tlCheck()">✓ Check Answers</button><button class="btn-reset" onclick="tlReset()">↺ Reset</button></div>
+      </div>
     </div>
   </div></div>
 </div>
@@ -2870,6 +2863,31 @@ function tpCycle(btn){
   btn.textContent=['?','T','P'][s];
   btn.className='tp-toggle '+['tp-blank','tp-t','tp-p'][s];
 }
+function wsCycle(btn){
+  var st=(parseInt(btn.dataset.state)+1)%4;
+  btn.dataset.state=st;
+  btn.textContent=['?','Train','Plane','Both'][st];
+  btn.className='tl-ws'+(st?' s'+st:'');
+}
+function tlCheck(){
+  checkTP('s-listen1');
+  document.querySelectorAll('#s-listen1 .tl-ws').forEach(function(b){
+    var st=parseInt(b.dataset.state);
+    b.classList.remove('tp-correct','tp-wrong');
+    if(!st)return;
+    b.classList.add(['','T','P','B'][st]===b.dataset.ans?'tp-correct':'tp-wrong');
+  });
+}
+function tlReset(){
+  resetTP('s-listen1');
+  document.querySelectorAll('#s-listen1 .tl-ws').forEach(function(b){b.dataset.state='0';b.textContent='?';b.className='tl-ws';});
+  document.querySelectorAll('#s-listen1 audio').forEach(function(a){a.pause();a.currentTime=0;});
+}
+document.addEventListener('play',function(e){
+  if(e.target&&e.target.closest&&e.target.closest('#s-listen1')){
+    document.querySelectorAll('#s-listen1 audio').forEach(function(a){if(a!==e.target)a.pause();});
+  }
+},true);
 function checkTP(sid){
   document.querySelectorAll('#'+sid+' .tp-toggle').forEach(function(btn){
     var s=parseInt(btn.dataset.state);
