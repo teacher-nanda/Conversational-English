@@ -214,6 +214,7 @@
   .img-placeholder .ip-icon { font-size:1.8rem; margin-bottom:6px; }
   .photo-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-bottom:16px; }
   .photo-item { position:relative; }
+  .photo-img { display:block; width:100%; height:200px; object-fit:cover; border-radius:10px; }
   .photo-item .img-placeholder { min-height:140px; margin:0; }
   .photo-num { position:absolute; top:8px; left:8px; background:#1C2B3A; color:#fff; width:26px; height:26px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:.9rem; }
   .photo-label { margin-top:6px; }
@@ -935,7 +936,7 @@
   <div class="banner banner-grammar">📐 Grammar</div>
   <div class="slide-main"><div class="content">
     <h2>Complete the sentence with a time expression</h2>
-    <p class="instruction">Click a time expression in the bank, then click the blank where it belongs.</p>
+    <p class="instruction">Choose a time expression in the bank, then tap the blank where it belongs.</p>
     <div class="wb-bank book-style" id="gex4-bank">
       <span class="wb-tile example-used" data-val="as soon as">as soon as</span>
       <span class="wb-tile" data-val="after" onclick="wbPick(this)">after</span>
@@ -980,8 +981,8 @@
   <div class="banner banner-grammar">📐 Grammar</div>
   <div class="slide-main"><div class="content">
     <h2>Finish the sentences</h2>
-    <p class="instruction">In pairs, complete each sentence in your own words. Then compare ideas with the class and vote for the best ones.</p>
-    <div class="fixed-two-col"><div><div class="ex-row">1. Don't buy a used car unless… <input class="ans-input" style="width:min(420px,100%)" aria-label="sentence 1"></div><div class="ex-row">2. You shouldn't think about getting a tattoo if… <input class="ans-input" style="width:min(420px,100%)" aria-label="sentence 2"></div><div class="ex-row">3. Keep a first-aid kit in your house in case… <input class="ans-input" style="width:min(420px,100%)" aria-label="sentence 3"></div><div class="ex-row">4. Children shouldn't use social media until… <input class="ans-input" style="width:min(420px,100%)" aria-label="sentence 4"></div><div class="ex-row">5. Always take out travel insurance in case… <input class="ans-input" style="width:min(420px,100%)" aria-label="sentence 5"></div><div class="ex-row">6. As soon as I've received your new credit card,… <input class="ans-input" style="width:min(420px,100%)" aria-label="sentence 6"></div><div class="ex-row">7. Don't go hiking in the mountains on your own unless… <input class="ans-input" style="width:min(420px,100%)" aria-label="sentence 7"></div><div class="ex-row">8. If you are taking a new job abroad,… <input class="ans-input" style="width:min(420px,100%)" aria-label="sentence 8"></div></div></div>
+    <p class="instruction">Complete each sentence in your own words. Then tell me your ideas and we’ll choose the best ones.</p>
+    <div class="fixed-two-col"><div><div class="ex-row">1. Don't buy a used car unless… <input class="ans-input" style="width:min(420px,100%)" aria-label="sentence 1"></div><div class="ex-row">2. You shouldn't think about getting a tattoo if… <input class="ans-input" style="width:min(420px,100%)" aria-label="sentence 2"></div><div class="ex-row">3. Keep a first-aid kit in your house in case… <input class="ans-input" style="width:min(420px,100%)" aria-label="sentence 3"></div><div class="ex-row">4. Children shouldn't use social media until… <input class="ans-input" style="width:min(420px,100%)" aria-label="sentence 4"></div></div><div><div class="ex-row">5. Always take out travel insurance in case… <input class="ans-input" style="width:min(420px,100%)" aria-label="sentence 5"></div><div class="ex-row">6. As soon as I've received your new credit card,… <input class="ans-input" style="width:min(420px,100%)" aria-label="sentence 6"></div><div class="ex-row">7. Don't go hiking in the mountains on your own unless… <input class="ans-input" style="width:min(420px,100%)" aria-label="sentence 7"></div><div class="ex-row">8. If you are taking a new job abroad,… <input class="ans-input" style="width:min(420px,100%)" aria-label="sentence 8"></div></div></div>
     <div class="btn-row">
       <button class="btn-suggest" onclick="toggleSuggested('gex5-sugg')">💡 Suggested Answers</button>
     </div>
@@ -1075,32 +1076,32 @@
   <div class="banner banner-reading">📖 Reading</div>
   <div class="slide-main"><div class="content">
     <h2>Label the photos</h2>
-    <p class="instruction">Click a sport in the bank, then click the photo it matches.</p>
+    <p class="instruction">Choose a sport in the bank, then tap the photo it matches.</p>
     <div class="wb-bank book-style" id="read1-bank">
       <span class="wb-tile" data-val="bungee jumping" onclick="wbPick(this)">bungee jumping</span>
       <span class="wb-tile" data-val="paragliding" onclick="wbPick(this)">paragliding</span>
       <span class="wb-tile" data-val="skydiving" onclick="wbPick(this)">skydiving</span>
       <span class="wb-tile" data-val="wingsuit flying" onclick="wbPick(this)">wingsuit flying</span>
     </div>
-    <div class="photo-grid" id="read1">
+    <div class="photo-grid" id="read1" style="grid-template-columns:repeat(4,1fr);">
       <div class="photo-item">
         <div class="photo-num">1</div>
-        <div class="img-placeholder"><span class="ip-icon">🖼️</span>Two people wingsuit flying over mountains</div>
+        <img class="photo-img" src="img-4b-wingsuit.jpg" alt="Two people wingsuit flying over mountains">
         <div class="photo-label"><span class="wb-blank" data-ans="wingsuit flying" onclick="wbPlace(this)">______</span></div>
       </div>
       <div class="photo-item">
         <div class="photo-num">2</div>
-        <div class="img-placeholder"><span class="ip-icon">🖼️</span>Person upside down, bungee jumping</div>
+        <img class="photo-img" src="img-4b-bungee.jpg" alt="Person bungee jumping upside down over a river canyon">
         <div class="photo-label"><span class="wb-blank" data-ans="bungee jumping" onclick="wbPlace(this)">______</span></div>
       </div>
       <div class="photo-item">
         <div class="photo-num">3</div>
-        <div class="img-placeholder"><span class="ip-icon">🖼️</span>Person skydiving in freefall</div>
+        <img class="photo-img" src="img-4b-skydiving.jpg" alt="Person skydiving in freefall above the clouds">
         <div class="photo-label"><span class="wb-blank" data-ans="skydiving" onclick="wbPlace(this)">______</span></div>
       </div>
       <div class="photo-item">
         <div class="photo-num">4</div>
-        <div class="img-placeholder"><span class="ip-icon">🖼️</span>Person paragliding over the coast</div>
+        <img class="photo-img" src="img-4b-paragliding.jpg" alt="Person paragliding over the coast">
         <div class="photo-label"><span class="wb-blank" data-ans="paragliding" onclick="wbPlace(this)">______</span></div>
       </div>
     </div>
@@ -1301,7 +1302,7 @@
   <div class="banner banner-vocab">📚 Vocabulary</div>
   <div class="slide-main"><div class="content">
     <h2>I'll take a question</h2>
-    <p class="instruction">Student A and Student B: complete the phrasal verbs and expressions in your own set of questions. Then ask your partner your questions, answer theirs — give examples to explain your answers.</p>
+    <p class="instruction">Complete the phrasal verbs and expressions in each set of questions. Then ask me the questions and answer mine — give examples to explain your answers.</p>
     <h3 class="section-subhead">Student A</h3>
   <div id="vocab4">
       <div class="ex-row">1. Who do you take <input class="ans-input small" data-ans="after"> more, your father or your mother?</div>
@@ -1399,7 +1400,7 @@
   <div class="banner banner-hw">📝 Homework</div>
   <div class="slide-main"><div class="content">
     <h2>HW1 — Zero and first conditionals</h2>
-    <p class="instruction">Click a verb in the bank, then click the blank where it belongs. Then mark whether each sentence is a zero (0) or first (1) conditional.</p>
+    <p class="instruction">Choose a verb in the bank, then tap the blank where it belongs. Then mark whether each sentence is a zero (0) or first (1) conditional.</p>
     <div class="wb-bank book-style" id="hw-gr1-bank">
       <span class="wb-tile example-used" data-val="don't get">don't get</span>
       <span class="wb-tile" data-val="are" onclick="wbPick(this)">are</span>
@@ -1539,7 +1540,7 @@
   <div class="banner banner-hw">📝 Homework</div>
   <div class="slide-main"><div class="content">
     <h2>HW5 — Complete with expressions with <i>take</i></h2>
-    <p class="instruction">Click a phrase in the bank, then click the blank where it belongs.</p>
+    <p class="instruction">Choose a phrase in the bank, then tap the blank where it belongs.</p>
     <div class="wb-bank book-style" id="hw-voc2-bank">
       <span class="wb-tile example-used" data-val="take into account">take into account</span>
       <span class="wb-tile" data-val="take advantage of" onclick="wbPick(this)">take advantage of</span>
@@ -1619,7 +1620,7 @@
   <div class="slide-main"><div class="content">
     <h2>HW7 — Complete the sentences about you</h2>
     <p class="instruction">Finish each sentence with your own ideas. Use a present form after the time expression.</p>
-    <div class="fixed-two-col"><div><div class="ex-row">1. I'll have dinner after <input class="ans-input wide" style="width:min(380px,100%)" aria-label="sentence 1"></div><div class="ex-row">2. I'll buy a new car as soon as <input class="ans-input wide" style="width:min(380px,100%)" aria-label="sentence 2"></div><div class="ex-row">3. I won't go to bed tonight until <input class="ans-input wide" style="width:min(380px,100%)" aria-label="sentence 3"></div><div class="ex-row">4. I'll go shopping before <input class="ans-input wide" style="width:min(380px,100%)" aria-label="sentence 4"></div><div class="ex-row">5. I might go out later if <input class="ans-input wide" style="width:min(380px,100%)" aria-label="sentence 5"></div><div class="ex-row">6. I won't move to a new house unless <input class="ans-input wide" style="width:min(380px,100%)" aria-label="sentence 6"></div><div class="ex-row">7. I'll finish my English homework now, in case <input class="ans-input wide" style="width:min(380px,100%)" aria-label="sentence 7"></div><div class="ex-row">8. I'll retire when <input class="ans-input wide" style="width:min(380px,100%)" aria-label="sentence 8"></div></div></div>
+    <div class="fixed-two-col"><div><div class="ex-row">1. I'll have dinner after <input class="ans-input wide" style="width:min(380px,100%)" aria-label="sentence 1"></div><div class="ex-row">2. I'll buy a new car as soon as <input class="ans-input wide" style="width:min(380px,100%)" aria-label="sentence 2"></div><div class="ex-row">3. I won't go to bed tonight until <input class="ans-input wide" style="width:min(380px,100%)" aria-label="sentence 3"></div><div class="ex-row">4. I'll go shopping before <input class="ans-input wide" style="width:min(380px,100%)" aria-label="sentence 4"></div></div><div><div class="ex-row">5. I might go out later if <input class="ans-input wide" style="width:min(380px,100%)" aria-label="sentence 5"></div><div class="ex-row">6. I won't move to a new house unless <input class="ans-input wide" style="width:min(380px,100%)" aria-label="sentence 6"></div><div class="ex-row">7. I'll finish my English homework now, in case <input class="ans-input wide" style="width:min(380px,100%)" aria-label="sentence 7"></div><div class="ex-row">8. I'll retire when <input class="ans-input wide" style="width:min(380px,100%)" aria-label="sentence 8"></div></div></div>
   </div></div>
 </div>
 
