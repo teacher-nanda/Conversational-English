@@ -2422,9 +2422,23 @@ mark.vm { background: #FFD54F; color: inherit; border-radius: 2px; padding: 0 1p
   </div>
 </div>
 
+<div class="slide" id="s-hwfam">
+  <div class="slide-main">
+    <div class="banner" style="background:#1C2B3A;color:#fff;">📝 HW 2 — Talking About Statistics</div>
+    <div class="content" style="padding:16px 36px 20px;">
+      <p class="instruction" style="font-size:1.05rem;margin-bottom:10px;">Click a phrase from the list, then click the blank to place it.<br>Choose the phrase that best matches each percentage.</p>
+      <div id="hwfbank" style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;padding:12px 16px;background:#EAF5F8;border-radius:10px;"><span class="hwfchip" data-val="very few" onclick="hwfSelect(this)" style="background:#14607A;color:#fff;padding:6px 16px;border-radius:20px;font-size:1.05rem;font-weight:600;cursor:pointer;">very few</span><span class="hwfchip" data-val="about one in ten" onclick="hwfSelect(this)" style="background:#14607A;color:#fff;padding:6px 16px;border-radius:20px;font-size:1.05rem;font-weight:600;cursor:pointer;">about one in ten</span><span class="hwfchip" data-val="more than half" onclick="hwfSelect(this)" style="background:#14607A;color:#fff;padding:6px 16px;border-radius:20px;font-size:1.05rem;font-weight:600;cursor:pointer;">more than half</span><span class="hwfchip" data-val="almost a quarter" onclick="hwfSelect(this)" style="background:#14607A;color:#fff;padding:6px 16px;border-radius:20px;font-size:1.05rem;font-weight:600;cursor:pointer;">almost a quarter</span><span style="padding:6px 16px;border-radius:20px;font-size:1.05rem;font-weight:600;background:#c9d6dc;color:#fff;text-decoration:line-through;">about two thirds</span></div>
+      <div id="hwfwrap"><div style="margin-bottom:12px;"><div style="background:#FAFAFA;border-radius:10px;padding:12px 16px;border-left:3px solid #14607A;"><span style="font-size:.85rem;font-weight:700;color:#14607A;">Example</span><p style="margin:4px 0 0;font-size:1.1rem;line-height:1.9;color:#1C2B3A;">According to the survey, <span style="font-style:italic;font-weight:700;border-bottom:2px solid #14607A;padding:2px 10px;color:#14607A;background:#EAF5F8;border-radius:4px;">about two thirds</span> of families have married parents (69%).</p></div></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px 30px;"><div style="background:#FAFAFA;border-radius:10px;padding:12px 16px;border-left:3px solid #14607A;"><span style="font-size:.85rem;font-weight:700;color:#14607A;">1</span><p style="margin:4px 0 0;font-size:1.1rem;line-height:1.9;color:#1C2B3A;">According to the survey, <span class="hwfblank" data-correct="almost a quarter" onclick="hwfFill(this)" style="display:inline-block;min-width:150px;border-bottom:2px solid #14607A;padding:0 10px;color:#999;border-radius:4px;cursor:pointer;font-style:italic;text-align:center;">click to fill</span> of families are single-parent families (23%).</p></div><div style="background:#FAFAFA;border-radius:10px;padding:12px 16px;border-left:3px solid #14607A;"><span style="font-size:.85rem;font-weight:700;color:#14607A;">2</span><p style="margin:4px 0 0;font-size:1.1rem;line-height:1.9;color:#1C2B3A;"><span class="hwfblank" data-correct="very few" onclick="hwfFill(this)" style="display:inline-block;min-width:150px;border-bottom:2px solid #14607A;padding:0 10px;color:#999;border-radius:4px;cursor:pointer;font-style:italic;text-align:center;">click to fill</span> of the single parents are men (4%).</p></div><div style="background:#FAFAFA;border-radius:10px;padding:12px 16px;border-left:3px solid #14607A;"><span style="font-size:.85rem;font-weight:700;color:#14607A;">3</span><p style="margin:4px 0 0;font-size:1.1rem;line-height:1.9;color:#1C2B3A;"><span class="hwfblank" data-correct="more than half" onclick="hwfFill(this)" style="display:inline-block;min-width:150px;border-bottom:2px solid #14607A;padding:0 10px;color:#999;border-radius:4px;cursor:pointer;font-style:italic;text-align:center;">click to fill</span> of parents in homes with two full-time working parents say chores are shared equally (60%).</p></div><div style="background:#FAFAFA;border-radius:10px;padding:12px 16px;border-left:3px solid #14607A;"><span style="font-size:.85rem;font-weight:700;color:#14607A;">4</span><p style="margin:4px 0 0;font-size:1.1rem;line-height:1.9;color:#1C2B3A;"><span class="hwfblank" data-correct="about one in ten" onclick="hwfFill(this)" style="display:inline-block;min-width:150px;border-bottom:2px solid #14607A;padding:0 10px;color:#999;border-radius:4px;cursor:pointer;font-style:italic;text-align:center;">click to fill</span> of families never eat at the same time (10%).</p></div></div></div>
+      <div style="margin-top:14px;display:flex;gap:12px;align-items:center;"><button onclick="hwfCheck()" style="background:#14607A;color:#fff;border:none;border-radius:20px;padding:8px 22px;font-size:1rem;font-weight:700;cursor:pointer;">✔ Check answers</button><button onclick="hwfReset()" style="background:transparent;color:#14607A;border:2px solid #14607A;border-radius:20px;padding:8px 22px;font-size:1rem;font-weight:700;cursor:pointer;">↺ Reset</button></div>
+      <div style="margin-top:16px;background:#F0EAF5;border-left:4px solid #7A5BAA;border-radius:8px;padding:12px 16px;"><span style="font-size:1.07rem;font-weight:700;color:#7A5BAA;">✍️ Your turn: </span><span style="font-size:1.05rem;color:#1C2B3A;">Write two sentences about families in your country. Use phrases like <i>about two thirds</i>, <i>very few</i>, <i>more than half</i>.</span><textarea style="display:block;width:100%;margin-top:8px;min-height:70px;border:1.5px solid #cbb8e3;border-radius:8px;padding:8px 10px;font:inherit;font-size:1.05rem;box-sizing:border-box;"></textarea></div>
+    </div>
+  </div>
+</div>
+
 <div class="slide" id="s30">
   <div class="slide-main">
-    <div class="banner" style="background:#1C2B3A;color:#fff;">📝 HW 2 — Personality Vocabulary</div>
+    <div class="banner" style="background:#1C2B3A;color:#fff;">📝 HW 3 — Personality Vocabulary</div>
     <div class="content" style="padding:16px 36px 20px;">
 
       <p class="instruction" style="font-size:1.05rem;margin-bottom:10px;">Click a word from the list, then click the blank to place it.</p>
@@ -2501,7 +2515,7 @@ mark.vm { background: #FFD54F; color: inherit; border-radius: 2px; padding: 0 1p
 
 <div class="slide" id="s31">
   <div class="slide-main">
-    <div class="banner" style="background:#1C2B3A;color:#fff;">📝 HW 3 — Prefixes + Adjectives</div>
+    <div class="banner" style="background:#1C2B3A;color:#fff;">📝 HW 4 — Prefixes + Adjectives</div>
     <div class="content" style="padding:14px 28px 18px;">
 
       <p class="instruction" style="font-size:1.05rem;margin-bottom:12px;">Write the opposite adjective using a negative prefix (un-, dis-, in-, im-, ir-).</p>
@@ -2539,7 +2553,7 @@ mark.vm { background: #FFD54F; color: inherit; border-radius: 2px; padding: 0 1p
 
 <div class="slide" id="s32">
   <div class="slide-main">
-    <div class="banner" style="background:#1C2B3A;color:#fff;">📝 HW 4 — Future Forms</div>
+    <div class="banner" style="background:#1C2B3A;color:#fff;">📝 HW 5 — Future Forms</div>
     <div class="content" style="padding:16px 36px 20px;">
 
       <p class="instruction" style="font-size:1.05rem;margin-bottom:14px;">Complete the sentences with the correct form of the verb or phrase in <strong>bold</strong>.</p>
@@ -2625,7 +2639,7 @@ mark.vm { background: #FFD54F; color: inherit; border-radius: 2px; padding: 0 1p
 
 <div class="slide" id="s33">
   <div class="slide-main">
-    <div class="banner" style="background:#1C2B3A;color:#fff;">📝 HW 5 — Future Forms in Conversations</div>
+    <div class="banner" style="background:#1C2B3A;color:#fff;">📝 HW 6 — Future Forms in Conversations</div>
     <div class="content" style="padding:12px 24px 14px;">
 
       <p class="instruction" style="font-size:1.05rem;margin-bottom:10px;">Complete the conversations with the correct form of the verb in parentheses.</p>
@@ -2743,7 +2757,7 @@ mark.vm { background: #FFD54F; color: inherit; border-radius: 2px; padding: 0 1p
 
 <div class="slide" id="s34">
   <div class="slide-main">
-    <div class="banner" style="background:#1C2B3A;color:#fff;">📝 HW 6 — Stress and Pronunciation</div>
+    <div class="banner" style="background:#1C2B3A;color:#fff;">📝 HW 7 — Stress and Pronunciation</div>
     <div class="content" style="padding:16px 36px 20px;">
 
       <p class="instruction" style="font-size:1.05rem;margin-bottom:10px;">🎧 Listen and complete the sentences.</p>
@@ -3649,8 +3663,8 @@ function castVote(btn) {
 function toggleAK22(){var ak=document.getElementById('ak22'),btn=document.getElementById('ak22btn');var open=ak.style.display==='block';ak.style.display=open?'none':'block';btn.textContent=open?'🔑 Show answer key':'🔒 Hide answer key';}
 // initialise nav
 /* ── DOWNLOAD NOTES (PDF) ── */
-var slideIds = ["s1", "s2", "s3", "s4", "s5", "s6", "s7", "s8", "s9", "s10", "s11", "s12", "s13", "s14", "s15", "s15b", "s16", "s17", "s18", "s19", "s20", "s21", "s22", "s23", "s24", "s25", "s26", "s27", "s-review", "s28", "s29", "s30", "s31", "s32", "s33", "s34"];
-var slideLabels = ["s1", "Vocabulary \u2013 What's the difference?", "Reading", "Speaking \u2013 What about you? \ud83d\udde3\ufe0f", "Grammar \u2013 Future forms", "Grammar \u2013 Future forms", "Grammar \u2013 Future forms", "Grammar \u2013 future forms: present continuous, be going to, will / won't", "Grammar \u2013 Future forms", "Speaking \u2013 Future Plans \u2014 What about you?", "Pronunciation", "Pronunciation \u2013 Sentence stress", "Speaking \u2013 Let's talk \u2014 Family &amp; Future", "Vocabulary \u2013 Opposites attract", "Vocabulary \u2013 Personality adjectives", "Speaking \u2013 Guess the personality! \ud83c\udfad", "Vocabulary", "Pronunciation \u2013 Word stress in adjectives \ud83d\udd0a", "Pronunciation \u2013 Word stress in adjectives \ud83d\udd0a", "Reading", "Reading \u2013 How birth order influences your personality", "Reading", "Listening", "Listening", "Speaking", "Writing \u2013 Self-Portrait Poem", "Writing \u2013 Describing a person", "Speaking \u2013 Do you agree? \ud83d\uddf3\ufe0f", "&#x1F501; Lesson Review \u2013 What have we learned? &#x1F4DA;", "s28", "\ud83d\udcdd HW 1 \u2014 Family Vocabulary", "\ud83d\udcdd HW 2 \u2014 Personality Vocabulary", "\ud83d\udcdd HW 3 \u2014 Prefixes + Adjectives", "\ud83d\udcdd HW 4 \u2014 Future Forms", "\ud83d\udcdd HW 5 \u2014 Future Forms in Conversations", "\ud83d\udcdd HW 6 \u2014 Stress and Pronunciation"];
+var slideIds = ["s1", "s2", "s3", "s4", "s5", "s6", "s7", "s8", "s9", "s10", "s11", "s12", "s13", "s14", "s15", "s15b", "s16", "s17", "s18", "s19", "s20", "s21", "s22", "s23", "s24", "s25", "s26", "s27", "s-review", "s28", "s29", "s-hwfam", "s30", "s31", "s32", "s33", "s34"];
+var slideLabels = ["s1", "Vocabulary \u2013 What's the difference?", "Reading", "Speaking \u2013 What about you? \ud83d\udde3\ufe0f", "Grammar \u2013 Future forms", "Grammar \u2013 Future forms", "Grammar \u2013 Future forms", "Grammar \u2013 future forms: present continuous, be going to, will / won't", "Grammar \u2013 Future forms", "Speaking \u2013 Future Plans \u2014 What about you?", "Pronunciation", "Pronunciation \u2013 Sentence stress", "Speaking \u2013 Let's talk \u2014 Family &amp; Future", "Vocabulary \u2013 Opposites attract", "Vocabulary \u2013 Personality adjectives", "Speaking \u2013 Guess the personality! \ud83c\udfad", "Vocabulary", "Pronunciation \u2013 Word stress in adjectives \ud83d\udd0a", "Pronunciation \u2013 Word stress in adjectives \ud83d\udd0a", "Reading", "Reading \u2013 How birth order influences your personality", "Reading", "Listening", "Listening", "Speaking", "Writing \u2013 Self-Portrait Poem", "Writing \u2013 Describing a person", "Speaking \u2013 Do you agree? \ud83d\uddf3\ufe0f", "&#x1F501; Lesson Review \u2013 What have we learned? &#x1F4DA;", "s28", "\ud83d\udcdd HW 1 \u2014 Family Vocabulary", "\ud83d\udcdd HW 2 \u2014 Talking About Statistics", "\ud83d\udcdd HW 3 \u2014 Personality Vocabulary", "\ud83d\udcdd HW 4 \u2014 Prefixes + Adjectives", "\ud83d\udcdd HW 5 \u2014 Future Forms", "\ud83d\udcdd HW 6 \u2014 Future Forms in Conversations", "\ud83d\udcdd HW 7 \u2014 Stress and Pronunciation"];
 function downloadNotes() {
   saveNotes();
   var hasAny = false;
@@ -3905,6 +3919,18 @@ function printAll(){
     }
   });
 })();
+</script>
+<script>
+var hwfSel=null;
+function hwfSelect(chip){ if(chip.classList.contains('used'))return; document.querySelectorAll('.hwfchip').forEach(function(c){c.style.outline='none';}); chip.style.outline='3px solid #C8891E'; hwfSel=chip; }
+function hwfFill(blank){
+  if(blank._chip){ var c=blank._chip; c.classList.remove('used'); c.style.opacity='1'; c.style.textDecoration='none'; blank._chip=null; blank.textContent='click to fill'; blank.style.color='#999'; blank.style.fontWeight='400'; blank.style.borderBottomColor='#14607A'; blank.dataset.val=''; return; }
+  if(!hwfSel)return;
+  blank.textContent=hwfSel.dataset.val; blank.dataset.val=hwfSel.dataset.val; blank._chip=hwfSel; blank.style.color='#14607A'; blank.style.fontWeight='700'; blank.style.fontStyle='italic';
+  hwfSel.classList.add('used'); hwfSel.style.opacity='.45'; hwfSel.style.textDecoration='line-through'; hwfSel.style.outline='none'; hwfSel=null;
+}
+function hwfCheck(){ document.querySelectorAll('.hwfblank').forEach(function(b){ if(!b.dataset.val){b.style.borderBottomColor='#14607A';return;} var ok=(b.dataset.val===b.dataset.correct); b.style.borderBottomColor=ok?'#1A7A4A':'#C4614A'; b.style.color=ok?'#1A7A4A':'#C4614A'; }); }
+function hwfReset(){ document.querySelectorAll('.hwfblank').forEach(function(b){ b._chip=null; b.dataset.val=''; b.textContent='click to fill'; b.style.color='#999'; b.style.fontWeight='400'; b.style.borderBottomColor='#14607A'; }); document.querySelectorAll('.hwfchip').forEach(function(c){c.classList.remove('used');c.style.opacity='1';c.style.textDecoration='none';c.style.outline='none';}); hwfSel=null; }
 </script>
 </body>
 </html>
