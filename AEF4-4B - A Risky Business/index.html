@@ -214,6 +214,8 @@
   .img-placeholder .ip-icon { font-size:1.8rem; margin-bottom:6px; }
   .photo-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-bottom:16px; }
   .photo-item { position:relative; }
+  #s-gram-ex2 .ex-row .hl, #s-gram-ex2b .ex-row .hl { font-weight:800; color:#3B1F66; background:#FFE066; padding:0 5px; border-radius:5px; }
+  #read3 .ex-row { padding-left:1.7em; text-indent:-1.7em; }
   .photo-img { display:block; width:100%; height:200px; object-fit:cover; border-radius:10px; }
   .photo-item .img-placeholder { min-height:140px; margin:0; }
   .photo-num { position:absolute; top:8px; left:8px; background:#1C2B3A; color:#fff; width:26px; height:26px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:.9rem; }
@@ -802,6 +804,27 @@
   </div></div>
 </div>
 
+<!-- ============ GRAMMAR: ZERO OR FIRST CONDITIONAL? (practice) ============ -->
+<!-- WB 4B 1a -->
+<div class="slide" id="s-gram-ex0">
+  <div class="banner banner-grammar">📐 Grammar</div>
+  <div class="slide-main"><div class="content">
+    <h2>Zero or first conditional?</h2>
+    <p class="instruction">Choose the correct form to complete each sentence.</p>
+    <div id="gex0">
+    <div class="ex-row"><span class="example-badge">1</span><em>(example)</em> If it <span style="color:#1A7A4A;font-weight:800;background:#E3F5EA;padding:1px 7px;border-radius:5px;">rains</span> tomorrow, we'll cancel the picnic.</div>
+    <div class="fixed-two-col">
+      <div><div class="ex-row">1. If you <button class="circ-opt" data-group="gx0-1" data-correct="ride" onclick="circPick(this)">will ride</button><button class="circ-opt" data-group="gx0-1" data-correct="ride" onclick="circPick(this)">ride</button> a bike without a helmet, you can seriously hurt your head.</div><div class="ex-row">2. I'll lend you my camera if you <button class="circ-opt" data-group="gx0-2" data-correct="are" onclick="circPick(this)">are</button><button class="circ-opt" data-group="gx0-2" data-correct="are" onclick="circPick(this)">will be</button> careful with it.</div><div class="ex-row">3. If the bus doesn't come soon, we <button class="circ-opt" data-group="gx0-3" data-correct="'ll be" onclick="circPick(this)">are</button><button class="circ-opt" data-group="gx0-3" data-correct="'ll be" onclick="circPick(this)">'ll be</button> late for the interview.</div><div class="ex-row">4. Metal <button class="circ-opt" data-group="gx0-4" data-correct="expands" onclick="circPick(this)">will expand</button><button class="circ-opt" data-group="gx0-4" data-correct="expands" onclick="circPick(this)">expands</button> if you heat it enough.</div></div>
+      <div><div class="ex-row">5. If my flight gets canceled, I <button class="circ-opt" data-group="gx0-5" data-correct="'ll book" onclick="circPick(this)">'ll book</button><button class="circ-opt" data-group="gx0-5" data-correct="'ll book" onclick="circPick(this)">booked</button> a hotel near the airport.</div><div class="ex-row">6. If people <button class="circ-opt" data-group="gx0-6" data-correct="don't get" onclick="circPick(this)">won't get</button><button class="circ-opt" data-group="gx0-6" data-correct="don't get" onclick="circPick(this)">don't get</button> enough sleep, they often get sick more easily.</div><div class="ex-row">7. If the weather <button class="circ-opt" data-group="gx0-7" data-correct="is" onclick="circPick(this)">is</button><button class="circ-opt" data-group="gx0-7" data-correct="is" onclick="circPick(this)">will be</button> bad this weekend, we won't go camping.</div><div class="ex-row">8. Many sailors feel seasick if the sea <button class="circ-opt" data-group="gx0-8" data-correct="is" onclick="circPick(this)">is</button><button class="circ-opt" data-group="gx0-8" data-correct="is" onclick="circPick(this)">will be</button> rough.</div></div>
+    </div>
+    </div>
+    <div class="btn-row">
+      <button class="btn-check" onclick="checkCircSlide('gex0')">Check Answers</button>
+      <button class="btn-reset" onclick="resetCircSlide('gex0')">Reset</button>
+    </div>
+  </div></div>
+</div>
+
 <!-- ============ GRAMMAR: FUTURE TIME CLAUSES ============ -->
 <div class="slide" id="s-gram-future">
   <div class="banner banner-grammar">📐 Grammar</div>
@@ -878,21 +901,28 @@
   <div class="banner banner-grammar">📐 Grammar</div>
   <div class="slide-main"><div class="content">
     <h2>Look more closely at the form</h2>
-    <p class="instruction">Look back at the highlighted verbs in the sentences you just matched. What forms or tenses can you use after <i>if, when,</i> etc., and in the main clause?</p>
+    <p class="instruction">Look at the highlighted verbs in these sentences. What forms or tenses can you use after <i>if, when,</i> etc., and in the main clause?</p>
+    <div class="fixed-two-col">
+      <div><div class="ex-row">1. If my dad <span class="hl">finds out</span> I've been hitchhiking, he<span class="hl">'ll be</span> furious.</div><div class="ex-row">2. When you<span class="hl">'re crossing</span> the street in the US, <span class="hl">make sure</span> you look left and right.</div><div class="ex-row">3. As soon as I<span class="hl">'ve passed</span> my driver's test, I<span class="hl">'m going to buy</span> a car.</div><div class="ex-row">4. If it<span class="hl">'s still snowing</span> tomorrow, we <span class="hl">won't be driving</span> anywhere.</div></div>
+      <div><div class="ex-row">5. When we<span class="hl">'ve booked</span> the flights, we <span class="hl">need to start looking</span> for hotels.</div><div class="ex-row">6. Unless you <span class="hl">lend</span> her that money, she <span class="hl">won't be able to buy</span> a train ticket.</div><div class="ex-row">7. If his temperature <span class="hl">hasn't gone down</span>, he <span class="hl">isn't going</span> to school tomorrow.</div><div class="ex-row">8. If it <span class="hl">doesn't rain</span> by the end of the week, all the plants in the garden <span class="hl">will have died</span>.</div></div>
+    </div>
     <div class="ccq-box">
       <ul class="ccq-list">
-        <li>After <i>if, when,</i> etc. (in items 1–8): <button class="ccq-reveal-btn" onclick="this.nextElementSibling.classList.toggle('show')">Show answer</button><span class="ccq-answer">Any present form, e.g., simple present, present continuous, present perfect.</span></li>
-        <li>In the main clause (a–h): <button class="ccq-reveal-btn" onclick="this.nextElementSibling.classList.toggle('show')">Show answer</button><span class="ccq-answer">Any future form, e.g., <i>will, going to,</i> present continuous with future meaning, future perfect, future continuous, or an imperative.</span></li>
+        <li>After <i>if, when,</i> etc.: <button class="ccq-reveal-btn" onclick="this.nextElementSibling.classList.toggle('show')">Show answer</button><span class="ccq-answer">Any present form, e.g., simple present, present continuous, present perfect.</span></li>
+        <li>In the main clause: <button class="ccq-reveal-btn" onclick="this.nextElementSibling.classList.toggle('show')">Show answer</button><span class="ccq-answer">Any future form, e.g., <i>will, going to,</i> present continuous with future meaning, future perfect, future continuous, or an imperative.</span></li>
       </ul>
     </div>
-    <p class="instruction" style="margin-top:22px;">Now look at two more conditional sentences. Does the <b>bold</b> clause refer to (a) something that is a <i>possible</i> consequence of the <i>if</i>-clause, or (b) something that is <i>always</i> a consequence of the <i>if</i>-clause?</p>
-    <div class="fixed-two-col" id="gex2">
-      <div>
-        <div class="ex-row">1. If you don't take out travel insurance, <b>you run the risk of paying expensive medical fees</b>.<br><button class="circ-opt" data-group="ge2-1" data-correct="a — possible consequence" onclick="circPick(this)">a — possible consequence</button><button class="circ-opt" data-group="ge2-1" data-correct="a — possible consequence" onclick="circPick(this)">b — always a consequence</button></div>
-      </div>
-      <div>
-        <div class="ex-row">2. If you use online banking, <b>it's essential to never share your password</b>.<br><button class="circ-opt" data-group="ge2-2" data-correct="b — always a consequence" onclick="circPick(this)">a — possible consequence</button><button class="circ-opt" data-group="ge2-2" data-correct="b — always a consequence" onclick="circPick(this)">b — always a consequence</button></div>
-      </div>
+  </div></div>
+</div>
+
+<div class="slide" id="s-gram-ex2b">
+  <div class="banner banner-grammar">📐 Grammar</div>
+  <div class="slide-main"><div class="content">
+    <h2>Possible or always?</h2>
+    <p class="instruction">Now look at two more conditional sentences. Does the <span class="hl" style="background:#FFE066;padding:0 5px;border-radius:5px;">highlighted</span> clause refer to (a) something that is a <i>possible</i> consequence of the <i>if</i>-clause, or (b) something that is <i>always</i> a consequence of the <i>if</i>-clause?</p>
+    <div id="gex2">
+        <div class="ex-row" style="margin-bottom:26px;">1. If you don't take out travel insurance, <span class="hl">you run the risk of paying expensive medical fees</span>.<br><button class="circ-opt" data-group="ge2-1" data-correct="a — possible consequence" onclick="circPick(this)">a — possible consequence</button><button class="circ-opt" data-group="ge2-1" data-correct="a — possible consequence" onclick="circPick(this)">b — always a consequence</button></div>
+        <div class="ex-row" style="margin-bottom:26px;">2. If you use online banking, <span class="hl">it's essential to never share your password</span>.<br><button class="circ-opt" data-group="ge2-2" data-correct="b — always a consequence" onclick="circPick(this)">a — possible consequence</button><button class="circ-opt" data-group="ge2-2" data-correct="b — always a consequence" onclick="circPick(this)">b — always a consequence</button></div>
     </div>
     <div class="btn-row">
       <button class="btn-check" onclick="checkCircSlide('gex2')">Check Answers</button>
@@ -990,87 +1020,6 @@
   </div></div>
 </div>
 
-<!-- ============ PRONUNCIATION: LISTEN & COMPLETE ============ -->
-<div class="slide" id="s-pron1">
-  <div class="banner banner-pron">🔊 Pronunciation</div>
-  <div class="slide-main"><div class="content">
-    <h2>Linked phrases</h2>
-    <p class="instruction">Listen and complete the sentence below with three words.</p>
-    <div class="audio-box">
-      <audio controls src="track_4_12.mp3" style="width:100%;"></audio>
-    </div>
-    <div class="ex-row" id="pron1" style="font-size:1.15rem;">I'll call you <input class="ans-input" data-ans="as soon as"> the mail's been delivered.</div>
-    <div class="btn-row">
-      <button class="btn-check" onclick="checkSlide('pron1')">Check Answers</button>
-      <button class="btn-reset" onclick="resetSlide('pron1')">Reset</button>
-    </div>
-    <div class="ccq-box" style="margin-top:20px;">
-      <p class="ccq-label">💭 Can you explain the linking?</p>
-      <ul class="ccq-list">
-        <li>Why are the first and second words linked together? <button class="ccq-reveal-btn" onclick="this.nextElementSibling.classList.toggle('show')">Show answer</button><span class="ccq-answer"><i>As</i> and <i>soon</i> are linked because <i>as</i> finishes with the /z/ sound and <i>soon</i> starts with the very similar sound /s/.</span></li>
-        <li>Why are the second and third words linked together? <button class="ccq-reveal-btn" onclick="this.nextElementSibling.classList.toggle('show')">Show answer</button><span class="ccq-answer"><i>Soon</i> and <i>as</i> are linked because <i>soon</i> ends with a consonant sound (/n/) and <i>as</i> begins with a vowel sound (/æ/).</span></li>
-      </ul>
-    </div>
-  </div></div>
-</div>
-
-<!-- ============ PRONUNCIATION: COMPLETE THE SENTENCES ============ -->
-<div class="slide" id="s-pron2">
-  <div class="banner banner-pron">🔊 Pronunciation</div>
-  <div class="slide-main"><div class="content">
-    <h2>Complete the sentences</h2>
-    <p class="instruction">Listen and complete the sentences with the missing three-word phrase (contractions count as one word).</p>
-    <div class="audio-box">
-      <audio controls src="track_4_13.mp3" style="width:100%;"></audio>
-    </div>
-    <div class="fixed-two-col" id="pron2">
-      <div>
-        <div class="ex-row">1. Don't call me <input class="ans-input" data-ans="unless it's an"> emergency.</div>
-        <div class="ex-row">2. As <input class="ans-input" data-ans="far as I'm"> concerned, you have to be crazy to want to do an extreme sport.</div>
-        <div class="ex-row">3. Be careful with your wallet, <input class="ans-input" data-ans="and above all">, don't use your phone on the street.</div>
-        <div class="ex-row">4. It was <input class="ans-input" data-ans="such an amazing"> experience that I've never forgotten it.</div>
-      </div>
-      <div>
-        <div class="ex-row">5. I dyed my hair blue a <input class="ans-input" data-ans="short time ago">, and I hated it!</div>
-        <div class="ex-row">6. I was scared at first, but it was <input class="ans-input" data-ans="worth it in"> the end.</div>
-        <div class="ex-row">7. <input class="ans-input" data-ans="first of all">, let's try to find a cheap hotel.</div>
-        <div class="ex-row">8. <input class="ans-input" data-ans="In an ideal" data-alt="an ideal"> world, everyone would earn a salary.</div>
-      </div>
-    </div>
-    <div class="btn-row">
-      <button class="btn-check" onclick="checkSlide('pron2')">Check Answers</button>
-      <button class="btn-reset" onclick="resetSlide('pron2')">Reset</button>
-    </div>
-  </div></div>
-</div>
-
-<!-- ============ PRONUNCIATION: PRACTICE & PERSONALIZE ============ -->
-<div class="slide" id="s-pron3">
-  <div class="banner banner-pron">🔊 Pronunciation</div>
-  <div class="slide-main"><div class="content">
-    <h2>Practice and personalize</h2>
-    <p class="instruction">Practice saying the highlighted phrases below, linking the words together. Then make personal sentences using as many of the phrases as you can.</p>
-    <div class="card" style="display:flex;flex-wrap:wrap;gap:10px;">
-      <span class="wb-tile" style="cursor:default;">unless it's an emergency</span>
-      <span class="wb-tile" style="cursor:default;">as far as I'm concerned</span>
-      <span class="wb-tile" style="cursor:default;">and above all</span>
-      <span class="wb-tile" style="cursor:default;">such an amazing (experience)</span>
-      <span class="wb-tile" style="cursor:default;">a short time ago</span>
-      <span class="wb-tile" style="cursor:default;">worth it in the end</span>
-      <span class="wb-tile" style="cursor:default;">first of all</span>
-      <span class="wb-tile" style="cursor:default;">in an ideal world</span>
-    </div>
-    <textarea class="ans-input wide" id="pron3-txt" rows="3" style="margin-top:16px;"></textarea>
-    <div class="btn-row">
-      <button class="btn-suggest" onclick="toggleSuggested('pron3-sugg')">💡 Suggested Answer</button>
-      <button class="btn-reset" onclick="document.getElementById('pron3-txt').value='';document.getElementById('pron3-sugg').classList.remove('show');">Reset</button>
-    </div>
-    <div class="suggest-box" id="pron3-sugg">
-      <i>I never go to the doctor unless it's an emergency.</i>
-    </div>
-  </div></div>
-</div>
-
 <!-- ============ READING: LABEL THE PHOTOS ============ -->
 <div class="slide" id="s-read1">
   <div class="banner banner-reading">📖 Reading</div>
@@ -1117,9 +1066,41 @@
 <div class="slide" id="s-read2">
   <div class="banner banner-reading">📖 Reading</div>
   <div class="slide-main"><div class="content">
-    <h2>Why are deadly extreme sports more popular than ever?</h2>
-    <p class="instruction">Read the article and check the three reasons it gives for why extreme sports are becoming more popular.</p>
-    <div class="tick-list" id="read2">
+    <h2>Read and explain</h2>
+    <p class="instruction">Read the article. Then tell me what it is about.</p>
+    <div style="display:grid;grid-template-columns:1fr 1.25fr;gap:24px;align-items:start;">
+      <div>
+        <p class="discuss-label">💬 Share your thoughts</p>
+        <ul class="discuss-list">
+          <li>What is the article about? Explain it in your own words.</li>
+          <li>What do you think is the writer’s main idea?</li>
+          <li>Do you agree or disagree with the writer? Why?</li>
+        </ul>
+      </div>
+      <div class="article-box" style="margin:0;max-height:560px;overflow-y:auto;"><h3>Why are <span class="hl">deadly extreme sports</span> more popular than ever?</h3>
+<p>Two men leap from the top of the mountain and spread their wings to fly down one of the most dangerous routes in one of the world's most dangerous sports. Dario Zanon and Graham Dickinson are experts at wingsuit flying. Using pieces of cloth that join their arms and legs, they fly past cliff edges and between trees at over 110 mph. Then they release their parachutes and drift down to land. This video has been watched over ten million times on social media.</p>
+<p>A few months later, Zanon returned to Chamonix and climbed the Aiguille du Midi on the other side of the valley, for a solo flight. On that Sunday, his body was found on the glaciers 5,000 feet below. He was 33. Most likely no one will ever know exactly which small thing went wrong. Small things become big quickly at 110 mph. It does happen to the best. Mark Sutton, the man who parachuted into the London Olympics stadium dressed as James Bond, was killed wingsuit flying in the Swiss Alps, while filming for EpicTV. Dean Potter, a famous US wingsuit flyer, died with his friend Graham Hunt. They had jumped from Taft Point in California.</p>
+<p>Today extreme sports are booming. Skydiving is a good example – in 2006, the British Parachute Association recorded 39,100 first jumps, but last year there were 59,679. The number of people climbing Everest has rocketed since the 1990s, and the proportion of women climbers is increasing, up from about 16% in 2002 to 36% now.</p>
+<p>"You just get into it and then progressively build up," says Jess Cox, 27, an instructor at her father's paragliding business. "Better flights involve going higher, further, doing acrobatic stuff." She shows me a video on her phone, of when she and a friend jumped off a mountain in Turkey. "Woo-hoo!" she squeals, watching. "I'd say that was one of the best days of my life. It's completely addictive. Some people become completely obsessed, quit their jobs, and just travel around the world, leaping off things." Science teacher Becky, on the other hand, didn't get addicted. "I did a skydive once and I've also done bungee jumping. The skydive was good, yes. I've no particular need to do it again. But," she says, "life would be a bit boring if people didn't try new things."</p>
+<p>Extreme sports constantly push people to test the ultimate limits of their own safety. They are jumping blindfolded, or with their dog, or skydiving without a parachute into a giant net – and you'll find all these online, thanks to action cameras. One hundred hours of GoPro video are uploaded onto YouTube every minute, and sales of these cameras are growing by 50% a year. Watching other people do these things is attracting many more new participants.</p>
+<p>A good soccer player or tennis player always wants to be tested against better opponents, but their opponents are human. In extreme sports, the opponent is danger. So how can you get better without killing yourself? Steph Davis, one of the world's best-known climbers and wingsuit flyers, wrote, "Perhaps getting better means becoming more elegant." Maybe the future of extreme sports is about learning to be less extreme.</p>
+<div class="glossary-box" style="margin:14px 0 0;"><h4>Glossary</h4>
+<p><b>Taft Point</b> a very high granite rock in Yosemite National Park, California</p>
+<p><b>GoPro</b> a compact action camera capable of taking photos and videos in extreme conditions</p></div>
+<p class="glossary-note">Adapted from The Guardian</p></div>
+    </div>
+  </div></div>
+</div>
+
+<!-- ============ READING: FIND THE REASONS ============ -->
+<div class="slide" id="s-read2b">
+  <div class="banner banner-reading">📖 Reading</div>
+  <div class="slide-main"><div class="content">
+    <h2>Find the reasons</h2>
+    <p class="instruction">Read the article again and check the three reasons it gives for why extreme sports are becoming more popular.</p>
+    <div style="display:grid;grid-template-columns:1fr 1.25fr;gap:24px;align-items:start;">
+      <div>
+<div class="tick-list" id="read2">
       <div class="tick-item" data-val="1" onclick="toggleTick(this)"><span class="tick-box">✓</span>More and more celebrities are taking them up.</div>
       <div class="tick-item" data-val="2" onclick="toggleTick(this)"><span class="tick-box">✓</span>Once some people have tried it, they can't stop.</div>
       <div class="tick-item" data-val="3" onclick="toggleTick(this)"><span class="tick-box">✓</span>People find traditional sports, like soccer, not challenging enough.</div>
@@ -1131,258 +1112,20 @@
       <button class="btn-check" onclick="checkTickSlide('read2', ['2','4','5'])">Check Answers</button>
       <button class="btn-reset" onclick="resetTickSlide('read2')">Reset</button>
     </div>
-    <div class="article-box" style="margin-top:22px;">
-      <h3>Why are <span class="hl">deadly extreme sports</span> more popular than ever?</h3>
-      <p>Two men leap from the top of the mountain and spread their wings to fly down one of the most dangerous routes in one of the world's most dangerous sports. Dario Zanon and Graham Dickinson are experts at wingsuit flying. Using pieces of cloth that join their arms and legs, they fly past cliff edges and between trees at over 110 mph. Then they release their parachutes and drift down to land. This video has been watched over ten million times on social media.</p>
-      <p>A few months later, Zanon returned to Chamonix and climbed the Aiguille du Midi on the other side of the valley, for a solo flight. On that Sunday, his body was found on the glaciers 5,000 feet below. He was 33. Most likely no one will ever know exactly which small thing went wrong. Small things become big quickly at 110 mph. It does happen to the best. Mark Sutton, the man who parachuted into the London Olympics stadium dressed as James Bond, was killed wingsuit flying in the Swiss Alps, while filming for EpicTV. Dean Potter, a famous US wingsuit flyer, died with his friend Graham Hunt. They had jumped from Taft Point in California.</p>
-      <p>Today extreme sports are booming. Skydiving is a good example – in 2006, the British Parachute Association recorded 39,100 first jumps, but last year there were 59,679. The number of people climbing Everest has rocketed since the 1990s, and the proportion of women climbers is increasing, up from about 16% in 2002 to 36% now.</p>
-      <p>"You just get into it and then progressively build up," says Jess Cox, 27, an instructor at her father's paragliding business. "Better flights involve going higher, further, doing acrobatic stuff." She shows me a video on her phone, of when she and a friend jumped off a mountain in Turkey. "Woo-hoo!" she squeals, watching. "I'd say that was one of the best days of my life. It's completely addictive. Some people become completely obsessed, quit their jobs, and just travel around the world, leaping off things." Science teacher Becky, on the other hand, didn't get addicted. "I did a skydive once and I've also done bungee jumping. The skydive was good, yes. I've no particular need to do it again. But," she says, "life would be a bit boring if people didn't try new things."</p>
-      <p>Extreme sports constantly push people to test the ultimate limits of their own safety. They are jumping blindfolded, or with their dog, or skydiving without a parachute into a giant net – and you'll find all these online, thanks to action cameras. One hundred hours of GoPro video are uploaded onto YouTube every minute, and sales of these cameras are growing by 50% a year. Watching other people do these things is attracting many more new participants.</p>
-      <p>A good soccer player or tennis player always wants to be tested against better opponents, but their opponents are human. In extreme sports, the opponent is danger. So how can you get better without killing yourself? Steph Davis, one of the world's best-known climbers and wingsuit flyers, wrote, "Perhaps getting better means becoming more elegant." Maybe the future of extreme sports is about learning to be less extreme.</p>
-    </div>
-    <div class="glossary-box">
-      <h4>Glossary</h4>
-      <p><b>Taft Point</b> a very high granite rock in Yosemite National Park, California</p>
-      <p><b>GoPro</b> a compact action camera capable of taking photos and videos in extreme conditions</p>
-    </div>
-    <p class="glossary-note">Adapted from The Guardian</p>
-  </div></div>
-</div>
 
-<!-- ============ READING: FIND THE MISSING INFORMATION ============ -->
-<div class="slide" id="s-read3">
-  <div class="banner banner-reading">📖 Reading</div>
-  <div class="slide-main"><div class="content">
-    <h2>Find the missing information</h2>
-    <p class="instruction">Read the article again and fill in the blanks. Each blank needs a name or a number.</p>
-    <div class="fixed-two-col" id="read3">
-      <div>
-        <div class="ex-row">1. <input class="ans-input" data-ans="110 mph"> — the typical speed of a wingsuit flyer</div>
-        <div class="ex-row">2. <input class="ans-input" data-ans="33"> — the age that Zanon was when he died</div>
-        <div class="ex-row">3. <input class="ans-input" data-ans="Dean Potter"> and <input class="ans-input" data-ans="Graham Hunt"> — the two men killed wingsuit flying in the US a few years ago</div>
-        <div class="ex-row">4. <input class="ans-input" data-ans="59,679" data-alt="59679"> — the number of people who parachuted for the first time last year</div>
       </div>
-      <div>
-        <div class="ex-row">5. <input class="ans-input" data-ans="36%" data-alt="36"> — the percentage of female climbers now</div>
-        <div class="ex-row">6. <input class="ans-input" data-ans="Jess Cox"> — the woman who paraglided off a mountain in Turkey</div>
-        <div class="ex-row">7. <input class="ans-input" data-ans="Steph Davis"> — one of the world's best female wingsuit flyers</div>
-      </div>
+      <div class="article-box" style="margin:0;max-height:560px;overflow-y:auto;"><h3>Why are <span class="hl">deadly extreme sports</span> more popular than ever?</h3>
+<p>Two men leap from the top of the mountain and spread their wings to fly down one of the most dangerous routes in one of the world's most dangerous sports. Dario Zanon and Graham Dickinson are experts at wingsuit flying. Using pieces of cloth that join their arms and legs, they fly past cliff edges and between trees at over 110 mph. Then they release their parachutes and drift down to land. This video has been watched over ten million times on social media.</p>
+<p>A few months later, Zanon returned to Chamonix and climbed the Aiguille du Midi on the other side of the valley, for a solo flight. On that Sunday, his body was found on the glaciers 5,000 feet below. He was 33. Most likely no one will ever know exactly which small thing went wrong. Small things become big quickly at 110 mph. It does happen to the best. Mark Sutton, the man who parachuted into the London Olympics stadium dressed as James Bond, was killed wingsuit flying in the Swiss Alps, while filming for EpicTV. Dean Potter, a famous US wingsuit flyer, died with his friend Graham Hunt. They had jumped from Taft Point in California.</p>
+<p>Today extreme sports are booming. Skydiving is a good example – in 2006, the British Parachute Association recorded 39,100 first jumps, but last year there were 59,679. The number of people climbing Everest has rocketed since the 1990s, and the proportion of women climbers is increasing, up from about 16% in 2002 to 36% now.</p>
+<p>"You just get into it and then progressively build up," says Jess Cox, 27, an instructor at her father's paragliding business. "Better flights involve going higher, further, doing acrobatic stuff." She shows me a video on her phone, of when she and a friend jumped off a mountain in Turkey. "Woo-hoo!" she squeals, watching. "I'd say that was one of the best days of my life. It's completely addictive. Some people become completely obsessed, quit their jobs, and just travel around the world, leaping off things." Science teacher Becky, on the other hand, didn't get addicted. "I did a skydive once and I've also done bungee jumping. The skydive was good, yes. I've no particular need to do it again. But," she says, "life would be a bit boring if people didn't try new things."</p>
+<p>Extreme sports constantly push people to test the ultimate limits of their own safety. They are jumping blindfolded, or with their dog, or skydiving without a parachute into a giant net – and you'll find all these online, thanks to action cameras. One hundred hours of GoPro video are uploaded onto YouTube every minute, and sales of these cameras are growing by 50% a year. Watching other people do these things is attracting many more new participants.</p>
+<p>A good soccer player or tennis player always wants to be tested against better opponents, but their opponents are human. In extreme sports, the opponent is danger. So how can you get better without killing yourself? Steph Davis, one of the world's best-known climbers and wingsuit flyers, wrote, "Perhaps getting better means becoming more elegant." Maybe the future of extreme sports is about learning to be less extreme.</p>
+<div class="glossary-box" style="margin:14px 0 0;"><h4>Glossary</h4>
+<p><b>Taft Point</b> a very high granite rock in Yosemite National Park, California</p>
+<p><b>GoPro</b> a compact action camera capable of taking photos and videos in extreme conditions</p></div>
+<p class="glossary-note">Adapted from The Guardian</p></div>
     </div>
-    <div class="btn-row">
-      <button class="btn-check" onclick="checkSlide('read3')">Check Answers</button>
-      <button class="btn-reset" onclick="resetSlide('read3')">Reset</button>
-    </div>
-  </div></div>
-</div>
-
-<!-- ============ READING: DISCUSSION ============ -->
-<div class="slide" id="s-read4">
-  <div class="banner banner-reading">📖 Reading</div>
-  <div class="slide-main"><div class="content">
-    <h2>Talk about it</h2>
-    <p class="discuss-label">💬 Share your thoughts</p>
-    <p class="section-subhead" style="font-size:1.1rem;">The writer's opinion</p>
-    <ul class="discuss-list">
-      <li>Read the last paragraph again. What do you think the writer means when he says <i>"Maybe the future of extreme sports is about learning to be less extreme"</i>?</li>
-      <li>Do you agree?</li>
-    </ul>
-    <p class="section-subhead" style="font-size:1.1rem;">Your experience</p>
-    <ul class="discuss-list">
-      <li>Have you ever done an extreme sport? Did you enjoy it? Why (not)?</li>
-      <li>Which extreme sport that you have never done would you most / least like to try?</li>
-    </ul>
-  </div></div>
-</div>
-
-<!-- ============ VOCABULARY: MATCH THE ANSWERS ============ -->
-<div class="slide" id="s-vocab1">
-  <div class="banner banner-vocab">📚 Vocabulary</div>
-  <div class="slide-main"><div class="content">
-    <h2>Match the answers to the questions</h2>
-    <p class="instruction">Listen to Sophie Rees, who works in the ski industry, answering six questions about extreme sports. Match her answers 1–6 (in the order you hear them) to questions A–F.</p>
-    <div class="audio-box">
-      <audio controls src="track_4_14.mp3" style="width:100%;"></audio>
-    </div>
-    <div class="match-wrap" id="vocab1-match">
-      <div>
-        <div class="match-col-head mc-left">Sophie's answers</div>
-        <div class="match-item" data-side="left" data-pair="1" onclick="matchPick(this)"><span class="circ-num">1</span>Her first answer</div>
-        <div class="match-item" data-side="left" data-pair="2" onclick="matchPick(this)"><span class="circ-num">2</span>Her second answer</div>
-        <div class="match-item" data-side="left" data-pair="3" onclick="matchPick(this)"><span class="circ-num">3</span>Her third answer</div>
-        <div class="match-item" data-side="left" data-pair="4" onclick="matchPick(this)"><span class="circ-num">4</span>Her fourth answer</div>
-        <div class="match-item" data-side="left" data-pair="5" onclick="matchPick(this)"><span class="circ-num">5</span>Her fifth answer</div>
-        <div class="match-item" data-side="left" data-pair="6" onclick="matchPick(this)"><span class="circ-num">6</span>Her sixth answer</div>
-      </div>
-      <div>
-        <div class="match-col-head mc-right">Questions</div>
-        <div class="match-item" data-side="right" data-pair="4" onclick="matchPick(this)"><span class="circ-num">A</span>Are you ever afraid that you might get injured or killed?</div>
-        <div class="match-item" data-side="right" data-pair="6" onclick="matchPick(this)"><span class="circ-num">B</span>Do you think extreme sports are more popular with men than with women?</div>
-        <div class="match-item" data-side="right" data-pair="2" onclick="matchPick(this)"><span class="circ-num">C</span>What other extreme sports have you done?</div>
-        <div class="match-item" data-side="right" data-pair="1" onclick="matchPick(this)"><span class="circ-num">D</span>What's the first extreme sport you did? When was it?</div>
-        <div class="match-item" data-side="right" data-pair="3" onclick="matchPick(this)"><span class="circ-num">E</span>Why do you enjoy extreme sports?</div>
-        <div class="match-item" data-side="right" data-pair="5" onclick="matchPick(this)"><span class="circ-num">F</span>Why do you think extreme sports are becoming more popular?</div>
-      </div>
-    </div>
-    <div class="btn-row">
-      <button class="btn-check" onclick="checkMatchSlide('vocab1-match')">Check Answers</button>
-      <button class="btn-reset" onclick="resetMatchSlide('vocab1-match')">Reset</button>
-    </div>
-  </div></div>
-</div>
-
-<!-- ============ VOCABULARY: LISTEN AGAIN ============ -->
-<div class="slide" id="s-vocab2">
-  <div class="banner banner-vocab">📚 Vocabulary</div>
-  <div class="slide-main"><div class="content">
-    <h2>Listen again</h2>
-    <p class="discuss-label">💬 In your own words, say how Sophie answered each question.</p>
-    <div class="btn-row" style="margin-bottom:10px;">
-      <button class="btn-suggest" onclick="toggleSuggested('vocab2-sugg')">💡 Suggested Answer</button>
-    </div>
-    <div class="suggest-box" id="vocab2-sugg">
-      <ul>
-        <li>Skiing; when she was six.</li>
-        <li>Mountain biking, rock climbing, ice-walking, white-water rafting.</li>
-        <li>She loves taking risks; she loves the adrenaline rush.</li>
-        <li>She doesn't really think about getting injured or killed.</li>
-        <li>Because extreme sports are becoming more accessible, and there's much more exposure than before on TV and social media. It's the adrenaline rush people enjoy.</li>
-        <li>She thinks it's becoming more equal between men and women, but men still dominate.</li>
-      </ul>
-    </div>
-    <p class="instruction" style="margin-top:22px;">Look at three extracts from the interview. Can you remember the missing words?</p>
-    <div id="vocab2">
-      <div class="ex-row">1. I take <input class="ans-input" data-ans="after"> my dad – we're both sports-crazy.</div>
-      <div class="ex-row">2. I think it's because I love taking <input class="ans-input" data-ans="risks">; I love the adrenaline rush.</div>
-      <div class="ex-row">3. I think more and more people are taking <input class="ans-input" data-ans="part"> in extreme sports…</div>
-    </div>
-    <div class="btn-row">
-      <button class="btn-check" onclick="checkSlide('vocab2')">Check Answers</button>
-      <button class="btn-reset" onclick="resetSlide('vocab2')">Reset</button>
-    </div>
-  </div></div>
-</div>
-
-<!-- ============ VOCABULARY: EXPRESSIONS & PHRASAL VERBS WITH TAKE ============ -->
-<div class="slide" id="s-vocab3">
-  <div class="banner banner-vocab">📚 Vocabulary</div>
-  <div class="slide-main"><div class="content">
-    <h2>Expressions and phrasal verbs with <i>take</i></h2>
-    <p class="instruction">Look at the expressions below. Try to figure out their meaning from the context, then reveal the answer.</p>
-    <h3 class="section-subhead">Expressions with <i>take</i></h3>
-    <div class="fixed-two-col">
-      <div>
-        <div class="ex-row">1. My neighbor <b>takes care of</b> my son while I'm at work. <button class="ccq-reveal-btn" onclick="this.nextElementSibling.classList.toggle('show')">Reveal</button><span class="ccq-answer">care for someone / something / yourself</span></div>
-        <div class="ex-row">2. You should <b>take advantage of</b> that job offer. It's a great opportunity. <button class="ccq-reveal-btn" onclick="this.nextElementSibling.classList.toggle('show')">Reveal</button><span class="ccq-answer">make use of something well / an opportunity</span></div>
-        <div class="ex-row">3. The concert will <b>take place</b> on March 6th. <button class="ccq-reveal-btn" onclick="this.nextElementSibling.classList.toggle('show')">Reveal</button><span class="ccq-answer">happen, especially after being planned</span></div>
-        <div class="ex-row">4. You don't need to hurry. <b>Take your time</b>. <button class="ccq-reveal-btn" onclick="this.nextElementSibling.classList.toggle('show')">Reveal</button><span class="ccq-answer">use as much time as you need without hurrying</span></div>
-      </div>
-      <div>
-        <div class="ex-row">5. Regarding evaluation, coursework is <b>taken into account</b>, as well as exam results. <button class="ccq-reveal-btn" onclick="this.nextElementSibling.classList.toggle('show')">Reveal</button><span class="ccq-answer">consider particular facts or circumstances</span></div>
-        <div class="ex-row">6. Lina <b>took part in</b> a charity walk and raised $500 for a local animal shelter. <button class="ccq-reveal-btn" onclick="this.nextElementSibling.classList.toggle('show')">Reveal</button><span class="ccq-answer">participate in</span></div>
-        <div class="ex-row">7. The dog looked so hungry that I <b>took pity on</b> it, and gave it some of my food. <button class="ccq-reveal-btn" onclick="this.nextElementSibling.classList.toggle('show')">Reveal</button><span class="ccq-answer">show compassion, feel sorry for</span></div>
-      </div>
-    </div>
-    <h3 class="section-subhead">Phrasal verbs with <i>take</i></h3>
-    <div class="fixed-two-col">
-      <div>
-        <div class="ex-row">8. <b>Take</b> your jacket <b>off</b> – it's hot in here. The flight will <b>take off</b> in about 20 minutes. <button class="ccq-reveal-btn" onclick="this.nextElementSibling.classList.toggle('show')">Reveal</button><span class="ccq-answer">remove; leave the ground and begin to fly</span></div>
-        <div class="ex-row">9. I'd love to <b>take up</b> snowboarding – it sounds really exciting. <button class="ccq-reveal-btn" onclick="this.nextElementSibling.classList.toggle('show')">Reveal</button><span class="ccq-answer">learn or start to do something, for pleasure</span></div>
-        <div class="ex-row">10. My boyfriend's little sister has really <b>taken to</b> me – she always wants to play with me. <button class="ccq-reveal-btn" onclick="this.nextElementSibling.classList.toggle('show')">Reveal</button><span class="ccq-answer">start liking someone</span></div>
-      </div>
-      <div>
-        <div class="ex-row">11. Our company is growing quickly. We're planning to <b>take on</b> three new employees in the marketing department. <button class="ccq-reveal-btn" onclick="this.nextElementSibling.classList.toggle('show')">Reveal</button><span class="ccq-answer">employ or hire someone</span></div>
-        <div class="ex-row">12. Elias is <b>taking me out</b> for dinner tonight to a great new restaurant. Please <b>take</b> the trash <b>out</b>. It's beginning to smell. <button class="ccq-reveal-btn" onclick="this.nextElementSibling.classList.toggle('show')">Reveal</button><span class="ccq-answer">go out with someone; remove</span></div>
-      </div>
-    </div>
-  </div></div>
-</div>
-
-<!-- ============ VOCABULARY: PERSONALIZE — I'LL TAKE A QUESTION ============ -->
-<div class="slide" id="s-vocab4">
-  <div class="banner banner-vocab">📚 Vocabulary</div>
-  <div class="slide-main"><div class="content">
-    <h2>I'll take a question</h2>
-    <p class="instruction">Complete the phrasal verbs and expressions in each set of questions. Then ask me the questions and answer mine — give examples to explain your answers.</p>
-    <h3 class="section-subhead">Student A</h3>
-  <div id="vocab4">
-      <div class="ex-row">1. Who do you take <input class="ans-input small" data-ans="after"> more, your father or your mother?</div>
-      <div class="ex-row">2. Do you take <input class="ans-input small" data-ans="care of"> yourself, or are you very laid-back about your health?</div>
-      <div class="ex-row">3. Have you ever <u>not</u> taken <input class="ans-input small" data-ans="advantage of"> a good opportunity and then regretted it?</div>
-      <div class="ex-row">4. Has any big sporting event ever taken <input class="ans-input small" data-ans="place"> in your (nearest big) city? Did you go to it?</div>
-      <div class="ex-row">5. Do you sometimes get annoyed by little things that people do, or do you take no <input class="ans-input small" data-ans="notice">? What kinds of things?</div>
-    </div>
-    <div class="btn-row">
-      <button class="btn-check" onclick="checkSlide('vocab4')">Check Answers</button>
-      <button class="btn-reset" onclick="resetSlide('vocab4')">Reset</button>
-    </div>
-  <h3 class="section-subhead" style="margin-top:26px;">Student B</h3>
-  <div id="vocab4b">
-    <div class="ex-row">1. Do you get up very quickly in the morning or do you take <input class="ans-input small" data-ans="your time">?</div>
-    <div class="ex-row">2. Have you taken <input class="ans-input small" data-ans="up"> a new sport or hobby recently, or is there one you would like to take <input class="ans-input small" data-ans="up">?</div>
-    <div class="ex-row">3. If you were thinking of buying a new phone, what factors would you take <input class="ans-input small" data-ans="into account">?</div>
-    <div class="ex-row">4. Have you ever taken <input class="ans-input small" data-ans="part in"> a charity walk or some other kind of fundraiser that benefited your community?</div>
-    <div class="ex-row">5. Who takes the trash <input class="ans-input small" data-ans="out"> in your house, you or someone else?</div>
-  </div>
-  <div class="btn-row">
-    <button class="btn-check" onclick="checkSlide('vocab4b')">Check Answers</button>
-    <button class="btn-reset" onclick="resetSlide('vocab4b')">Reset</button>
-  </div>
-
-    <div class="gram-note" style="margin-top:20px;">
-      <b>💡 Giving examples</b> — We often use <i>for example</i> or <i>for instance</i> to give examples.<br>
-      <i>I usually get up quickly, but sometimes I take my time, for example / for instance, on the weekend.</i>
-    </div>
-  </div></div>
-</div>
-
-<!-- ============ VIDEO LISTENING: RIDING THE WAVES ============ -->
-<div class="slide" id="s-video">
-  <div class="banner banner-video">🎥 Video Listening</div>
-  <div class="slide-main"><div class="content">
-    <h2>Riding the waves</h2>
-    <p class="instruction">Watch a documentary about Grace Doyle. How did surfing help her through a difficult time in her life?</p>
-    <div class="video-box">
-      <p>🎥 Riding the waves — video file needed</p>
-      <div class="img-placeholder" style="background:linear-gradient(135deg,#2A2A2A,#444);color:#ddd;border-color:#666;">
-        <span class="ip-icon">🎬</span>Video placeholder — add the "Riding the Waves" video file here
-      </div>
-    </div>
-    <div class="glossary-box">
-      <h4>Glossary</h4>
-      <p><b>surfboard</b> a long narrow piece of hard material that you stand on to surf (also <b>body~</b>, a short, light board that you ride lying on your front)</p>
-      <p><b>wipe out</b> to fall, especially when doing a sport such as surfing or skiing</p>
-    </div>
-    <div class="btn-row">
-      <button class="btn-suggest" onclick="toggleSuggested('video-sugg1')">💡 Suggested Answer</button>
-    </div>
-    <div class="suggest-box" id="video-sugg1">Surfing helped her to relax and get her mind off her problems.</div>
-
-    <h3 class="section-subhead" style="margin-top:26px;">Watch again and complete the information</h3>
-    <div class="fixed-two-col" id="video1">
-      <div>
-        <div class="ex-row">1. Grace is from a small town in <input class="ans-input" style="width:150px" data-ans="Ireland">.</div>
-        <div class="ex-row">2. She originally trained to be a <input class="ans-input" style="width:150px" data-ans="math teacher">.</div>
-        <div class="ex-row">3. She got interested in surfing when she was young because of her <input class="ans-input" style="width:150px" data-ans="older brother">.</div>
-        <div class="ex-row">4. Grace has surfed abroad in places such as Central America, <input class="ans-input" style="width:150px" data-ans="Indonesia">, and <input class="ans-input" style="width:150px" data-ans="Europe">.</div>
-        <div class="ex-row">5. The global surfing business is worth about a <input class="ans-input" style="width:150px" data-ans="hundred"> billion <input class="ans-input" style="width:150px" data-ans="dollars">.</div>
-      </div>
-      <div>
-        <div class="ex-row">6. Grace thinks that media coverage is one reason why surfing has become <input class="ans-input" style="width:150px" data-ans="so popular">.</div>
-        <div class="ex-row">7. According to Grace, people are attracted to surfing because it's <input class="ans-input" style="width:150px" data-ans="healthy"> and <input class="ans-input" style="width:150px" data-ans="fun">.</div>
-        <div class="ex-row">8. If you fall off a big wave, you need to hold your <input class="ans-input" style="width:150px" data-ans="breath"> and <input class="ans-input" style="width:150px" data-ans="relax">.</div>
-        <div class="ex-row">9. Grace enjoys the balance between the danger of injury and the chance she might get the <input class="ans-input" style="width:150px" data-ans="best wave"> of her life.</div>
-        <div class="ex-row">10. In highly competitive surfing, there's a real risk that you could get <input class="ans-input" style="width:150px" data-ans="hurt"> or even <input class="ans-input" style="width:150px" data-ans="die">.</div>
-      </div>
-    </div>
-    <div class="btn-row">
-      <button class="btn-check" onclick="checkSlide('video1')">Check Answers</button>
-      <button class="btn-reset" onclick="resetSlide('video1')">Reset</button>
-    </div>
-
-    <p class="discuss-label" style="margin-top:26px;">💬 Share your thoughts</p>
-    <ul class="discuss-list">
-      <li>Do you think doing something that gives you an "adrenaline rush" is always more enjoyable? What things do you do that are both healthy and fun?</li>
-    </ul>
   </div></div>
 </div>
 
@@ -1495,159 +1238,46 @@
 </div>
 
 <!-- ============ HW4: VOCABULARY — MATCH THE SENTENCE HALVES ============ -->
-<!-- WB 4B 3a -->
-<div class="slide" id="hw-voc1-slide">
-  <div class="banner banner-hw">📝 Homework</div>
-  <div class="slide-main"><div class="content">
-    <h2>HW4 — Match the sentence halves</h2>
-    <p class="instruction">Match each numbered sentence beginning on the left to its lettered ending on the right.</p>
-    <div class="match-wrap" id="hwv1-match">
-      <div>
-        <div class="match-col-head mc-left">Sentence beginnings</div>
-        <div class="match-item example-pair"><span class="circ-num">1</span>Grandparents often <b>take care of</b> children</div>
-        <div class="match-item" data-side="left" data-pair="2" onclick="matchPick(this)"><span class="circ-num">2</span>Don't <b>take a risk</b>,</div>
-        <div class="match-item" data-side="left" data-pair="3" onclick="matchPick(this)"><span class="circ-num">3</span>Try to take all the factors <b>into account</b></div>
-        <div class="match-item" data-side="left" data-pair="4" onclick="matchPick(this)"><span class="circ-num">4</span>If you get an interesting job opportunity,</div>
-        <div class="match-item" data-side="left" data-pair="5" onclick="matchPick(this)"><span class="circ-num">5</span>There's a new restaurant opening in my neighborhood;</div>
-        <div class="match-item" data-side="left" data-pair="6" onclick="matchPick(this)"><span class="circ-num">6</span>If you want to be involved in the protest,</div>
-        <div class="match-item" data-side="left" data-pair="7" onclick="matchPick(this)"><span class="circ-num">7</span>Most people <b>take pity on</b> people</div>
-        <div class="match-item" data-side="left" data-pair="8" onclick="matchPick(this)"><span class="circ-num">8</span>The Olympics <b>take place</b> every four years;</div>
-        <div class="match-item" data-side="left" data-pair="9" onclick="matchPick(this)"><span class="circ-num">9</span>Please don't hurry;</div>
-      </div>
-      <div>
-        <div class="match-col-head mc-right">Sentence endings</div>
-        <div class="match-item example-pair"><span class="circ-num">i</span>when their parents can't look after them.</div>
-        <div class="match-item" data-side="right" data-pair="2" onclick="matchPick(this)"><span class="circ-num">a</span>if you think something bad might happen.</div>
-        <div class="match-item" data-side="right" data-pair="8" onclick="matchPick(this)"><span class="circ-num">b</span>they're always held in a different country.</div>
-        <div class="match-item" data-side="right" data-pair="5" onclick="matchPick(this)"><span class="circ-num">c</span>they're looking to <b>take on</b> a new cook as well as several food servers.</div>
-        <div class="match-item" data-side="right" data-pair="4" onclick="matchPick(this)"><span class="circ-num">d</span><b>take advantage of</b> it.</div>
-        <div class="match-item" data-side="right" data-pair="7" onclick="matchPick(this)"><span class="circ-num">e</span>who are homeless.</div>
-        <div class="match-item" data-side="right" data-pair="3" onclick="matchPick(this)"><span class="circ-num">f</span>before you make a decision.</div>
-        <div class="match-item" data-side="right" data-pair="9" onclick="matchPick(this)"><span class="circ-num">g</span>you can <b>take your time</b>.</div>
-        <div class="match-item" data-side="right" data-pair="6" onclick="matchPick(this)"><span class="circ-num">h</span>you can <b>take part in</b> the demonstration.</div>
-      </div>
-    </div>
-    <div class="btn-row">
-      <button class="btn-check" onclick="checkMatchSlide('hwv1-match')">Check Answers</button>
-      <button class="btn-reset" onclick="resetMatchSlide('hwv1-match')">Reset</button>
-    </div>
-  </div></div>
-</div>
-
 <!-- ============ HW5: VOCABULARY — COMPLETE WITH take PHRASES ============ -->
-<!-- WB 4B 3b -->
-<div class="slide" id="hw-voc2-slide">
-  <div class="banner banner-hw">📝 Homework</div>
-  <div class="slide-main"><div class="content">
-    <h2>HW5 — Complete with expressions with <i>take</i></h2>
-    <p class="instruction">Choose a phrase in the bank, then tap the blank where it belongs.</p>
-    <div class="wb-bank book-style" id="hw-voc2-bank">
-      <span class="wb-tile example-used" data-val="take into account">take into account</span>
-      <span class="wb-tile" data-val="take advantage of" onclick="wbPick(this)">take advantage of</span>
-      <span class="wb-tile" data-val="take part in" onclick="wbPick(this)">take part in</span>
-      <span class="wb-tile" data-val="take your time" onclick="wbPick(this)">take your time</span>
-      <span class="wb-tile" data-val="take a risk" onclick="wbPick(this)">take a risk</span>
-      <span class="wb-tile" data-val="take pity on" onclick="wbPick(this)">take pity on</span>
-      <span class="wb-tile" data-val="take place" onclick="wbPick(this)">take place</span>
-      <span class="wb-tile" data-val="take care of" onclick="wbPick(this)">take care of</span>
-      <span class="wb-tile" data-val="take to" onclick="wbPick(this)">take to</span>
-    </div>
-    <div class="fixed-two-col" id="hw-voc2">
-      <div>
-        <div class="ex-row"><span class="example-badge">1</span><em>(example)</em> We didn't <span style="color:#1A7A4A;font-weight:800;background:#E3F5EA;padding:1px 7px;border-radius:5px;">take</span> the rush hour traffic <span style="color:#1A7A4A;font-weight:800;background:#E3F5EA;padding:1px 7px;border-radius:5px;">into account</span>, so we almost missed our flight.</div>
-        <div class="ex-row">2. Why don't we <span class="wb-blank" data-ans="take advantage of" onclick="wbPlace(this)">______</span> the sunny weather and go to the beach?</div>
-        <div class="ex-row">3. My children love drama, so they always <span class="wb-blank" data-ans="take part in" onclick="wbPlace(this)">______</span> the school play.</div>
-        <div class="ex-row">4. This report doesn't need to be finished today — you can <span class="wb-blank" data-ans="take your time" onclick="wbPlace(this)">______</span>.</div>
-        <div class="ex-row">5. The pilot decided to <span class="wb-blank" data-ans="take a risk" onclick="wbPlace(this)">______</span> and try to land the plane on the river.</div>
-      </div>
-      <div>
-        <div class="ex-row">6. I always <span class="wb-blank" data-ans="take pity on" onclick="wbPlace(this)">______</span> my elderly neighbor when he's sick. I visit him every day to check if he needs anything.</div>
-        <div class="ex-row">7. Most music festivals <span class="wb-blank" data-ans="take place" onclick="wbPlace(this)">______</span> in the summer months when it's more likely to be sunny.</div>
-        <div class="ex-row">8. Could you <span class="wb-blank" data-ans="take care of" onclick="wbPlace(this)">______</span> my cat while I'm on vacation?</div>
-        <div class="ex-row">9. Don't mind Charlie. He doesn't <span class="wb-blank" data-ans="take to" onclick="wbPlace(this)">______</span> other children very quickly.</div>
-      </div>
-    </div>
-    <div class="btn-row">
-      <button class="btn-check" onclick="checkWbSlide('hw-voc2')">Check Answers</button>
-      <button class="btn-reset" onclick="resetWbSlide('hw-voc2')">Reset</button>
-    </div>
-  </div></div>
-</div>
-
 <!-- ============ HW6: VOCABULARY — PHRASAL VERBS & MEANINGS ============ -->
-<!-- WB 4B 3c -->
-<div class="slide" id="hw-voc3-slide">
-  <div class="banner banner-hw">📝 Homework</div>
-  <div class="slide-main"><div class="content">
-    <h2>HW6 — Phrasal verbs with <i>take</i> and their meanings</h2>
-    <p class="instruction">Match each bold phrasal verb on the left to its correct meaning on the right.</p>
-    <div class="match-wrap" id="hwv3-match">
-      <div>
-        <div class="match-col-head mc-left">Phrasal verb in context</div>
-        <div class="match-item example-pair"><span class="circ-num">1</span>When was the last time someone <b>took</b> you <b>out</b> for dinner?</div>
-        <div class="match-item" data-side="left" data-pair="2" onclick="matchPick(this)"><span class="circ-num">2</span>Who was the last person you <b>took to</b> immediately?</div>
-        <div class="match-item" data-side="left" data-pair="3" onclick="matchPick(this)"><span class="circ-num">3</span>Do you <b>take</b> your shoes <b>off</b> as soon as you go into your house?</div>
-        <div class="match-item" data-side="left" data-pair="4" onclick="matchPick(this)"><span class="circ-num">4</span>Do you <b>take your time</b> doing your English homework?</div>
-        <div class="match-item" data-side="left" data-pair="5" onclick="matchPick(this)"><span class="circ-num">5</span>In what ways do you <b>take after</b> your parents?</div>
-        <div class="match-item" data-side="left" data-pair="6" onclick="matchPick(this)"><span class="circ-num">6</span>How often do you <b>take</b> the trash <b>out</b>?</div>
-        <div class="match-item" data-side="left" data-pair="7" onclick="matchPick(this)"><span class="circ-num">7</span>Have you ever watched the planes <b>take off</b> and land at an airport?</div>
-        <div class="match-item" data-side="left" data-pair="8" onclick="matchPick(this)"><span class="circ-num">8</span>If you could <b>take up</b> a new activity, what would it be?</div>
-      </div>
-      <div>
-        <div class="match-col-head mc-right">Meaning</div>
-        <div class="match-item example-pair"><span class="circ-num">d</span>to take somebody to a place and pay for them</div>
-        <div class="match-item" data-side="right" data-pair="7" onclick="matchPick(this)"><span class="circ-num">a</span>to leave the ground and begin to fly</div>
-        <div class="match-item" data-side="right" data-pair="4" onclick="matchPick(this)"><span class="circ-num">b</span>to use as much time as you need without hurrying</div>
-        <div class="match-item" data-side="right" data-pair="3" onclick="matchPick(this)"><span class="circ-num">c</span>to remove a piece of clothing</div>
-        <div class="match-item" data-side="right" data-pair="2" onclick="matchPick(this)"><span class="circ-num">e</span>to start liking somebody</div>
-        <div class="match-item" data-side="right" data-pair="8" onclick="matchPick(this)"><span class="circ-num">f</span>to learn or start to do something, especially for pleasure</div>
-        <div class="match-item" data-side="right" data-pair="6" onclick="matchPick(this)"><span class="circ-num">g</span>to remove something from inside, e.g., a house</div>
-        <div class="match-item" data-side="right" data-pair="5" onclick="matchPick(this)"><span class="circ-num">h</span>to look or behave like a member of your family</div>
-      </div>
-    </div>
-    <div class="btn-row">
-      <button class="btn-check" onclick="checkMatchSlide('hwv3-match')">Check Answers</button>
-      <button class="btn-reset" onclick="resetMatchSlide('hwv3-match')">Reset</button>
-    </div>
-  </div></div>
-</div>
-
-
 <!-- ============ HW7: GRAMMAR — ABOUT YOU ============ -->
 <!-- WB 4B 1d -->
 <div class="slide" id="hw-gr4-slide">
   <div class="banner banner-hw">📝 Homework</div>
   <div class="slide-main"><div class="content">
-    <h2>HW7 — Complete the sentences about you</h2>
+    <h2>HW4 — Complete the sentences about you</h2>
     <p class="instruction">Finish each sentence with your own ideas. Use a present form after the time expression.</p>
     <div class="fixed-two-col"><div><div class="ex-row">1. I'll have dinner after <input class="ans-input wide" style="width:min(380px,100%)" aria-label="sentence 1"></div><div class="ex-row">2. I'll buy a new car as soon as <input class="ans-input wide" style="width:min(380px,100%)" aria-label="sentence 2"></div><div class="ex-row">3. I won't go to bed tonight until <input class="ans-input wide" style="width:min(380px,100%)" aria-label="sentence 3"></div><div class="ex-row">4. I'll go shopping before <input class="ans-input wide" style="width:min(380px,100%)" aria-label="sentence 4"></div></div><div><div class="ex-row">5. I might go out later if <input class="ans-input wide" style="width:min(380px,100%)" aria-label="sentence 5"></div><div class="ex-row">6. I won't move to a new house unless <input class="ans-input wide" style="width:min(380px,100%)" aria-label="sentence 6"></div><div class="ex-row">7. I'll finish my English homework now, in case <input class="ans-input wide" style="width:min(380px,100%)" aria-label="sentence 7"></div><div class="ex-row">8. I'll retire when <input class="ans-input wide" style="width:min(380px,100%)" aria-label="sentence 8"></div></div></div>
   </div></div>
 </div>
 
 <!-- ============ HW8: PRONUNCIATION — LINKED PHRASES ============ -->
-<!-- WB 4B 2a, 2b -->
-<div class="slide" id="hw-pron-slide">
+<!-- ============ HW9: VOCABULARY — ABOUT YOU ============ -->
+<!-- ============ HW6: VOCABULARY — WORDS FROM THE ARTICLE ============ -->
+<div class="slide" id="hw-vocab-slide">
   <div class="banner banner-hw">📝 Homework</div>
   <div class="slide-main"><div class="content">
-    <h2>HW8 — Linked phrases</h2>
-    <p class="instruction">Listen and complete the sentences with a three-word linked phrase. Then listen again and repeat the words. Copy the rhythm.</p>
-    <div class="img-placeholder"><span class="ip-icon">🎧</span>Audio placeholder — add the Workbook 4.2 audio file here</div>
-    <div id="hw-pron" style="margin-top:12px;"><div class="ex-row"><span class="example-badge">1</span><em>(example)</em> <span style="color:#1A7A4A;font-weight:800;background:#E3F5EA;padding:1px 7px;border-radius:5px;">First of all</span>, let's see how much money we have.</div><div class="ex-row">2. I didn't really want to go, but it was <input class="ans-input" style="width:170px" data-ans="worth it in"> the end.</div><div class="ex-row">3. Dress professionally, <input class="ans-input" style="width:170px" data-ans="and above all">, don't be late.</div><div class="ex-row">4. <input class="ans-input" style="width:170px" data-ans="In an ideal" data-alt="an ideal"> world, everyone would have a roof over their head.</div><div class="ex-row">5. Don't disturb me <input class="ans-input" style="width:170px" data-ans="unless it's" data-alt="unless it’s"> important.</div><div class="ex-row">6. I'll call you <input class="ans-input" style="width:170px" data-ans="as soon as"> I get home.</div><div class="ex-row">7. <input class="ans-input" style="width:170px" data-ans="As far as"> I'm concerned, there's nothing more to say.</div><div class="ex-row">8. It was <input class="ans-input" style="width:170px" data-ans="such an awful"> experience that I don't really want to think about.</div></div>
+    <h2>HW5 — Words from the article</h2>
+    <p class="instruction">Write the letter of the meaning that matches each bold word.</p>
+    <div class="gram-box" style="padding:10px 18px;"><div style="display:grid;grid-template-columns:1fr 1fr;column-gap:24px;"><div class="ex-row" style="margin:3px 0;"><b>A</b> &nbsp;thinking about something all the time</div><div class="ex-row" style="margin:3px 0;"><b>B</b> &nbsp;a person you compete against</div><div class="ex-row" style="margin:3px 0;"><b>C</b> &nbsp;a part or share of a total</div><div class="ex-row" style="margin:3px 0;"><b>D</b> &nbsp;to increase very quickly</div><div class="ex-row" style="margin:3px 0;"><b>E</b> &nbsp;growing fast and being successful</div><div class="ex-row" style="margin:3px 0;"><b>F</b> &nbsp;to stop doing a job or an activity</div><div class="ex-row" style="margin:3px 0;"><b>G</b> &nbsp;so enjoyable that you can’t stop doing it</div><div class="ex-row" style="margin:3px 0;"><b>H</b> &nbsp;graceful and stylish</div><div class="ex-row" style="margin:3px 0;"><b>I</b> &nbsp;likely to cause death</div></div></div>
+    <div class="ex-row"><span class="example-badge">1</span><em>(example)</em> Bungee jumping can be <b>deadly</b> if the rope breaks. <span style="color:#1A7A4A;font-weight:800;background:#E3F5EA;padding:1px 7px;border-radius:5px;">I</span></div>
+    <div class="fixed-two-col" id="hwvocab"><div><div class="ex-row">1. The number of surfers has <b>rocketed</b> in recent years. <input class="ans-input" style="width:60px;text-align:center" data-ans="D" aria-label="answer 1"></div><div class="ex-row">2. Social media is a <b>booming</b> industry. <input class="ans-input" style="width:60px;text-align:center" data-ans="E" aria-label="answer 2"></div><div class="ex-row">3. A large <b>proportion</b> of my friends play online games. <input class="ans-input" style="width:60px;text-align:center" data-ans="C" aria-label="answer 3"></div><div class="ex-row">4. Some people find video games completely <b>addictive</b>. <input class="ans-input" style="width:60px;text-align:center" data-ans="G" aria-label="answer 4"></div></div><div><div class="ex-row">5. My brother is <b>obsessed</b> with mountain biking. <input class="ans-input" style="width:60px;text-align:center" data-ans="A" aria-label="answer 5"></div><div class="ex-row">6. She decided to <b>quit</b> her job and travel the world. <input class="ans-input" style="width:60px;text-align:center" data-ans="F" aria-label="answer 6"></div><div class="ex-row">7. In tennis, your <b>opponent</b> is always trying to beat you. <input class="ans-input" style="width:60px;text-align:center" data-ans="B" aria-label="answer 7"></div><div class="ex-row">8. Her dance moves were so <b>elegant</b>. <input class="ans-input" style="width:60px;text-align:center" data-ans="H" aria-label="answer 8"></div></div></div>
     <div class="btn-row">
-      <button class="btn-check" onclick="checkSlide('hw-pron')">Check Answers</button>
-      <button class="btn-reset" onclick="resetSlide('hw-pron')">Reset</button>
+      <button class="btn-check" onclick="checkSlide('hwvocab')">Check Answers</button>
+      <button class="btn-reset" onclick="resetSlide('hwvocab')">Reset</button>
     </div>
   </div></div>
 </div>
 
-<!-- ============ HW9: VOCABULARY — ABOUT YOU ============ -->
-<!-- WB 4B 3d -->
-<div class="slide" id="hw-voc4-slide">
+<!-- ============ HW7: WRITING — WOULD YOU TRY IT? ============ -->
+<div class="slide" id="hw-write-slide">
   <div class="banner banner-hw">📝 Homework</div>
   <div class="slide-main"><div class="content">
-    <h2>HW9 — Answer the questions about you</h2>
-    <p class="instruction">Answer the questions from HW6 about you. Write full sentences.</p>
-    <div><div class="ex-row">1. When was the last time someone took you out for dinner? <input class="ans-input wide" style="width:min(520px,100%)" aria-label="answer 1"></div><div class="ex-row">2. Who was the last person you took to immediately? <input class="ans-input wide" style="width:min(520px,100%)" aria-label="answer 2"></div><div class="ex-row">3. Do you take your shoes off as soon as you go into your house? <input class="ans-input wide" style="width:min(520px,100%)" aria-label="answer 3"></div><div class="ex-row">4. Do you take your time doing your English homework? <input class="ans-input wide" style="width:min(520px,100%)" aria-label="answer 4"></div><div class="ex-row">5. In what ways do you take after your parents? <input class="ans-input wide" style="width:min(520px,100%)" aria-label="answer 5"></div><div class="ex-row">6. How often do you take the trash out? <input class="ans-input wide" style="width:min(520px,100%)" aria-label="answer 6"></div><div class="ex-row">7. Have you ever watched the planes take off and land at an airport? <input class="ans-input wide" style="width:min(520px,100%)" aria-label="answer 7"></div><div class="ex-row">8. If you could take up a new activity, what would it be? <input class="ans-input wide" style="width:min(520px,100%)" aria-label="answer 8"></div></div>
+    <h2>HW6 — Would you try an extreme sport?</h2>
+    <p class="instruction">Write 4–5 sentences explaining why you would or wouldn’t try an extreme sport. Use at least three of these expressions: as soon as, when, until, unless, before, after, in case.</p>
+    <textarea class="ans-input wide" id="hw7-txt" rows="7" style="width:100%;" aria-label="your paragraph"></textarea>
+    <div class="btn-row"><button class="btn-suggest" onclick="toggleSuggested('hw7-sugg')">💡 Suggested Answer</button></div>
+    <div class="suggest-box" id="hw7-sugg"><p>I would love to try paragliding, but only if I have a good instructor. I won’t jump <i>unless</i> I feel completely safe. <i>As soon as</i> I get to the top of the mountain, I’ll check all the equipment. I’ll take a jacket <i>in case</i> it’s cold in the air. <i>When</i> I land, I’ll call my family and tell them about it!</p></div>
   </div></div>
 </div>
 
@@ -1665,8 +1295,8 @@
 
 <script>
 /* ===================== SLIDE NAV DATA ===================== */
-var slideIds = ["s1","s-leadin","s-listen1","s-listen2","s-listen2b","s-speak1","s-gram-meaning","s-gram-future","s-gram-ex1","s-gram-ex2","s-gram-ex3","s-gram-ex4","s-gram-ex5","s-pron1","s-pron2","s-pron3","s-read1","s-read2","s-read3","s-read4","s-vocab1","s-vocab2","s-vocab3","s-vocab4","s-video","hw-cover","hw-gr1-slide","hw-gr2-slide","hw-gr3-slide","hw-voc1-slide","hw-voc2-slide","hw-voc3-slide","hw-gr4-slide","hw-pron-slide","hw-voc4-slide"];
-var slideLabels = ["Cover","Warm-Up – The Man in the Lawn Chair","Listening – Score the Risks","Listening – Are You a Risk-Taker?","Listening – Who Said It?","Speaking – Risk Bingo","Grammar – Zero & First Conditionals","Grammar – Future Time Clauses","Grammar – Match the Sentence Halves","Grammar – Look More Closely at the Form","Grammar – Circle the Correct Form","Grammar – Complete with a Time Expression","Grammar – Finish the Sentences","Pronunciation – Listen and Complete","Pronunciation – Complete the Sentences","Pronunciation – Practice and Personalize","Reading – Label the Photos","Reading – Article & Reasons","Reading – Find the Information","Reading – Discussion","Vocabulary – Match the Answers","Vocabulary – Listen Again","Vocabulary – Expressions & Phrasal Verbs with Take","Vocabulary – I'll Take a Question","Video Listening – Riding the Waves","Homework Cover","HW1 – Zero & First Conditionals","HW2 – Correct Form","HW3 – Rewrite with a Time Expression","HW4 – Match the Sentence Halves","HW5 – Expressions with Take","HW6 – Phrasal Verbs with Take","HW7 – About You: Time Clauses","HW8 – Linked Phrases","HW9 – About You: Take"];
+var slideIds = ["s1", "s-leadin", "s-listen1", "s-listen2", "s-listen2b", "s-speak1", "s-gram-meaning", "s-gram-ex0", "s-gram-future", "s-gram-ex1", "s-gram-ex2", "s-gram-ex2b", "s-gram-ex3", "s-gram-ex4", "s-gram-ex5", "s-read1", "s-read2", "s-read2b", "hw-cover", "hw-gr1-slide", "hw-gr2-slide", "hw-gr3-slide", "hw-gr4-slide", "hw-vocab-slide", "hw-write-slide"];
+var slideLabels = ["Cover", "Warm-Up – The Man in the Lawn Chair", "Listening – Score the Risks", "Listening – Are You a Risk-Taker?", "Listening – Who Said It?", "Speaking – Risk Bingo", "Grammar – Zero & First Conditionals", "Grammar – Zero or First?", "Grammar – Future Time Clauses", "Grammar – Match the Sentence Halves", "Grammar – Look More Closely at the Form", "Grammar – Possible or Always?", "Grammar – Circle the Correct Form", "Grammar – Complete with a Time Expression", "Grammar – Finish the Sentences", "Reading – Label the Photos", "Reading – Read and Explain", "Reading – Find the Reasons", "Homework Cover", "HW1 – Zero & First Conditionals", "HW2 – Correct Form", "HW3 – Rewrite with a Time Expression", "HW4 – About You: Time Clauses", "HW5 – Words from the Article", "HW6 – Would You Try an Extreme Sport?"];
 
 var slides = Array.from(document.querySelectorAll('.slide'));
 var current = 0;
